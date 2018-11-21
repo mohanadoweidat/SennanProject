@@ -12,13 +12,11 @@
     <!-- Bootstrap-->
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
     <script src="bootstrap/bootstrap.min.js"></script>
-
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             
-
         </div>
     </form>
 </body>
