@@ -13,7 +13,6 @@
     <!-- Bootstrap-->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -30,8 +29,8 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css"/>
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css"/>
 <link rel="stylesheet" type="text/css" href="styles/responsive.css"/>
-     
- 
+<link rel="stylesheet" type="text/css" href="../main.css"/>
+
 
 </head>
 <body>
@@ -68,6 +67,7 @@
 				</div>
 			</div>
 		</div>
+         <h1 class="supers">Hello!</h1>
 		<div class="header_social d-flex flex-row align-items-center justify-content-start">
 			<ul class="d-flex flex-row align-items-start justify-content-start">
 				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>

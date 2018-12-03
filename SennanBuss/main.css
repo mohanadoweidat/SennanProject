@@ -1,0 +1,9 @@
+﻿@font-face {
+    font-family: Allerta Stencil;
+    src: url('../design/fonts/AllertaStencil-Regular.ttf');
+}
+
+.supers {
+    font-family: 'Allerta Stencil';
+    color: red;
+}
