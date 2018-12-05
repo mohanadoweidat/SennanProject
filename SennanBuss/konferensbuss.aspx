@@ -42,7 +42,7 @@
 				<div class="col">
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
 						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-							<div class="logo"><a href="index.aspx">SENNAN BUSS</a></div>
+							<div class="logo"><a href="index.aspx"><h5>SENNAN BUSS</h5></a></div>
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
 									<li><a href="index.aspx">STARTSIDAN</a></li>
@@ -126,7 +126,7 @@
 							<div class="row">
 								<div class="col">
 									<div class="home_slider_content">
-										<div class="home_title"><h2>Let us take you away</h2></div>
+										<div class="home_title"><h3 style="color:white">Let us take you away</h3></div>
 									</div>
 								</div>
 							</div>

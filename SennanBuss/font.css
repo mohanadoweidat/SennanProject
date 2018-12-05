@@ -1,0 +1,14 @@
+﻿
+
+
+
+
+@font-face {
+    font-family: Hind Siliguri;
+    src: url(HindSiliguri-Regular.ttf);
+}
+
+
+* {
+    font-family: Hind Siliguri !important;
+}

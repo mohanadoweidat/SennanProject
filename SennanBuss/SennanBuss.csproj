@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="font.css" />
     <Content Include="historik.aspx" />
     <Content Include="images\1%402x.jpg" />
     <Content Include="images\1.jpg" />
@@ -223,6 +224,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="HindSiliguri-Regular.ttf" />
     <None Include="packages.config" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
