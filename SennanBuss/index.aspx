@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SennanBuss.index" %>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -12,63 +11,54 @@
     
     <!-- Bootstrap-->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
      <!------------>
-    
-
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css"/>
+<!--<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css"/>-->
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css"/>
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css"/>
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css"/>
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css"/>
 <link rel="stylesheet" type="text/css" href="styles/responsive.css"/>
-<link rel="stylesheet" type="text/css" href="../main.css"/>
-
+     
+ 
 
 </head>
 <body>
     <form id="form1" runat="server">
-       <div class="super_container">
- 	<!-- Header -->
- 	<header class="header">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="header_content d-flex flex-row align-items-center justify-content-start">
-						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-							<div class="logo"><a href="index.html">SENNAN BUSS</a></div>
-							<nav class="main_nav">
-								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li class="active"><a href="index.html">STARTSIDAN</a></li>
-									<li><a href="about.html"> VÅRA BUSSAR</a></li>
-									<li><a href="#">MILJÖ & KVALITET</a></li>
-									<li><a href="news.html">HISTORIK</a></li>
-									<li><a href="contact.html">KONFERENSBUSS</a></li>
-                                    <li><a href="contact.html">KONTAKTA OSS</a></li>
-								</ul>
-							</nav>
-							 
 
-							<!-- Hamburger -->
+         <div class="super_container">
 
-							<div class="hamburger ml-auto">
-								<i class="fa fa-bars" aria-hidden="true"></i>
-							</div>
-                           
+             <!-- Start Navbar-->
+               <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+ <nav class="navbar navbar-default navbar-fixed-top" id="myScrollspy">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+             <a href="#" class="navbar-brand" style="  color: black;">  Sennan Buss</a>
+        </div>
+
 
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-         <h1 class="supers">Hello!</h1>
 		<div class="header_social d-flex flex-row align-items-center justify-content-start">
 			<ul class="d-flex flex-row align-items-start justify-content-start">
 				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
@@ -81,52 +71,36 @@
 		</div>
 	</header>
 
-	<!-- Menu(Bootstrap) -->
 
-	<div class="menu">
-		<div class="menu_header d-flex flex-row align-items-center justify-content-start">
-			<div class="menu_logo"><a href="index.html">SENNAN BUSS</a></div>
-			<div class="menu_close_container ml-auto"><div class="menu_close"><div></div><div></div></div></div>
-		</div>
-		<div class="menu_content">
-			<ul>
-				<li><a href="inex.html">STARTSIDAN</a></li>
-				<li><a href="about.html">VÅRA BUSSAR</a></li>
-                <li><a href="about.html">MILJÖ & KVALITET</a></li>
-				<li><a href="#">HISTORIK</a></li>
-				<li><a href="news.html">KONFERENSBUSS</a></li>
-				<li><a href="contact.html">KONTAKTA OSS</a></li>
-			</ul>
-		</div>
-		<div class="menu_social">
- 			<ul class="d-flex flex-row align-items-start justify-content-start">
-				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
-	</div>
-	
-	<!-- Home -->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Logga in</a></li>
+                <li><a href="#">Skapa konto</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>  
+                    
+          <!--/End navbar-->
+
+              <!-- Home -->
+        <!--  Image Background -->
 
 	<div class="home">
-		
-		<!-- Home Slider -->
+ 		<!-- Home Slider -->
 		<div class="home_slider_container">
 			<div class="owl-carousel owl-theme home_slider">
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url(images/crap.jpg)"></div>
+
+					<div class="background_image" style="background-image:url(images/crap.jpg)">
+ 					</div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
 								<div class="col">
 									<div class="home_slider_content">
-										<div class="home_title"><h2>Let us take you away</h2></div>
+										<div class="home_title"><h3 style="color:white">Let us take you away</h3></div>
 									</div>
 								</div>
 							</div>
@@ -134,417 +108,204 @@
 					</div>
 				</div>
   			</div>
+           
+            <div class="home_page_nav">
 
-			<div class="home_page_nav">
-				<ul class="d-flex flex-column align-items-end justify-content-end">
-					<li><a href="#" data-scroll-to="#destinations">Offers<span>01</span></a></li>
-					<li><a href="#" data-scroll-to="#testimonials">Testimonials<span>02</span></a></li>
-					<li><a href="#" data-scroll-to="#news">Latest<span>03</span></a></li>
-				</ul>
+			</div>
+ 		</div>
+
+	</div>
+           
+            
+
+
+
+
+
+
+
+
+         
+         
+  
+
+         <!-- About -->
+         <div class="about">
+ 		<div class="container">
+ 			<div class="row">
+				<div class="col text-left">
+					<div class="section_subtitle"> </div>
+					<div class="section_title">
+                        <h4>
+                            Gör som hallänningar gör varje dag,åk med Sennans Buss!
+                         </h4>
+                 </div>
+				</div>
+			</div>
+			<div class="row about_row">
+				<div class="col-lg-6">
+					<div class="about_content">
+						<div class="about_text">Sennans Buss AB är ett gammalt välrenommerat företag med många kända kunder bl.a. 
+                            Försvarsmakten, Halmstads kommun, Hyltebruks Kommun, Markaryds Kommun, Region Halland, Hallandstrafiken, 
+                            Kronobergs Länstrafik, Erlings Resor, Resia.
+                         </div>
+                        <br />
+                         <h4 style="color:black">Vi har resurser för alla sorters uppdrag.</h4>
+						<div class="about_text">
+                           
+							<p> Våra bussar har upp till 59 sittplatser. Vår trevliga och kunniga personal och våra fina bussar borgar för att din resupplevelse blir något extra.</p>
+						</div>
+                        <br />
+                        <div class="about_text">
+                           
+							<p style="color:red">Den 2 januari 2017 utökades familjen genom att Sennans Buss tog över verksamheten i Unnaryds Buss. Gamla kunder, såväl som nya hälsas välkomna till Sennans Buss.</p>
+						</div>
+						
+                        
+                        <img src="images/1.jpg" class="img-circle" />
+                        <img src="images/2.jpg" class="img-circle" />
+
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="about_image" style="background-color: blanchedalmond; border:1px solid black; ">
+                        <img src="images/rbuss.png" alt="rbuss"  class="img-responsive" style="margin: 5px 5px 5px 5px"/>
+                        <br />
+                        <br />
+                        <h5 style="color:black; margin:5px 5px 5px 5px">Vi är unika med att kunna erbjuda konferensbuss i Hallands Län.</h5>
+                         
+                      
+                        <p style="margin:5px 5px 5px 5px">Läs mer och titta på en film om vår nya konferensbuss!</p>
+
+                        <p style="margin:5px 5px 5px 5px">Totalt 31 platser + Guidestol 17 personer kan sitta med ögonkontakt runt det stora bordet längst bak i bussen.</p>
+
+
+                        <div class="button about_button" style="margin:5px 5px 5px 5px "><a href="#">Klicka Här</a></div>
+
+					</div>
+                    
+				</div>
 			</div>
 		</div>
-	</div>
 
-	 
 
-	<!-- Intro -->
- 	<div class="intro">
- 		<div class="container">
+
+        <!--- Card<--->
+
+        <div class="intro">
+		<div class="intro_background" style="background-image:url(images/intro.png)"></div>
+		<div class="container">
 			<div class="row">
 				<div class="col">
 					<div class="intro_container">
 						<div class="row">
- 							<!-- Intro Item -->
-							<div class="col-lg-4 intro_col">
-								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
-									<div class="intro_icon"><img src="images/beach.svg" alt=""/></div>
-									<div class="intro_content">
-										<div class="intro_title">Top Destinations</div>
-										<div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-									</div>
-								</div>
-							</div>
 
 							<!-- Intro Item -->
-							<div class="col-lg-4 intro_col">
-								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
-									<div class="intro_icon"><img src="images/wallet.svg" alt=""/></div>
+							<div class="col-lg-4 intro_col"  >
+                                <center>
+                              <div class="intro_title">Vi är både miljö- och kvalitetscertifierade.</div>
+                                     </center>
+ 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+ 									<div class="intro_icon"></div>
 									<div class="intro_content">
-										<div class="intro_title">The Best Prices</div>
-										<div class="intro_subtitle"><p>Sollicitudin mauris lobortis in.</p></div>
+ 										<div class="intro_subtitle"> <img src="images/c1.jpg" alt="">
+ 										</div>
+ 									</div>
+								</div>
+ 							</div>
+
+                            <!-- Intro Item -->
+                              <div class="col-lg-4 intro_col" >
+                                <center>
+                             <div class="intro_title">Vi är både miljö- och kvalitetscertifierade.</div>
+                                     </center>
+ 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+                                    <div class="intro_icon"></div>
+ 									<div class="intro_content">
+										 <img src="images/c2.jpg" alt=""/>
+										<div class="intro_subtitle"></div>
 									</div>
 								</div>
 							</div>
 
-							<!-- Intro Item -->
-							<div class="col-lg-4 intro_col">
-								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
-									<div class="intro_icon"><img src="images/suitcase.svg" alt=""/></div>
-									<div class="intro_content">
-										<div class="intro_title">Amazing Services</div>
-										<div class="intro_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+                          <!-- Intro Item -->
+						  <div class="col-lg-4 intro_col" >
+                                <center>
+                             <div class="intro_title">Vi är delägare i Bivab.</div>
+                                     </center>
+ 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+                                    <div class="intro_icon"></div>
+ 									<div class="intro_content">
+										 <img src="images/c3.png" alt=""/>
+										<div class="intro_subtitle"></div>
 									</div>
 								</div>
 							</div>
-
-						</div>
+ 						</div>
 					</div>
 				</div>		
 			</div>
 		</div>
 	</div>
+  	<!-- Footer -->
 
-	<!-- Destinations -->
-
-	<div class="destinations" id="destinations">
-		<div class="container">
-			<div class="row">
-				<div class="col text-center">
-					<div class="section_subtitle">simply amazing places</div>
-					<div class="section_title"><h2>Popular Destinations</h2></div>
-				</div>
-			</div>
-			<div class="row destinations_row">
-				<div class="col">
-					<div class="destinations_container item_grid">
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="images/destination_1.jpg" alt="">
-								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Bali</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $679</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="images/destination_2.jpg" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Indonesia</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $679</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="images/destination_3.jpg" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">San Francisco</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $679</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="images/destination_4.jpg" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Paris</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $679</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="images/destination_5.jpg" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Phi Phi Island</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $679</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="images/destination_6.jpg" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Mykonos</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
-								<div class="destination_price">From $679</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Testimonials -->
-
-	<div class="testimonials" id="testimonials">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/testimonials.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col text-center">
-					<div class="section_subtitle">simply amazing places</div>
-					<div class="section_title"><h2>Testimonials</h2></div>
-				</div>
-			</div>
-			<div class="row testimonials_row">
-				<div class="col">
-
-					<!-- Testimonials Slider -->
-					<div class="testimonials_slider_container">
-						<div class="owl-carousel owl-theme testimonials_slider">
-							
-							<!-- Slide -->
-							<div class="owl-item text-center">
-								<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
-								<div class="testimonial_author">
-									<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-										<div>john turner,</div>
-										<div>client</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Slide -->
-							<div class="owl-item text-center">
-								<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
-								<div class="testimonial_author">
-									<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-										<div>john turner,</div>
-										<div>client</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Slide -->
-							<div class="owl-item text-center">
-								<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
-								<div class="testimonial_author">
-									<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
-										<div>john turner,</div>
-										<div>client</div>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="test_nav">
-			<ul class="d-flex flex-column align-items-end justify-content-end">
-				<li><a href="#">City Breaks Clients<span>01</span></a></li>
-				<li><a href="#">Cruises Clients<span>02</span></a></li>
-				<li><a href="#">All Inclusive Clients<span>03</span></a></li>
-			</ul>
-		</div>
-	</div>
-
-	<!-- News -->
-
-	<div class="news" id="news">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-8">
-					<div class="news_container">
-						
-						<!-- News Post -->
-						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
-							<div class="news_post_image"><img src="images/news_1.jpg" alt=""></div>
-							<div class="news_post_content">
-								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
-									<div>02</div>
-									<div>june</div>
-								</div>
-								<div class="news_post_title"><a href="#">Best tips to travel light</a></div>
-								<div class="news_post_category">
-									<ul>
-										<li><a href="#">lifestyle & travel</a></li>
-									</ul>
-								</div>
-								<div class="news_post_text">
-									<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet.</p>
-								</div>
-							</div>
-						</div>
-
-						<!-- News Post -->
-						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
-							<div class="news_post_image"><img src="images/news_2.jpg" alt=""></div>
-							<div class="news_post_content">
-								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
-									<div>01</div>
-									<div>june</div>
-								</div>
-								<div class="news_post_title"><a href="#">Best tips to travel light</a></div>
-								<div class="news_post_category">
-									<ul>
-										<li><a href="#">lifestyle & travel</a></li>
-									</ul>
-								</div>
-								<div class="news_post_text">
-									<p>Tempor massa et laoreet malesuada. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo.</p>
-								</div>
-							</div>
-						</div>
-
-						<!-- News Post -->
-						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
-							<div class="news_post_image"><img src="images/news_3.jpg" alt=""></div>
-							<div class="news_post_content">
-								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
-									<div>29</div>
-									<div>may</div>
-								</div>
-								<div class="news_post_title"><a href="#">Best tips to travel light</a></div>
-								<div class="news_post_category">
-									<ul>
-										<li><a href="#">lifestyle & travel</a></li>
-									</ul>
-								</div>
-								<div class="news_post_text">
-									<p>Vivamus massa.Tempor massa et laoreet malesuada. Aliquam nulla nisl, accumsan sit amet mattis.</p>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-				<!-- News Sidebar -->
-				<div class="col-xl-4">
-					<div class="travello">
-						<div class="background_image" style="background-image:url(images/travello.jpg)"></div>
-						<div class="travello_content">
-							<div class="travello_content_inner">
-								<div></div>
-								<div></div>
-							</div>
-						</div>
-						<div class="travello_container">
-							<a href="#">
-								<div class="d-flex flex-column align-items-center justify-content-end">
-									<span class="travello_title">Get a 20% Discount</span>
-									<span class="travello_subtitle">Buy Your Vacation Online Now</span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Footer -->
-
-	<footer class="footer">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/footer_1.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="newsletter">
-						<div class="newsletter_title_container text-center">
-							<div class="newsletter_title">Subscribe to our newsletter to get the latest trends & news</div>
-							<div class="newsletter_subtitle">Join our database NOW!</div>
-						</div>
-						<div class="newsletter_form_container">
-							<form action="#" class="newsletter_form d-flex flex-md-row flex-column align-items-start justify-content-between" id="newsletter_form">
-								<div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
-									<div><input type="text" class="newsletter_input newsletter_input_name" id="newsletter_input_name" placeholder="Name" required="required"><div class="input_border"></div></div>
-									<div><input type="email" class="newsletter_input newsletter_input_email" id="newsletter_input_email" placeholder="Your e-mail" required="required"><div class="input_border"></div></div>
-								</div>
-								<div><button class="newsletter_button">subscribe</button></div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row footer_contact_row">
-				<div class="col-xl-10 offset-xl-1">
-					<div class="row">
-
-						<!-- Footer Contact Item -->
-						<div class="col-xl-4 footer_contact_col">
-							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
-								<div class="footer_contact_icon"><img src="images/sign.svg" alt=""></div>
-								<div class="footer_contact_title">give us a call</div>
-								<div class="footer_contact_list">
-									<ul>
-										<li>Office Landline: +44 5567 32 664 567</li>
-										<li>Mobile: +44 5567 89 3322 332</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Footer Contact Item -->
-						<div class="col-xl-4 footer_contact_col">
-							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
-								<div class="footer_contact_icon"><img src="images/trekking.svg" alt=""></div>
-								<div class="footer_contact_title">come & drop by</div>
-								<div class="footer_contact_list">
-									<ul style="max-width:190px">
-										<li>4124 Barnes Street, Sanford, FL 32771</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- Footer Contact Item -->
-						<div class="col-xl-4 footer_contact_col">
-							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
-								<div class="footer_contact_icon"><img src="images/around.svg" alt=""></div>
-								<div class="footer_contact_title">send us a message</div>
-								<div class="footer_contact_list">
-									<ul>
-										<li>youremail@gmail.com</li>
-										<li>Office@yourbusinessname.com</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
-	</footer>
-</div>
+	 
+  	<!-- Section 4 -->
+        <div class="section-4-container section-container section-container-gray-bg">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col section-4 section-description wow fadeInLeftBig">
+                        <center>
+                            <h3>Sennans Buss AB / Byggets Buss / Skogaby Buss / Unnaryds Buss</h3>
+  	                    <p> telefon: 035-661 10 - fax: 035-662 19 - epost: info@sennansbuss.se </p>
+                       </center>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+        
+        <!-- Footer -->
+        
 
 
 
-        <!---- Scripts----->
+        <!-- Footer script -->
+  
+         
+        <!--- Site scripts--->
         <script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
-<script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/custom.js"></script>
+        <script src="styles/bootstrap4/popper.js"></script>
+        <script src="styles/bootstrap4/bootstrap.min.js"></script>
+        <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+        <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+        <script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
+        <script src="plugins/easing/easing.js"></script>
+        <script src="plugins/parallax-js-master/parallax.min.js"></script>
+        <script src="js/custom.js"></script>
        
            
 
-
+<script type="text/javascript">
+    //Change pos/background/padding/add shadow on nav when scroll event happens 
+$(function(){
+	var navbar = $('.navbar');
+	
+	$(window).scroll(function(){
+		if($(window).scrollTop() <= 40){
+			navbar.removeClass('navbar-scroll');
+		} else {
+			navbar.addClass('navbar-scroll');
+		}
+	});
+});
+</script>
 
             
-     
+     	</div>
+         </div>     
+             
+              
+              
     </form>
  </body>
 </html>
