@@ -254,10 +254,9 @@
 			</div>
 		</div>
 	</div>
-  	<!-- Footer -->
 
 	 
-  	<!-- Section 4 -->
+  	  	<!-- Footer -->
         <div class="section-4-container section-container section-container-gray-bg">
 	        <div class="container">
 	            <div class="row">

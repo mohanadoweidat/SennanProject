@@ -104,17 +104,125 @@
 					</div>
 				</div>
   			</div>
+  		</div>
+	</div>
 
-			<div class="home_page_nav">
-				<ul class="d-flex flex-column align-items-end justify-content-end">
-					<li><a href="#" data-scroll-to="#destinations">Offers<span>01</span></a></li>
-					<li><a href="#" data-scroll-to="#testimonials">Testimonials<span>02</span></a></li>
-					<li><a href="#" data-scroll-to="#news">Latest<span>03</span></a></li>
-				</ul>
+
+             <!-- Left section-->
+              <div class="about">
+ 		<div class="container">
+ 			<div class="row">
+				<div class="col text-left">
+					<div class="section_subtitle"> </div>
+					<div class="section_title">
+                        <h4>
+                            Miljö, Kvalitet & Säkerhet
+                         </h4>
+                 </div>
+				</div>
+			</div>
+			<div class="row about_row">
+				<div class="col-lg-6">
+					<div class="about_content">
+						<div class="about_text">Miljö, kvalitet och säkerhet är väldigt viktiga områden för oss.
+                                               Miljö & Kvalitet Vi är miljöcertifierade sedan juni 2004 enligt ISO 14001:2004 och även 
+                                               kvalitetscertifierade enligt ISO 9001:2000 sedan mars 2008.
+                            </div>
+                        <br />
+
+                        <h4 style="color:black">Säkerhet</h4>
+
+
+                        <div class="about_text">Miljö, kvalitet och säkerhet är väldigt viktiga områden för oss.
+                                               Miljö & Kvalitet Vi är miljöcertifierade sedan juni 2004 enligt ISO 14001:2004 och även 
+                                               kvalitetscertifierade enligt ISO 9001:2000 sedan mars 2008.
+                            </div>
+ 					    </div>
+                     </div>
+               
+                </div>
+              </div>
+          </div>
+ </div>
+
+                <!--- Card<--->
+
+        <div class="intro">
+		<div class="intro_background" style="background-image:url(images/intro.png)"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="intro_container">
+						<div class="row">
+
+							<!-- Intro Item -->
+							<div class="col-lg-4 intro_col"  >
+                                <center>
+                              <div class="intro_title"></div>
+                                     </center>
+ 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+ 									<div class="intro_icon"></div>
+									<div class="intro_content">
+ 										<div class="intro_subtitle">  
+                                             <img src="images/sennan_certifikat_2017.jpg" alt="rbuss"  class="img-responsive" style="margin: 5px 5px 5px 5px"/>
+ 										</div>
+ 									</div>
+								</div>
+ 							</div>
+
+                            <!-- Intro Item -->
+                              <div class="col-lg-4 intro_col" >
+                                <center>
+                             <div class="intro_title"></div>
+                                     </center>
+ 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+                                    <div class="intro_icon"></div>
+ 									<div class="intro_content">
+										  <img src="images/skogaby_buss_certifikat_2017.jpg" alt="rbuss"  class="img-responsive" style="margin: 5px 5px 5px 5px"/>
+										<div class="intro_subtitle"></div>
+									</div>
+								</div>
+							</div>
+
+                          <!-- Intro Item -->
+						  <div class="col-lg-4 intro_col" >
+                                <center>
+                             <div class="intro_title"></div>
+                                     </center>
+ 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+                                    <div class="intro_icon"></div>
+ 									<div class="intro_content">
+          <img src="images/byggets_buss_certifikat_2017.jpg" alt="rbuss"  class="img-responsive" style="margin: 5px 5px 5px 5px"/>
+ 										<div class="intro_subtitle"></div>
+									</div>
+								</div>
+							</div>
+ 						</div>
+					</div>
+				</div>		
 			</div>
 		</div>
 	</div>
-</div>
+
+
+           
+
+           
+             	<!-- Footer -->
+        <div class="section-4-container section-container section-container-gray-bg">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col section-4 section-description wow fadeInLeftBig">
+                        <center>
+                           
+                            <h3>Sennans Buss AB / Byggets Buss / Skogaby Buss / Unnaryds Buss</h3>
+  	                    <p> telefon: 035-661 10 - fax: 035-662 19 - epost: info@sennansbuss.se </p>
+                       </center>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+
 
  
 

@@ -254,6 +254,24 @@
         </div>
 </div>
 
+
+         
+             	<!-- Section 4 -->
+        <div class="section-4-container section-container section-container-gray-bg">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col section-4 section-description wow fadeInLeftBig">
+                        <center>
+                            <hr style="color:gray" />
+                            <h3>Sennans Buss AB / Byggets Buss / Skogaby Buss / Unnaryds Buss</h3>
+  	                    <p> telefon: 035-661 10 - fax: 035-662 19 - epost: info@sennansbuss.se </p>
+                       </center>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+
+
                     <!---- Scripts----->
         <script src="js/jquery-3.2.1.min.js"></script>
 <script src="styles/bootstrap4/popper.js"></script>
