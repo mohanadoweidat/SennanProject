@@ -67,7 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="font.css" />
     <Content Include="historik.aspx" />
     <Content Include="images\1%402x.jpg" />
     <Content Include="images\1.jpg" />
@@ -128,6 +127,15 @@
     <Content Include="images\why_2.svg" />
     <Content Include="images\why_3.jpg" />
     <Content Include="images\why_3.svg" />
+    <Content Include="images\imgv1.jpg" />
+    <Content Include="images\imgv2.jpg" />
+    <Content Include="images\imgv3.jpg" />
+    <Content Include="images\imgv4.jpg" />
+    <Content Include="images\imgv5.jpg" />
+    <Content Include="images\imgv6.jpg" />
+    <Content Include="images\imgv7.jpg" />
+    <Content Include="images\imgv8.jpg" />
+    <Content Include="images\imgv9.jpg" />
     <Content Include="index.aspx" />
     <Content Include="js\about.js" />
     <Content Include="js\contact.js" />
@@ -175,6 +183,7 @@
     <Content Include="styles\news.css" />
     <Content Include="styles\news_responsive.css" />
     <Content Include="styles\responsive.css" />
+    <Content Include="styles\Style.css" />
     <Content Include="varabussar.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -224,7 +233,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HindSiliguri-Regular.ttf" />
     <None Include="packages.config" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
