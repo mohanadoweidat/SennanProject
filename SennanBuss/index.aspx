@@ -28,8 +28,21 @@
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css"/>
 <link rel="stylesheet" type="text/css" href="styles/responsive.css"/>
      
- 
 
+
+
+
+
+    <link rel="stylesheet"  href="styles/Style.css" type="text/css" />
+
+
+    
+
+   
+ 
+       
+     
+     
 </head>
 <body>
     <form id="form1" runat="server">
@@ -54,22 +67,16 @@
         </div>
 
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="header_social d-flex flex-row align-items-center justify-content-start">
-			<ul class="d-flex flex-row align-items-start justify-content-start">
-				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
-	</header>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+               <li><a class="active" href="index.aspx">STARTSIDAN</a></li>
+				<li><a href="varabussar.aspx">VÅRA BUSSAR</a></li>
+                <li><a href="miljoochkvalitet.aspx">MILJÖ & KVALITET</a></li>
+				<li><a href="historik.aspx">HISTORIK</a></li>
+				<li><a href="konferensbuss.aspx">KONFERENSBUSS</a></li>
+				<li><a href="kontaktaoss.aspx">KONTAKTA OSS</a></li>
+            </ul>
 
 
             <ul class="nav navbar-nav navbar-right">

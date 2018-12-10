@@ -233,7 +233,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="design\fonts\AllertaStencil-Regular.ttf" />
     <None Include="packages.config" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
@@ -275,11 +274,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="design\css\" />
-    <Folder Include="scripts\" />
-    <Folder Include="styles\css\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
