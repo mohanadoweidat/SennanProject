@@ -114,6 +114,23 @@
 						</div>
 					</div>
 				</div>
+
+                				<div class="owl-item">
+
+					<div class="background_image" style="background-image:url(images/around.svg)">
+ 					</div>
+					<div class="home_slider_content_container">
+						<div class="container">
+							<div class="row">
+								<div class="col">
+									<div class="home_slider_content">
+										<div class="home_title"><h3 style="color:black">Hello</h3></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
   			</div>
            
             <div class="home_page_nav">
