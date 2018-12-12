@@ -34,22 +34,24 @@
 }
 
 .navbar a {
-    transition: 1s;
+    transition: 1s !important;
+     
 }
 
 .navbar a:hover{
     color: black !important;
     background-color: white !important;
-    border-radius: 20px;
-    transition: 0.5s;
+    border-radius: 20px !important;
+    transition: 0.5s !important;
 }
 .navbar li:hover{
-    opacity:0.5;
-    margin:0 10px 0 10px;
-    transition: 1s;
+    opacity:0.5 !important;
+    margin:0 10px 0 10px !important;
+    transition: 1s !important;
 }
 
 .navbar li{
     transition: 1s;
 }
+ 
 
