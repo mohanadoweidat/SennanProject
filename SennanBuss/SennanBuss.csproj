@@ -237,6 +237,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\sennan_certifikat_2017.pdf" />
+    <Content Include="Data\skogaby_buss_certifikat_2017.pdf" />
+    <Content Include="Data\byggets_buss_certifikat_2017.pdf" />
     <None Include="packages.config" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
