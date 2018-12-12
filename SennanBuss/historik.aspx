@@ -59,10 +59,10 @@
         <!-- Collection of nav links and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-               <li><a class="active" href="index.aspx">STARTSIDAN</a></li>
+               <li><a href="index.aspx">STARTSIDAN</a></li>
 				<li><a href="varabussar.aspx">VÅRA BUSSAR</a></li>
                 <li><a href="miljoochkvalitet.aspx">MILJÖ & KVALITET</a></li>
-				<li><a href="historik.aspx">HISTORIK</a></li>
+				<li><a class="active" href="historik.aspx">HISTORIK</a></li>
 				<li><a href="konferensbuss.aspx">KONFERENSBUSS</a></li>
 				<li><a href="kontaktaoss.aspx">KONTAKTA OSS</a></li>
             </ul>
@@ -75,8 +75,7 @@
         </div>
     </div>
 </nav>  
-                    
-          <!--/End navbar-->
+         <!--/End navbar-->
 
      
 
@@ -109,6 +108,110 @@
  		</div>
 	</div>
 </div>
+        <!-- /End Slider-->
+
+
+        <!-- Left section-->
+
+                 <div class="about">
+ 		<div class="container">
+ 			<div class="row">
+				<div class="col text-left">
+					<div class="section_subtitle"> </div>
+					<div class="section_title">
+                        <h3>
+                            Historik - en bussresa genom tiden.
+                         </h3>
+                 </div>
+				</div>
+			</div>
+ 		</div>
+
+<br />
+     
+                     <div class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					 
+				</div>
+			</div>
+			<div class="row about_row">
+				<div class="col-lg-6">
+					<div class="about_content">
+						<div class="text_highlight"> </div>
+						<div class="about_text">
+							<p> 1923 bildade Bröderna Andersson, Anderssons Busstrafik Gräsås.</p>
+						</div>
+						 
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="about_image"><img src="images/about_1.jpg" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</div>
+        
+
+         
+
+	 
+  	  	<!-- Footer -->
+        <div class="section-4-container section-container section-container-gray-bg">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col section-4 section-description wow fadeInLeftBig">
+                        <center>
+                            <h3>Sennans Buss AB / Byggets Buss / Skogaby Buss / Unnaryds Buss</h3>
+  	                    <p> telefon: 035-661 10 - fax: 035-662 19 - epost: info@sennansbuss.se </p>
+                       </center>
+	                </div>
+	            </div>
+	        </div>
+        </div>
+        
+        <!-- Footer -->
+        
+
+
+
+        
+  
+         
+        <!--- Site scripts--->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="styles/bootstrap4/popper.js"></script>
+        <script src="styles/bootstrap4/bootstrap.min.js"></script>
+        <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+        <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+        <script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
+        <script src="plugins/easing/easing.js"></script>
+        <script src="plugins/parallax-js-master/parallax.min.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/main.js"></script>
+       
+           
+<!-- Navbar script (Scroll)-->
+  <script type="text/javascript">
+    //Change pos/background/padding/add shadow on nav when scroll event happens 
+$(function(){
+	var navbar = $('.navbar');
+	
+	$(window).scroll(function(){
+		if($(window).scrollTop() <= 40){
+			navbar.removeClass('navbar-scroll');
+		} else {
+			navbar.addClass('navbar-scroll');
+		}
+	});
+});
+</script>
+
+            
+     	</div>
+
+
 
 	 
 
@@ -117,16 +220,7 @@
 
 
 
-        <!---- Scripts----->
-        <script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
-<script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/custom.js"></script>
+ 
        
     </form>
 </body>
