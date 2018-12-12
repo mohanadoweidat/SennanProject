@@ -104,7 +104,6 @@
 						</div>
 					</div>
 				</div>
-
                 <div class="owl-item">
 					<div class="background_image" style="background-image:url(images/around.svg)">
  					</div>
