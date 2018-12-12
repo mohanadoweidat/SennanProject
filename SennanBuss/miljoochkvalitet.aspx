@@ -145,10 +145,10 @@
           </div>
  </div>
 
-                <!--- Card<--->
+                <!--- Card--->
 
         <div class="intro">
-		<div class="intro_background" style="background-image:url(images/intro.png)"></div>
+		<div class="intro_background" style="background-image:url(images/imgv1.jpg)"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -157,43 +157,25 @@
 
 							<!-- Intro Item -->
 							<div class="col-lg-4 intro_col"  >
-                                <center>
-                              <div class="intro_title"></div>
-                                     </center>
  								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
- 									<div class="intro_icon"></div>
 									<div class="intro_content">
- 										<div class="intro_subtitle">  
                                              <img src="images/sennan_certifikat_2017.jpg" alt="rbuss"  class="img-responsive" style="margin: 5px 5px 5px 5px"/>
- 										</div>
  									</div>
 								</div>
  							</div>
 
-                            <!-- Intro Item -->
                               <div class="col-lg-4 intro_col" >
-                                <center>
-                             <div class="intro_title"></div>
-                                     </center>
  								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
-                                    <div class="intro_icon"></div>
  									<div class="intro_content">
 										  <img src="images/skogaby_buss_certifikat_2017.jpg" alt="rbuss"  class="img-responsive" style="margin: 5px 5px 5px 5px"/>
-										<div class="intro_subtitle"></div>
 									</div>
 								</div>
 							</div>
 
-                          <!-- Intro Item -->
 						  <div class="col-lg-4 intro_col" >
-                                <center>
-                             <div class="intro_title"></div>
-                                     </center>
  								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
-                                    <div class="intro_icon"></div>
  									<div class="intro_content">
-          <img src="images/byggets_buss_certifikat_2017.jpg" alt="rbuss"  class="img-responsive" style="margin: 5px 5px 5px 5px"/>
- 										<div class="intro_subtitle"></div>
+          <img src="images/byggets_buss_certifikat_2017.jpg" alt="rbuss"  class="img-responsive"/>
 									</div>
 								</div>
 							</div>

@@ -29,6 +29,7 @@
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css"/>
 <link rel="stylesheet" type="text/css" href="styles/responsive.css"/>
     <link rel="stylesheet"  href="styles/Style.css" type="text/css" />
+    <link rel="stylesheet" href="styles/main.css"/>
  
        
      
@@ -86,11 +87,10 @@
  		<!-- Home Slider -->
 		<div class="home_slider_container">
 			<div class="owl-carousel owl-theme home_slider">
-				
+
 				<!-- Slide -->
 				<div class="owl-item">
-
-					<div class="background_image" style="background-image:url(images/crap.jpg)">
+					<div class="background_image" style="background-image:url(images/slider/slider_1.jpg)">
  					</div>
 					<div class="home_slider_content_container">
 						<div class="container">
@@ -105,7 +105,7 @@
 					</div>
 				</div>
                 <div class="owl-item">
-					<div class="background_image" style="background-image:url(images/around.svg)">
+					<div class="background_image" style="background-image:url(images/slider/slider_1.jpg)">
  					</div>
 					<div class="home_slider_content_container">
 						<div class="container">
@@ -122,7 +122,9 @@
   			</div>
            
             <div class="home_page_nav">
-
+                <div class="swap">
+                <p>Hello</p>
+            </div>
 			</div>
  		</div>
 
