@@ -28,12 +28,7 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css"/>
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css"/>
 <link rel="stylesheet" type="text/css" href="styles/responsive.css"/>
- <link rel="stylesheet" href="styles/Style.css" />
-
-
-    
-
-   
+    <link rel="stylesheet"  href="styles/Style.css" type="text/css" />
  
        
      
@@ -110,8 +105,7 @@
 					</div>
 				</div>
 
-                				<div class="owl-item">
-
+                <div class="owl-item">
 					<div class="background_image" style="background-image:url(images/around.svg)">
  					</div>
 					<div class="home_slider_content_container">
@@ -300,6 +294,7 @@
         <script src="plugins/easing/easing.js"></script>
         <script src="plugins/parallax-js-master/parallax.min.js"></script>
         <script src="js/custom.js"></script>
+        <script src="js/main.js"></script>
        
            
 
