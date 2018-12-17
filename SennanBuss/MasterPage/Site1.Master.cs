@@ -5,14 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace SennanBuss
+namespace SennanBuss.MasterPage
 {
-    public partial class historik : System.Web.UI.Page
+    public partial class Site1 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Username"] == null)
-                Response.Redirect("Accounts/Login.aspx");
+
         }
     }
 }

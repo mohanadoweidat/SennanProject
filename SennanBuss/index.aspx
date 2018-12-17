@@ -11,6 +11,9 @@
     
     <!-- Bootstrap-->
 
+    <link rel="stylesheet" href="sweetalert2.css" />
+    <script src="sweetalert2.all.min.js"></script>
+
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 
@@ -30,7 +33,8 @@
 <link rel="stylesheet" type="text/css" href="styles/responsive.css"/>
     <link rel="stylesheet"  href="styles/Style.css" type="text/css" />
     <link rel="stylesheet" href="styles/main.css"/>
- 
+
+    
        
      
      
@@ -71,8 +75,28 @@
 
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Logga in</a></li>
-                <li><a href="#">Skapa konto</a></li>
+              
+               
+                <% 
+
+
+                    if (Session["Username"] == null)
+                        Response.Write("<li><a href='../Accounts/Signup.aspx'> Skapa ett konto</a></li>" + "<li><a href='../Accounts/Login.aspx'>Logga In</a></li>" );
+                    else
+                    {
+                        
+                        Response.Write("<li><a href='../Accounts/Login.aspx'> Logga ut</a></li>");
+
+                    }
+                     
+
+
+                 %>
+
+            
+                
+               
+            
             </ul>
         </div>
     </div>
@@ -176,8 +200,8 @@
 						</div>
 						
                         
-                        <img src="images/1.jpg" class="img-circle" />
-                        <img src="images/2.jpg" class="img-circle" />
+                        <img src="../images/1.jpg" class="img-circle" />
+                        <img src="../images/2.jpg" class="img-circle" />
 
 					</div>
 				</div>
@@ -222,7 +246,7 @@
  								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
  									<div class="intro_icon"></div>
 									<div class="intro_content">
- 										<div class="intro_subtitle"> <img src="images/c1.jpg" alt="">
+ 										<div class="intro_subtitle"> <img src="images/c1.jpg" alt=""/>
  										</div>
  									</div>
 								</div>
@@ -276,13 +300,12 @@
 	            </div>
 	        </div>
         </div>
+ 
         
-        <!-- Footer -->
-        
 
 
 
-        <!-- Footer script -->
+       
   
          
         <!--- Site scripts--->
@@ -313,6 +336,22 @@ $(function(){
 	});
 });
 </script>
+
+
+             
+    <!-- Error logg in Alredy exist Email and name Both-->
+        <script type="text/javascript" lang="ja">
+
+            function Loginerror() {
+                swal({
+         type: 'error',
+         title: 'Oops...',
+           text:"Du har angett fel Användarnamn eller Lösenord!"
+  
+})
+            }
+            
+        </script>
 
             
      	</div>
