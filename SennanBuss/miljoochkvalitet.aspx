@@ -30,7 +30,8 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css"/>
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css"/>
 <link rel="stylesheet" type="text/css" href="styles/responsive.css"/>
-    <link rel="stylesheet"  href="styles/Style.css" type="text/css" />
+    <link rel="stylesheet" href="styles/Style.css" type="text/css"/>
+    <link rel="stylesheet" href="styles/pages/quality.css" type="text/css"/>
      
  
 </head>
@@ -150,39 +151,20 @@
         <div class="intro">
 		<div class="intro_background" style="background-image:url(images/imgv1.jpg)"></div>
 		<div class="container">
-			<div class="row">
-				<div class="col">
 					<div class="intro_container">
-						<div class="row">
-
-							<!-- Intro Item -->
-							<div class="col-lg-4 intro_col"  >
- 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
-									<div class="intro_content">
-                                             <img src="images/sennan_certifikat_2017.jpg" alt="rbuss"  class="img-responsive" style="margin: 5px 5px 5px 5px"/>
- 									</div>
-								</div>
+						<div class="row certificate">
+							<div class="col-lg-4">
+                               <img src="images/sennan_certifikat_2017.jpg" alt="rbuss" class="img-responsive"/>
  							</div>
-
-                              <div class="col-lg-4 intro_col" >
- 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
- 									<div class="intro_content">
-										  <img src="images/skogaby_buss_certifikat_2017.jpg" alt="rbuss"  class="img-responsive" style="margin: 5px 5px 5px 5px"/>
-									</div>
-								</div>
+                            <div class="col-lg-4">
+							   <img src="images/skogaby_buss_certifikat_2017.jpg" alt="rbuss" class="img-responsive"/>
 							</div>
 
-						  <div class="col-lg-4 intro_col" >
- 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
- 									<div class="intro_content">
-          <img src="images/byggets_buss_certifikat_2017.jpg" alt="rbuss"  class="img-responsive"/>
-									</div>
-								</div>
+						  <div class="col-lg-4">
+                                <img src="images/byggets_buss_certifikat_2017.jpg" alt="rbuss" class="img-responsive"/>
 							</div>
  						</div>
-					</div>
-				</div>		
-			</div>
+					</div>	
 		</div>
 	</div>
 
