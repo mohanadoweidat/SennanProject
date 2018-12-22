@@ -134,6 +134,7 @@
     <Content Include="js\custom.js" />
     <Content Include="js\destinations.js" />
     <Content Include="js\elements.js" />
+    <Content Include="js\forms\registerJ.js" />
     <Content Include="js\jquery-3.2.1.min.js" />
     <Content Include="js\main.js" />
     <Content Include="js\news.js" />
@@ -176,6 +177,7 @@
     <Content Include="styles\main_styles.css" />
     <Content Include="styles\news.css" />
     <Content Include="styles\news_responsive.css" />
+    <Content Include="styles\pages\forms\register.css" />
     <Content Include="styles\pages\quality.css" />
     <Content Include="styles\responsive.css" />
     <Content Include="styles\Style.css" />
@@ -208,7 +210,15 @@
     <Compile Include="Accounts\Verfiymail.aspx.designer.cs">
       <DependentUpon>Verfiymail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="bas\master.Master.cs">
+      <DependentUpon>master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bas\master.Master.designer.cs">
+      <DependentUpon>master.Master</DependentUpon>
+    </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
+    <Compile Include="Database\DBActions.cs" />
     <Compile Include="historik.aspx.cs">
       <DependentUpon>historik.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -265,6 +275,7 @@
     <Content Include="Data\skogaby_buss_certifikat_2017.pdf" />
     <Content Include="Data\byggets_buss_certifikat_2017.pdf" />
     <Content Include="MasterPage\Site1.Master" />
+    <Content Include="bas\master.Master" />
     <None Include="packages.config" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />

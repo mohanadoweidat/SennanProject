@@ -1,11 +1,4 @@
-﻿ 
- 
-
-
-
-
-
-/* Nav / Navbar Styles
+﻿/* Nav / Navbar Styles
 ===================================*/
 .navbar {
     background: rgba(105,105,105,0.7);
@@ -35,7 +28,6 @@
 
 .navbar a {
     transition: 1s !important;
-     
 }
 
 .navbar a:hover{
@@ -44,7 +36,7 @@
     border-radius: 20px !important;
     transition: 0.5s !important;
 }
-.navbar li:hover{
+.navbar li a:hover{
     opacity:0.5 !important;
     margin:0 10px 0 10px !important;
     transition: 1s !important;
@@ -54,4 +46,24 @@
     transition: 1s;
 }
  
+#logged {
+    color: white;
+}
 
+#logged_ {
+    color: lightgoldenrodyellow;
+    font-weight: bolder;
+}
+
+.alert.alert-server {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.alert button {
+    transition: .5s;
+}
+.alert button:hover {
+    color: red;
+    transition: .5s;
+}

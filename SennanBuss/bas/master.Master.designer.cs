@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SennanBuss.MasterPage {
+namespace SennanBuss.bas {
     
     
-    public partial class Site1 {
+    public partial class master {
         
         /// <summary>
         /// head control.
@@ -29,6 +29,15 @@ namespace SennanBuss.MasterPage {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// Btn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

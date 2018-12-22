@@ -18,8 +18,9 @@ namespace SennanBuss.Accounts
         Database.DatabaseConnection db = new Database.DatabaseConnection();
         bool Nameexist = false;
         bool Emailexist = false;
-        static string Kod;
-
+        private string Kod;
+        private static Random r = new Random();
+        private readonly string chars = "abcdefghijklmnopqrstuvwxyz";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -37,7 +38,6 @@ namespace SennanBuss.Accounts
                         sqlda.SelectCommand.Parameters.AddWithValue("@Id", Id);
                         DataTable dtbl = new DataTable();
                         sqlda.Fill(dtbl);
-
                         hfId.Value = Id.ToString();
                         usrtxtbox.Text = dtbl.Rows[0][1].ToString();
                         ematxtbox.Text = dtbl.Rows[0][2].ToString();
@@ -50,21 +50,14 @@ namespace SennanBuss.Accounts
             }
         }
 
-
-
         protected void signupbtn_Click(object sender, EventArgs e)
         {
             pswtxtbox.Text = EncryptPassword(pswtxtbox.Text);
             cpwdtxtbox.Text = EncryptPassword(cpwdtxtbox.Text);
             if (usrtxtbox.Text == "" || ematxtbox.Text == "" || pswtxtbox.Text == "")
                 ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "error()", true);
-
-
             else if (pswtxtbox.Text != cpwdtxtbox.Text)
                 ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Passerror()", true);
-
-
-
             else
             {
                 SqlConnection sql = new SqlConnection(db.con);
@@ -85,28 +78,21 @@ namespace SennanBuss.Accounts
                         Emailexist = true;
                         break;
                     }
-
-
                 }
                 if (Nameexist == true)
                 {
                     ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Nameerror()", true);
-
                 }
                 else if (Emailexist == true)
                 {
                     ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Emailerror()", true);
-
                 }
-
                 else
                 {
-
-
                     using (SqlConnection sqlcon = new SqlConnection(db.con))
                     {
                         Random rand = new Random();
-                        Kod = rand.Next(1001,9999).ToString();
+                        Kod = _code();
                         sqlcon.Open();
                         SqlCommand sqlCmd = new SqlCommand("AccountsAddorEdit", sqlcon);
                         sqlCmd.CommandType = CommandType.StoredProcedure;
@@ -118,29 +104,20 @@ namespace SennanBuss.Accounts
                         sqlCmd.Parameters.AddWithValue("@Status", "Obekräftat");
                         sqlCmd.Parameters.AddWithValue("@Kod", Kod);
                         sqlCmd.ExecuteNonQuery();
-                       
                         Thread.Sleep(TimeSpan.FromSeconds(2));
                         Sendcode();
                         //Clear();
                         Response.Redirect("../Accounts/Verfiymail.aspx?Epost=" + ematxtbox.Text);
                        // ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "success()", true);
-
-
                     } 
                 }
-
-
-
             }
-
-
         }
 
         void Clear()
         {
             usrtxtbox.Text = ematxtbox.Text = pswtxtbox.Text = cpwdtxtbox.Text = "";
             hfId.Value = "";
-
         }
 
         private void Sendcode()
@@ -163,11 +140,9 @@ namespace SennanBuss.Accounts
             }
             catch  
             {
-
                 throw;
             }
         }
-
 
         //Enkrypt Password
         public string EncryptPassword(string pass)
@@ -177,15 +152,21 @@ namespace SennanBuss.Accounts
             return enkryptedpassword;
         }
 
-
-
         //Dekrypt Password
         private string dekryptPassword(string pass)
         {
             byte[] bytes = Convert.FromBase64String(pass);
             string dekryptpassword = System.Text.Encoding.Unicode.GetString(bytes);
             return dekryptpassword;
+        }
 
+        private string _code()
+        {
+            var ret = chars.ElementAt(r.Next(chars.Length))+"";
+            ret += r.Next(100, 999).ToString();
+            ret += chars.ElementAt(r.Next(chars.Length));
+            ret += chars.ElementAt(r.Next(chars.Length));
+            return ret;
         }
 
         protected void loginbtn_Click(object sender, EventArgs e)

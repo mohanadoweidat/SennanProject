@@ -1,10 +1,17 @@
-﻿$(document).ready(function () {
+﻿
 
-    $(".nitem").on('mouseover', function () {
-        this.innerHTML = ">" + this.innerHTML;
-    });
-
-    $(".nitem").on('mouseout', function () {
-        this.innerHTML = this.innerHTML.substr(4, this.innerHTML.length-1);
+$(function () {
+    var navbar = $('.navbar');
+    $(window).scroll(function () {
+        if ($(window).scrollTop() <= 40) {
+            navbar.removeClass('navbar-scroll');
+        } else {
+            navbar.addClass('navbar-scroll');
+        }
     });
 });
+
+function Logout() {
+    var button = document.getElementById('Btn');
+    button.click();
+}

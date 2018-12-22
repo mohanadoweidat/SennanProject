@@ -14,9 +14,13 @@ namespace SennanBuss.Accounts
     {
         Database.DatabaseConnection db = new Database.DatabaseConnection();
         Signup sg = new Signup();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["Username"] = null;
+            if (Session["Username"] != null)
+            {
+                Response.Redirect("../index.aspx");
+            }
         }
 
         protected void signupbtn_Click(object sender, EventArgs e)
