@@ -69,9 +69,24 @@
             </ul>
 
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Logga in</a></li>
-                <li><a href="#">Skapa konto</a></li>
+             <ul class="nav navbar-nav navbar-right">
+                    
+                <% 
+
+
+                    if (Session["Username"] == null)
+                        Response.Write("<li><a href='../Accounts/Signup.aspx'> Skapa ett konto</a></li>" + "<li><a href='../Accounts/Login.aspx'>Logga In</a></li>" );
+                    else
+                    {
+                        
+                        Response.Write("<li><a href='../Accounts/Login.aspx'> Logga ut</a></li>");
+
+                    }
+                     
+
+
+                 %>
+
             </ul>
         </div>
     </div>
@@ -91,7 +106,7 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url(images/crap.jpg)"></div>
+							<div class="background_image" style="background-image:url(images/slider/slider_1.jpg)"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -130,6 +145,7 @@
                                                kvalitetscertifierade enligt ISO 9001:2000 sedan mars 2008.
                             </div>
                         <br />
+                        <br />
 
                         <h4 style="color:black">Säkerhet</h4>
 
@@ -152,19 +168,36 @@
 		<div class="intro_background" style="background-image:url(images/imgv1.jpg)"></div>
 		<div class="container">
 					<div class="intro_container">
-						<div class="row certificate">
-							<div class="col-lg-4">
-                               <img src="images/sennan_certifikat_2017.jpg" alt="rbuss" class="img-responsive"/>
+						<div class="row">
+
+							<!-- Intro Item -->
+							<div class="col-lg-4 intro_col"  >
+ 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+									<div class="intro_content">
+                                            <a href="Data/sennan_certifikat_2017.pdf"><img src="images/sennan_certifikat_2017.jpg" alt="rbuss"  class="img-responsive" style="margin: 5px 5px 5px 5px"/></a> 
+ 									</div>
+								</div>
  							</div>
-                            <div class="col-lg-4">
-							   <img src="images/skogaby_buss_certifikat_2017.jpg" alt="rbuss" class="img-responsive"/>
+
+                              <div class="col-lg-4 intro_col" >
+ 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+ 									<div class="intro_content">
+										 <a href="Data/skogaby_buss_certifikat_2017.pdf"> <img src="images/skogaby_buss_certifikat_2017.jpg" alt="rbuss"  class="img-responsive" style="margin: 5px 5px 5px 5px"/></a>
+									</div>
+								</div>
 							</div>
 
-						  <div class="col-lg-4">
-                                <img src="images/byggets_buss_certifikat_2017.jpg" alt="rbuss" class="img-responsive"/>
+						  <div class="col-lg-4 intro_col" >
+ 								<div class="intro_item d-flex flex-row align-items-end justify-content-start">
+ 									<div class="intro_content">
+                                      <a href="Data/byggets_buss_certifikat_2017.pdf"> <img src="images/byggets_buss_certifikat_2017.jpg" alt="rbuss"  class="img-responsive"/></a>
+									</div>
+								</div>
 							</div>
  						</div>
-					</div>	
+					</div>
+				</div>		
+			</div>
 		</div>
 	</div>
 
@@ -205,6 +238,24 @@
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/main.js"></script>
+
+
+             
+<script type="text/javascript">
+    //Change pos/background/padding/add shadow on nav when scroll event happens 
+$(function(){
+	var navbar = $('.navbar');
+	
+	$(window).scroll(function(){
+		if($(window).scrollTop() <= 40){
+			navbar.removeClass('navbar-scroll');
+		} else {
+			navbar.addClass('navbar-scroll');
+		}
+	});
+});
+</script>
     </form>
 </body>
 </html>

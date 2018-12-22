@@ -68,9 +68,24 @@
             </ul>
 
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Logga in</a></li>
-                <li><a href="#">Skapa konto</a></li>
+             <ul class="nav navbar-nav navbar-right">
+                    
+                <% 
+
+
+                    if (Session["Username"] == null)
+                        Response.Write("<li><a href='../Accounts/Signup.aspx'> Skapa ett konto</a></li>" + "<li><a href='../Accounts/Login.aspx'>Logga In</a></li>" );
+                    else
+                    {
+                        
+                        Response.Write("<li><a href='../Accounts/Login.aspx'> Logga ut</a></li>");
+
+                    }
+                     
+
+
+                 %>
+
             </ul>
         </div>
     </div>
@@ -89,7 +104,7 @@
 				
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url(images/crap.jpg)"></div>
+				<div class="background_image" style="background-image:url(images/slider/slider_1.jpg)"></div>
 					<div class="home_slider_content_container">
 						<div class="container">
 							<div class="row">
@@ -132,6 +147,24 @@
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/main.js"></script>
+
+
+             
+<script type="text/javascript">
+    //Change pos/background/padding/add shadow on nav when scroll event happens 
+$(function(){
+	var navbar = $('.navbar');
+	
+	$(window).scroll(function(){
+		if($(window).scrollTop() <= 40){
+			navbar.removeClass('navbar-scroll');
+		} else {
+			navbar.addClass('navbar-scroll');
+		}
+	});
+});
+</script>
        
     </form>
 </body>
