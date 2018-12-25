@@ -37,34 +37,9 @@ max-width: none !important;
    
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
          <div class="super_container">
-        <!-- Home -->
         <!--  Image Background -->
-
-        <div class="home">
-		
-		<!-- Home Slider -->
-		<div class="home_slider_container">
-			<div class="owl-carousel owl-theme home_slider">
-				
-				<!-- Slide -->
-				<div class="owl-item">
-							<div class="background_image" style="background-image:url(images/slider/slider_1.jpg)"></div>
-					<div class="home_slider_content_container">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_slider_content">
-										<div class="home_title"><h3 style="color:white">Let us take you away</h3></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-  			</div>
- 		</div>
+        <div class="home no-slider">
 	</div>
-</div>
         <br />
         <!-- Video-->
          <div class="embedresize">
@@ -125,4 +100,5 @@ max-width: none !important;
 		</div>
  <br />
      <hr style="margin:0 80px 0 80px" />
+            </div>
 </asp:Content>

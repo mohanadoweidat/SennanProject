@@ -4,36 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
          <div class="super_container">
-        <!--  Image Background -->
-	<div class="home">
-		<!-- Home Slider -->
-		<div class="home_slider_container">
-			<div class="owl-carousel owl-theme home_slider">
-				
-				<!-- Slide -->
-				<div class="owl-item">
-				<div class="background_image" style="background-image:url(images/slider/slider_1.jpg)"></div>
-					<div class="home_slider_content_container">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_slider_content">
-										<div class="home_title"><h3 style="color:white">Let us take you away</h3></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-  			</div>
- 		</div>
-	</div>
-</div>
-        <!-- /End Slider-->
-
-
+	<div class="home no-slider"></div>
         <!-- Left section-->
-
                  <div class="about">
  		<div class="container">
  			<div class="row">
@@ -47,14 +19,11 @@
 				</div>
 			</div>
  		</div>
-
 <br />
-     
                      <div class="about">
 		<div class="container">
 			<div class="row">
-				<div class="col text-center">
-					 
+				<div class="col text-center">			 
 				</div>
 			</div>
 			<div class="row about_row">
@@ -64,7 +33,6 @@
 						<div class="about_text">
 							<p> 1923 bildade Bröderna Andersson, Anderssons Busstrafik Gräsås.</p>
 						</div>
-						 
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -73,18 +41,12 @@
 			</div>
 		</div>
 	</div>
-
-
-
-
-
                      <br />
-     
                      <div class="about">
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					 
+		
 				</div>
 			</div>
 			<div class="row about_row">
@@ -103,8 +65,6 @@
 			</div>
 		</div>
 	</div>
-
-
                      <br />
                      <div class="about">
 		<div class="container">
@@ -129,9 +89,6 @@
 			</div>
 		</div>
 	</div>
-        
-        
-
              <br />
                      <div class="about">
 		<div class="container">
@@ -414,6 +371,6 @@ I november 1983 slutade Kenneth på Sennans Buss och blev utlöst ur firman i ap
 			</div>
 		</div>
 	</div>
-          
+          </div>
      	</div>
 </asp:Content>

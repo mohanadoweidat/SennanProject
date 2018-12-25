@@ -3,7 +3,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
          <div class="super_container">
 	<!-- Home -->
-	<div class="no-slider">
+	<div class="home no-slider">
 	</div>
        
         
