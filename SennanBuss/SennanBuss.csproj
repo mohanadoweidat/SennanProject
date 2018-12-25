@@ -247,13 +247,6 @@
     <Compile Include="kontaktaoss.aspx.designer.cs">
       <DependentUpon>kontaktaoss.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MasterPage\Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
     <Compile Include="miljoochkvalitet.aspx.cs">
       <DependentUpon>miljoochkvalitet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -274,7 +267,6 @@
     <Content Include="Data\sennan_certifikat_2017.pdf" />
     <Content Include="Data\skogaby_buss_certifikat_2017.pdf" />
     <Content Include="Data\byggets_buss_certifikat_2017.pdf" />
-    <Content Include="MasterPage\Site1.Master" />
     <Content Include="bas\master.Master" />
     <None Include="packages.config" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
