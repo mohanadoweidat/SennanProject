@@ -24,6 +24,11 @@ namespace SennanBuss.Accounts
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Username"] != null)
+            {
+                Response.Redirect("../index.aspx");
+                return;
+            }
             if (!IsPostBack)
             {
                 Clear();

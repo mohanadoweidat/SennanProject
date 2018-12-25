@@ -28,20 +28,14 @@ namespace SennanBuss.Accounts
             Response.Redirect("../Accounts/Signup.aspx");
         }
 
-
-
         protected void loginbtn_Click(object sender, EventArgs e)
         {
-
-            String Username = usrtxtbox.Text.ToString();
-            String Password = pswtxtbox.Text;
-
+            string Username = usrtxtbox.Text.ToString();
+            string Password = pswtxtbox.Text;
             SqlConnection connection = new SqlConnection(db.con);
             connection.Open();
-
             string passwords = sg.EncryptPassword(Password);
             String query = "SELECT Username, Password FROM Accounts WHERE (Username = '" + Username + "') AND (Password = '" + passwords + "');";
-
             SqlCommand cmd = new SqlCommand(query, connection);
             SqlDataAdapter sds = new SqlDataAdapter();
             DataSet ds = new DataSet();
@@ -54,19 +48,13 @@ namespace SennanBuss.Accounts
                 {
                     Session["Username"] = usrtxtbox.Text.Trim();
                     Response.Redirect("../index.aspx");
-                     
                 }
-
-
             }
             else
             {
                 ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Loginerror()", true);
                 clear();
-
-
             }
-
             connection.Close();
         }
         void clear()

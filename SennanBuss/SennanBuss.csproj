@@ -93,7 +93,7 @@
   <ItemGroup>
     <Content Include="Accounts\Login.aspx" />
     <Content Include="Accounts\Signup.aspx" />
-    <Content Include="Accounts\Verfiymail.aspx" />
+    <Content Include="Accounts\Verifymail.aspx" />
     <Content Include="historik.aspx" />
     <Content Include="images\1.jpg" />
     <Content Include="images\2.jpg" />
@@ -203,12 +203,12 @@
     <Compile Include="Accounts\Signup.aspx.designer.cs">
       <DependentUpon>Signup.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Accounts\Verfiymail.aspx.cs">
-      <DependentUpon>Verfiymail.aspx</DependentUpon>
+    <Compile Include="Accounts\Verifymail.aspx.cs">
+      <DependentUpon>Verifymail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Accounts\Verfiymail.aspx.designer.cs">
-      <DependentUpon>Verfiymail.aspx</DependentUpon>
+    <Compile Include="Accounts\Verifymail.aspx.designer.cs">
+      <DependentUpon>Verifymail.aspx</DependentUpon>
     </Compile>
     <Compile Include="bas\master.Master.cs">
       <DependentUpon>master.Master</DependentUpon>

@@ -1,14 +1,8 @@
 ﻿<%@ Page Title="Startsidan" Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SennanBuss.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <!-- Metas tags-->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
          <div class="super_container">
         <!--  Image Background -->
 	<div class="home">
@@ -47,11 +41,6 @@
 					</div>
 				</div>
   			</div>
-            <div class="home_page_nav">
-                <div class="swap">
-                <p>Hello</p>
-            </div>
-			</div>
  		</div>
 	</div>
            
@@ -63,7 +52,7 @@
 					<div class="section_subtitle"> </div>
 					<div class="section_title">
                         <h4>
-                            Gör som hallänningar gör varje dag,åk med Sennans Buss!
+                            Gör som hallänningar gör varje dag, åk med Sennans Buss!
                          </h4>
                  </div>
 				</div>
@@ -160,7 +149,6 @@
 		</div>
 	</div> 
      	</div>
-
 
          </div>
 </asp:Content>

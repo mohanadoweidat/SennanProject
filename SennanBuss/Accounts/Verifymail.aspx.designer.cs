@@ -10,7 +10,7 @@
 namespace SennanBuss.Accounts {
     
     
-    public partial class Verfiymail {
+    public partial class Verifymail {
         
         /// <summary>
         /// Label1 control.

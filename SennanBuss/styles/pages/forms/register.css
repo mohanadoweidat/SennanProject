@@ -4,13 +4,14 @@ body {
     background-image: url(/images/slider/slider_1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    padding-top: 120px;
 }
 
 .login {
     background: #eceeee;
     border: 1px solid #42464b;
     border-radius: 6px;
-    height: 450px;
+    height: 500px;
     margin: 20px auto 0;
     width: 298px;
 }
@@ -31,7 +32,6 @@ body {
     }
 
 input[type="password"], input[type="text"], input[type="email"] {
-    background: url('http://i.minus.com/ibhqW9Buanohx2.png') center left no-repeat, linear-gradient(top, #d6d7d7, #dee0e0);
     border: 1px solid #a1a3a3;
     border-radius: 4px;
     box-shadow: 0 1px #fff;
@@ -115,13 +115,19 @@ input[type="submit"] {
     position: relative;
     cursor: pointer;
     border: none;
-    background-color: #37a69b;
-    background-image: linear-gradient(top,#3db0a6,#3111);
+    background-color: #31b69b;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
     box-shadow: inset 0px 1px 0px #2ab7ec, 0px 5px 0px 0px #497a78, 0px 10px 5px #999;
+    transition: .5s;
+}
+
+input[type=submit]:hover {
+    transition: .5s;
+    background-color: #299b84;
+    border-radius: 20px;
 }
 
 .shadow {
@@ -139,3 +145,34 @@ input[type="submit"]:active {
     top: 3px;
     box-shadow: inset 0px 1px 0px #2ab7ec, 0px 2px 0px 0px #31524d, 0px 5px 3px #999;
 }
+
+
+#info-main {
+    margin-top: 20px;
+
+}
+
+.info {
+    display: inline-block;
+}
+
+.speech-bubble {
+    position: relative;
+    background: #c8f9cf;
+    border-radius: .4em;
+}
+
+    .speech-bubble:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border: 19px solid transparent;
+        border-right-color: #c8f9cf;
+        border-left: 0;
+        border-bottom: 0;
+        margin-top: -9.5px;
+        margin-left: -19px;
+    }

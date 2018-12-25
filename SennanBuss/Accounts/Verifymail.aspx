@@ -1,21 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Site1.Master" AutoEventWireup="true" CodeBehind="Verfiymail.aspx.cs" Inherits="SennanBuss.Accounts.Verfiymail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="Verifymail.aspx.cs" Inherits="SennanBuss.Accounts.Verifymail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-
-
     <style type="text/css">
         .auto-style1 {
             width: 599px
         }
     </style>
-
-
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-
-
 
     <asp:Label ID="Label1" runat="server" Font-Size="XX-Large" Text="Bekräfta din Email"></asp:Label>
     <br />

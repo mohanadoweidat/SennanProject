@@ -10,7 +10,7 @@ using System.Threading;
 
 namespace SennanBuss.Accounts
 {
-    public partial class Verfiymail : System.Web.UI.Page
+    public partial class Verifymail : System.Web.UI.Page
     {
         Database.DatabaseConnection db = new Database.DatabaseConnection();
         protected void Page_Load(object sender, EventArgs e)
