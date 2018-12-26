@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="../styles/pages/forms/register.css"/>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!--div class="home no-slider"></div-->
+    <img src="../images/slider/slider_1.jpg" class="img-responsive"/>
        <div class="login">
 
           <asp:TextBox ID="usrtxtbox" runat="server" placeholder="Användarnamn"></asp:TextBox>
           <asp:TextBox ID="pswtxtbox" runat="server" placeholder="Lösenord" TextMode="Password"></asp:TextBox>
+        
           <asp:HyperLink ID="pswforglink" runat="server" CssClass="forgot">forgot password?</asp:HyperLink>
           <asp:Button ID="loginbtn" runat="server" Text="Logga In" OnClick="loginbtn_Click" />
 

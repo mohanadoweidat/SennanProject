@@ -1,10 +1,18 @@
 ﻿
 /*After registring, return to the previous opened page (using Session[])*/
 body {
+    /*
     background-image: url(/images/slider/slider_1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 120px;
+        */
+    //padding-top: 120px;
+}
+
+.imag {
+    background-image: url(/images/slider/slider_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .login {
@@ -14,6 +22,10 @@ body {
     height: 500px;
     margin: 20px auto 0;
     width: 298px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
     .login h1 {
@@ -59,7 +71,7 @@ input[type="password"], input[type="text"], input[type="email"] {
 input[type="checkbox"] {
     cursor: pointer;
     height: 16px;
-    opacity: 0;
+    opacity: 1;
     position: relative;
     width: 64px;
 }

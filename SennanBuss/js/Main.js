@@ -15,3 +15,9 @@ function Logout() {
     var button = document.getElementById('Btn');
     button.click();
 }
+
+function Dismiss() {
+    var button = document.getElementById('Btn1');
+    button.click();
+    //$('.alert').modal('hide');
+}

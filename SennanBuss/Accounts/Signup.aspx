@@ -8,6 +8,7 @@
  </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <img src="../images/slider/slider_1.jpg" class="img-responsive imag"/>
     <asp:HiddenField ID="hfId" runat="server" />
      <div class="login">
     <p id="info-main" class="text-center">Ange nedanstående uppgifter</p>
