@@ -8,10 +8,10 @@ body {
 }
 
 .login {
-    background: #eceeee;
+    background: #eceeee !important;
     border: 1px solid #42464b;
     border-radius: 6px;
-    height: 500px;
+    height: 510px;
     margin: 20px auto 0;
     width: 298px;
 }
