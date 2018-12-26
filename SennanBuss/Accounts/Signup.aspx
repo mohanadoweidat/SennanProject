@@ -7,6 +7,7 @@
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
  </style>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <img src="../images/slider/slider_1.jpg" class="img-responsive imag"/>
     <asp:HiddenField ID="hfId" runat="server" />
