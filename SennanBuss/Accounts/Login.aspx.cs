@@ -60,9 +60,10 @@ namespace SennanBuss.Accounts
             }
             connection.Close();
         }
+
         void clear()
         {
-            usrtxtbox.Text = pswtxtbox.Text = "";
+            pswtxtbox.Text = "";
         }
         
         

@@ -20,6 +20,7 @@ namespace SennanBuss.bas
         protected void Btn_Click(object sender, EventArgs e)
         {
             Session["Username"] = null;
+            ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "ALogout()", true);
         }
 
         protected void Btn1_Click(object sender, EventArgs e)

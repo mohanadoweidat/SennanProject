@@ -153,7 +153,7 @@
 	            <div class="row">
 	                <div class="col section-4 section-description wow fadeInLeftBig">
                         <center>
-                            <h3 onclick="Run()">Sennans Buss AB / Byggets Buss / Skogaby Buss / Unnaryds Buss</h3>
+                            <h3>Sennans Buss AB / Byggets Buss / Skogaby Buss / Unnaryds Buss</h3>
   	                    <p> telefon: 035-661 10 - fax: 035-662 19 - epost: info@sennansbuss.se </p>
                        </center>
 	                </div>
@@ -163,6 +163,7 @@
 
                 <div id="eee" style="height:50px;"></div>
                     <!--- Site scripts--->
+        <script src="../js/head/constants.js"></script>
         <script src="../js/jquery-3.2.1.min.js"></script>
         <script src="../styles/bootstrap4/popper.js"></script>
         <script src="../styles/bootstrap4/bootstrap.min.js"></script>
@@ -175,19 +176,6 @@
         <script src="../js/main.js"></script>
         <script src="../js/lottie/lottie.js"></script>
 
-
-        <script>
-            try {
-                lottie.loadAnimation({
-                    container: document.getElementById('eee'), renderer: 'svg',
-                    loop: true,
-                    autoplay: true,
-                    path: '../check.json'
-                });
-            } catch (e) {
-                alert(e);
-            }
-        </script>
     </form>
 </body>
 </html>
