@@ -7,7 +7,7 @@
         }
     </style>
 
-
+    
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -50,7 +50,7 @@
         <script type="text/javascript" lang="ja">
             function success()
             {
-                swal("Info!", "Tack för att du har verfierat ditt E-post" + "</br>"+ "<a href='Login.aspx'>Logga in</a>", "success", "LogIn");
+                swal("Info!", "Tack för att du har verfierat ditt E-post" + "</br>", "success", "LogIn");
             }
 
       

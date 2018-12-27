@@ -1,11 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="master.master.cs" Inherits="SennanBuss.bas.master" %>
 <%@ Import Namespace="System.Data.SqlClient" %>
 <%@ Import Namespace="System.Data" %>
- 
- 
-
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
         <!-- Metas tags-->
@@ -48,13 +44,10 @@
 
  <nav class="navbar navbar-default navbar-fixed-top" id="myScrollspy">
 
-          <% 
-
-
+          <%
               string db = "data source=89.221.254.34;initial catalog=MSSQL400023;persist security info=True;user id=MSSQL400023;password=OTo0OToyNg;MultipleActiveResultSets=True;App = EntityFramework";
               using (SqlConnection sqlcon = new SqlConnection(db))
               {
-
                   string myquery = "Select Status from Accounts where Username='" + Session["Username"] + "'";
                   SqlCommand cmd = new SqlCommand();
                   cmd.CommandText = myquery;
@@ -80,22 +73,14 @@
                           df.Fill(dg);
                           if (dg.Tables[0].Rows.Count > 0)
                           {
-
                               string Email = dg.Tables[0].Rows[0]["Email"].ToString();
                               var s = "<div class=\"alert alert-warning alert-server fade in\" role=\"alert\">" +
               "<button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button>" +
               "<strong>Email Confirmation:</strong> " +
               "Vissa funktioner kräver att du har bekräftat din mail. " +
-              "För att bekräfta klicka <a class=\"alert-link\" href=\"../Accounts/Verifymail.aspx\">här</a>.</div>";
+              "För att bekräfta klicka <a class=\"alert-link\" href=\"../Accounts/Verifymail.aspx\" target=\"_blank\">här</a>.</div>";
                               Response.Write(s);
                           }
-                          else
-                          {
-
-                          }
-
-
-
                       }
                       else
                       {
@@ -110,15 +95,8 @@
                       }
                   }
                   sqlcon.Close();
-
               }
-
-
-
-
-
   %>
-
 
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -162,6 +140,7 @@
         </div>
     </div>
 </nav>  
+
           <!--/End navbar-->
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
@@ -172,7 +151,7 @@
 	            <div class="row">
 	                <div class="col section-4 section-description wow fadeInLeftBig">
                         <center>
-                            <h3>Sennans Buss AB / Byggets Buss / Skogaby Buss / Unnaryds Buss</h3>
+                            <h3 onclick="Run()">Sennans Buss AB / Byggets Buss / Skogaby Buss / Unnaryds Buss</h3>
   	                    <p> telefon: 035-661 10 - fax: 035-662 19 - epost: info@sennansbuss.se </p>
                        </center>
 	                </div>
@@ -180,6 +159,7 @@
 	        </div>
         </div>
 
+                <div id="eee" style="height:50px;"></div>
                     <!--- Site scripts--->
         <script src="../js/jquery-3.2.1.min.js"></script>
         <script src="../styles/bootstrap4/popper.js"></script>
@@ -191,6 +171,21 @@
         <script src="../plugins/parallax-js-master/parallax.min.js"></script>
         <script src="../js/custom.js"></script>
         <script src="../js/main.js"></script>
+        <script src="../js/lottie/lottie.js"></script>
+
+
+        <script>
+            try {
+                lottie.loadAnimation({
+                    container: document.getElementById('eee'), renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: '../check.json'
+                });
+            } catch (e) {
+                alert(e);
+            }
+        </script>
     </form>
 </body>
 </html>

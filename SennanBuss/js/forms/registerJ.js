@@ -46,5 +46,5 @@ function Passerror() {
 }
 
 function success() {
-    swal("Info!", "Du har skapat ett konto" + "</br>" + "<a href='Login.aspx'>Logga in</a>", "success", "LogIn");
+    swal("Info!", "Du har skapat ett konto" + "</br>", "success", "LogIn");
 }

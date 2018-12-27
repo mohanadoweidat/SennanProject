@@ -19,5 +19,18 @@ function Logout() {
 function Dismiss() {
     var button = document.getElementById('Btn1');
     button.click();
-    //$('.alert').modal('hide');
+}
+
+function Run() {
+    const msg = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        footer: '<img src=\'../images/slider/slider_1.jpg\' style=\'height: 50px;\'/>'
+    });
+    msg({
+        type: 'info',
+        title: 'Signed in successfully '
+    })
 }

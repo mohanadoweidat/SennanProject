@@ -16,17 +16,40 @@ namespace SennanBuss.Accounts
         Database.DatabaseConnection db = new Database.DatabaseConnection();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Label3.Text = "Ditt Epost: " + Request.QueryString["Epost"].ToString() + ", Var vänlig och kolla din Mailbox för aktiveringskoden";
+            if(Session["Username"] == null)
+            {
+                Response.Redirect("../index.aspx");
+                return;
+            }
+            string db = "data source=89.221.254.34;initial catalog=MSSQL400023;persist security info=True;user id=MSSQL400023;password=OTo0OToyNg;MultipleActiveResultSets=True;App = EntityFramework";
+            using (SqlConnection sqlcon = new SqlConnection(db))
+            {
+                string query = "Select Status From Accounts Where Username='" + Session["Username"] + "'";
+                SqlCommand cm = new SqlCommand();
+                cm.CommandText = query;
+                cm.Connection = sqlcon;
+                SqlDataAdapter df = new SqlDataAdapter();
+                df.SelectCommand = cm;
+                DataSet dg = new DataSet();
+                df.Fill(dg);
+                if (dg.Tables[0].Rows.Count > 0)
+                {
+                    var v = dg.Tables[0].Rows[0]["Status"].ToString();
+                    if(v == "Bekräftat")
+                    {
+                        Response.Redirect("../index.aspx");
+                        return;
+                    }
+                    //Label3.Text = "Ditt Epost: " + Request.QueryString["Epost"].ToString() + ", Var vänlig och kolla din Mailbox för aktiveringskoden";
+                }
+            }
         }
-
-
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             string db = "data source=89.221.254.34;initial catalog=MSSQL400023;persist security info=True;user id=MSSQL400023;password=OTo0OToyNg;MultipleActiveResultSets=True;App = EntityFramework";
             using (SqlConnection sqlcon = new SqlConnection(db))
             {
-                 
                 string query = "Select Email From Accounts Where Username='" + Session["Username"] + "'";
                 SqlCommand cm = new SqlCommand();
                 cm.CommandText = query;
@@ -62,7 +85,7 @@ namespace SennanBuss.Accounts
                     {
                         Changestatus();
                         Label4.Text = "Din Mail har bekräftats!";
-
+                        //http://localhost:8000/Accounts/Verifymail.aspx
                         ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "success()", true);
 
                     }
@@ -72,10 +95,7 @@ namespace SennanBuss.Accounts
                     }
                 }
                 sqlcon.Close();
-
             }
-
-
         }
 
 
@@ -84,23 +104,13 @@ namespace SennanBuss.Accounts
             string db = "data source=89.221.254.34;initial catalog=MSSQL400023;persist security info=True;user id=MSSQL400023;password=OTo0OToyNg;MultipleActiveResultSets=True;App = EntityFramework";
             using (SqlConnection sqlcon = new SqlConnection(db))
             {
-
-
                 string Updatestat = "Update Accounts set Status='Bekräftat' where Email='" +  Email + "'";
                 sqlcon.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = Updatestat;
                 cmd.Connection = sqlcon;
                 cmd.ExecuteNonQuery();
-
-
             }
-
         }
-
-
-
-
-
     }
 }
