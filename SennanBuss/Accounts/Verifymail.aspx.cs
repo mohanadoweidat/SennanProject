@@ -14,6 +14,7 @@ namespace SennanBuss.Accounts
     {
         private string Email = null;
         Database.DatabaseConnection db = new Database.DatabaseConnection();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if(Session["Username"] == null)
