@@ -12,18 +12,41 @@ namespace SennanBuss.Accounts
 {
     public partial class Verifymail : System.Web.UI.Page
     {
+        private string Email = null;
         Database.DatabaseConnection db = new Database.DatabaseConnection();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label3.Text = "Din E-postaddress" + Request.QueryString["Epost"].ToString() + ", Var vänlig och kolla din inbox för aktiveringskoden";
+            //Label3.Text = "Ditt Epost: " + Request.QueryString["Epost"].ToString() + ", Var vänlig och kolla din Mailbox för aktiveringskoden";
         }
+
+
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection sqlcon = new SqlConnection(db.con))
+            string db = "data source=89.221.254.34;initial catalog=MSSQL400023;persist security info=True;user id=MSSQL400023;password=OTo0OToyNg;MultipleActiveResultSets=True;App = EntityFramework";
+            using (SqlConnection sqlcon = new SqlConnection(db))
             {
- 
-                string myquery = "Select * from Accounts where Email='" + Request.QueryString["Epost"] + "'";
+                 
+                string query = "Select Email From Accounts Where Username='" + Session["Username"] + "'";
+                SqlCommand cm = new SqlCommand();
+                cm.CommandText = query;
+                cm.Connection = sqlcon;
+                SqlDataAdapter df = new SqlDataAdapter();
+                df.SelectCommand = cm;
+                DataSet dg = new DataSet();
+                df.Fill(dg);
+                if (dg.Tables[0].Rows.Count > 0)
+                {
+
+                    Email = dg.Tables[0].Rows[0]["Email"].ToString();
+
+                }
+                if (Email == null)
+                {
+                    return;
+                }
+                string myquery = "Select * from Accounts where Email='" +  Email + "'";
+
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = myquery;
                 cmd.Connection = sqlcon;
@@ -31,7 +54,7 @@ namespace SennanBuss.Accounts
                 da.SelectCommand = cmd;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
-                if (ds.Tables[0].Rows.Count>0)
+                if (ds.Tables[0].Rows.Count > 0)
                 {
                     string Kod;
                     Kod = ds.Tables[0].Rows[0]["Kod"].ToString();
@@ -39,38 +62,45 @@ namespace SennanBuss.Accounts
                     {
                         Changestatus();
                         Label4.Text = "Din Mail har bekräftats!";
-                        Thread.Sleep(8);
-                        Response.Redirect("../Accounts/Login.aspx");
+
+                        ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "success()", true);
+
                     }
                     else
                     {
-                        Label4.Text = "Du har angtt en felaktig akteveringskod, var vänlig och kolla igen på din inbox";
+                        Label4.Text = "Du har angtt en felaktig aktiveringskod, var vänlig och kolla igen på din inbox";
                     }
                 }
                 sqlcon.Close();
 
             }
 
-            
+
         }
 
 
-        private void Changestatus()
+       protected void Changestatus()
         {
-            using (SqlConnection sqlcon = new SqlConnection(db.con))
+            string db = "data source=89.221.254.34;initial catalog=MSSQL400023;persist security info=True;user id=MSSQL400023;password=OTo0OToyNg;MultipleActiveResultSets=True;App = EntityFramework";
+            using (SqlConnection sqlcon = new SqlConnection(db))
             {
 
 
-                string Updatestat = "Update Accounts set Status='Bekräftat' where Email='" + Request.QueryString["Epost"] + "'";
+                string Updatestat = "Update Accounts set Status='Bekräftat' where Email='" +  Email + "'";
                 sqlcon.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = Updatestat;
                 cmd.Connection = sqlcon;
                 cmd.ExecuteNonQuery();
-                
+
 
             }
 
         }
+
+
+
+
+
     }
 }

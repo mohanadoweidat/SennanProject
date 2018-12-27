@@ -52,7 +52,7 @@
                 <!--- Card--->
 
         <div class="intro">
-		<div class="intro_background" style="background-image:url(images/imgv1.jpg)"></div>
+		 
 		<div class="container">
 					<div class="intro_container">
 						<div class="row">

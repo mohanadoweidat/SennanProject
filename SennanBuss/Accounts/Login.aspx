@@ -6,6 +6,15 @@
         html { height: 100% }
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+.login1 {
+    background: #eceeee !important;
+    border: 1px solid #42464b;
+    border-radius: 6px;
+    height: 320px !important;
+    margin: 20px auto 0;
+    width: 298px;
+}
   </style>
     <link rel="stylesheet" href="../styles/pages/forms/register.css"/>
 </asp:Content>

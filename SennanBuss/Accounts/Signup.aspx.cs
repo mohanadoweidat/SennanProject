@@ -96,13 +96,14 @@ namespace SennanBuss.Accounts
                 {
                     using (SqlConnection sqlcon = new SqlConnection(db.con))
                     {
+                        var _s = usrtxtbox.Text.Trim();
                         Random rand = new Random();
                         Kod = _code();
                         sqlcon.Open();
                         SqlCommand sqlCmd = new SqlCommand("AccountsAddorEdit", sqlcon);
                         sqlCmd.CommandType = CommandType.StoredProcedure;
                         sqlCmd.Parameters.AddWithValue("@Id", Convert.ToInt32(hfId.Value == "" ? "0" : hfId.Value));
-                        sqlCmd.Parameters.AddWithValue("@Username", usrtxtbox.Text.Trim());
+                        sqlCmd.Parameters.AddWithValue("@Username", _s);
                         sqlCmd.Parameters.AddWithValue("@Email", ematxtbox.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@Password", pswtxtbox.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@Cpassword", cpwdtxtbox.Text.Trim());
@@ -112,7 +113,8 @@ namespace SennanBuss.Accounts
                         Thread.Sleep(TimeSpan.FromSeconds(2));
                         Sendcode();
                         //Clear();
-                        Response.Redirect("../Accounts/Verfiymail.aspx?Epost=" + ematxtbox.Text);
+                        Session["Username"] = _s;
+                        Response.Redirect("Verifymail.aspx");
                        // ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "success()", true);
                     } 
                 }
@@ -178,5 +180,9 @@ namespace SennanBuss.Accounts
         {
             Response.Redirect("Login.aspx");
         }
+
+
+       
+         
     }
 }

@@ -12,6 +12,7 @@ namespace SennanBuss.Accounts
 {
     public partial class Login : System.Web.UI.Page
     {
+       
         Database.DatabaseConnection db = new Database.DatabaseConnection();
         Signup sg = new Signup();
 
@@ -28,8 +29,10 @@ namespace SennanBuss.Accounts
             Response.Redirect("../Accounts/Signup.aspx");
         }
 
+        
         protected void loginbtn_Click(object sender, EventArgs e)
         {
+             
             string Username = usrtxtbox.Text.ToString();
             string Password = pswtxtbox.Text;
             SqlConnection connection = new SqlConnection(db.con);
@@ -61,5 +64,8 @@ namespace SennanBuss.Accounts
         {
             usrtxtbox.Text = pswtxtbox.Text = "";
         }
+        
+        
     }
+   
 }
