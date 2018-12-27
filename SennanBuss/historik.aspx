@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="historik.aspx.cs" Inherits="SennanBuss.historik" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="historik.aspx.cs" Inherits="SennanBuss.historik" Title="HISTORIK" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -372,5 +372,7 @@ I november 1983 slutade Kenneth på Sennans Buss och blev utlöst ur firman i ap
 		</div>
 	</div>
           </div>
+             <br />
+              <hr style="margin:0 80px 0 80px ; border:5px solid black" />
      	</div>
 </asp:Content>

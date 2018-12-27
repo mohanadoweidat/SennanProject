@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="konferensbuss.aspx.cs" Inherits="SennanBuss.konferensbuss" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="konferensbuss.aspx.cs" Inherits="SennanBuss.konferensbuss" Title="KONFERENSBUSS" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
      <!-- Video style-->
@@ -99,6 +99,6 @@ max-width: none !important;
 			</div>
 		</div>
  <br />
-     <hr style="margin:0 80px 0 80px" />
+      <hr style="margin:0 80px 0 80px ; border:5px solid black" />
             </div>
 </asp:Content>

@@ -183,6 +183,7 @@
     <Content Include="styles\Style.css" />
     <Content Include="sweetalert2.all.min.js" />
     <Content Include="sweetalert2.css" />
+    <Content Include="UserPages\UsProfile.aspx" />
     <Content Include="varabussar.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -255,6 +256,13 @@
       <DependentUpon>miljoochkvalitet.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserPages\UsProfile.aspx.cs">
+      <DependentUpon>UsProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\UsProfile.aspx.designer.cs">
+      <DependentUpon>UsProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="varabussar.aspx.cs">
       <DependentUpon>varabussar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -311,7 +319,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPages\" />
-    <Folder Include="UserPages\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

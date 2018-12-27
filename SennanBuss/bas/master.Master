@@ -86,10 +86,10 @@
 
                               string Email = dg.Tables[0].Rows[0]["Email"].ToString();
                               var s = "<div class=\"alert alert-warning alert-server fade in\" role=\"alert\">" +
-              "<button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button>" +
-              "<strong>Email Confirmation:</strong> " +
-              "Vissa funktioner kräver att du har bekräftat din mail. " +
-              "För att bekräfta klicka <a class=\"alert-link\" href=\"../Accounts/Verifymail.aspx\">här</a>.</div>";
+                                    "<button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button>" +
+                                      "<strong>Email Confirmation:</strong> " +
+                                          "Vissa funktioner kräver att du har bekräftat din mail. " +
+                                            "För att bekräfta klicka <a class=\"alert-link\" href=\"../Accounts/Verifymail.aspx\">här</a>.</div>";
                               Response.Write(s);
                           }
                           else
@@ -152,11 +152,12 @@
                 <%
                     if (Session["Username"] == null)
                         Response.Write("<li><a href='../Accounts/Signup.aspx'>Skapa ett konto</a></li>" + "<li><a href='../Accounts/Login.aspx'>Logga In</a></li>" );
+                         
                     else
                     {
                         Response.Write("<li><p id=\"logged\">Inloggad som</p>" +
-                            "<p class=\"text-center\" id=\"logged_\">"+
-                            ""+Session["Username"]+"</p></li>");
+                            "<a href='../UserPages/UsProfile.aspx'><p class=\"text-center\" id=\"logged_\">"+
+                            ""+Session["Username"]+"</p></a></li>");
                         Response.Write("<li><a href='#' onclick='Logout()'>Logga ut</a></li>");
                     }
                  %>
