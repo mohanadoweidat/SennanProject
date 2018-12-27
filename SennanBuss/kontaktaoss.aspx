@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="kontaktaoss.aspx.cs" Inherits="SennanBuss.kontaktaoss" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="kontaktaoss.aspx.cs" Inherits="SennanBuss.kontaktaoss"  Title="KONTAKTA OSS"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
   
      <!-- Log in and sign up form style-->
@@ -213,8 +213,9 @@ border: 1px solid #c6c6c6;
 <div class="wpcf7-response-output wpcf7-display-none"></div>
 </form>
 </div>
+        
 </div>
 
-
+<hr style="margin:0 80px 0 80px ; border:5px solid dotted" />
     
 </asp:Content>

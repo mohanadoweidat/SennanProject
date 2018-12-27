@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Startsidan" Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SennanBuss.index" %>
+﻿<%@ Page Title="STARTSIDAN" Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SennanBuss.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -149,6 +149,7 @@
 		</div>
 	</div> 
      	</div>
-
+             
          </div>
+     <hr style="margin:0 80px 0 80px ; border:5px solid black" />
 </asp:Content>
