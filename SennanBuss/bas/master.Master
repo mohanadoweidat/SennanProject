@@ -114,12 +114,12 @@
         <!-- Collection of nav links and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-               <li><a class="active" href="~/index.aspx" runat="server">STARTSIDAN</a></li>
-				<li><a href="~/varabussar.aspx" runat="server">VÅRA BUSSAR</a></li>
-                <li><a href="~/miljoochkvalitet.aspx" runat="server">MILJÖ & KVALITET</a></li>
-				<li><a href="~/historik.aspx" runat="server">HISTORIK</a></li>
-				<li><a href="~/konferensbuss.aspx" runat="server">KONFERENSBUSS</a></li>
-				<li><a href="~/kontaktaoss.aspx" runat="server">KONTAKTA OSS</a></li>
+               <li><a class="active nitem" href="~/index.aspx" runat="server">STARTSIDAN</a></li>
+				<li><a class="nitem" href="~/varabussar.aspx" runat="server">VÅRA BUSSAR</a></li>
+                <li><a class="nitem" href="~/miljoochkvalitet.aspx" runat="server">MILJÖ & KVALITET</a></li>
+				<li><a class="nitem" href="~/historik.aspx" runat="server">HISTORIK</a></li>
+				<li><a class="nitem" href="~/konferensbuss.aspx" runat="server">KONFERENSBUSS</a></li>
+				<li><a class="nitem" href="~/kontaktaoss.aspx" runat="server">KONTAKTA OSS</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <div style="display: none;">
@@ -127,15 +127,27 @@
                    <asp:Button runat="server" ID="Btn1"/>
               </div>
                 <%
-                    if (Session["Username"] == null)
-                        Response.Write("<li><a href='../Accounts/Signup.aspx'>Skapa ett konto</a></li>" + "<li><a href='../Accounts/Login.aspx'>Logga In</a></li>" );
-                         
-                    else
+                    bool b = false;
+                    if(Session["CurrentPage"] != null)
                     {
-                        Response.Write("<li><p id=\"logged\">Inloggad som</p>" +
-                            "<a href='../UserPages/UsProfile.aspx'><p class=\"text-center\" id=\"logged_\">"+
-                            ""+Session["Username"]+"</p></a></li>");
-                        Response.Write("<li><a href='#' onclick='Logout()'>Logga ut</a></li>");
+                        var s = Session["CurrentPage"] as string;
+                        if(s == "Login" || s == "Signup")
+                        {
+                            b = true;
+                        }
+                    }
+                    if (!b)
+                    {
+                        if (Session["Username"] == null)
+                            Response.Write("<li><a href='../Accounts/Signup.aspx'>Skapa ett konto</a></li>" + "<li><a href='../Accounts/Login.aspx'>Logga In</a></li>");
+
+                        else
+                        {
+                            Response.Write("<li><p id=\"logged\">Inloggad som</p>" +
+                                "<a class=\"excl\" href='../UserPages/UsProfile.aspx'><p class=\"text-center\" id=\"logged_\">" +
+                                "" + Session["Username"] + "</p></a></li>");
+                            Response.Write("<li><a href='#' onclick='Logout()'>Logga ut</a></li>");
+                        }
                     }
                  %>
             </ul>
@@ -160,8 +172,6 @@
 	            </div>
 	        </div>
         </div>
-
-                <div id="eee" style="height:50px;"></div>
                     <!--- Site scripts--->
         <script src="../js/head/constants.js"></script>
         <script src="../js/jquery-3.2.1.min.js"></script>

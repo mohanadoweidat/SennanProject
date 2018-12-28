@@ -21,7 +21,9 @@ namespace SennanBuss.Accounts
             if (Session["Username"] != null)
             {
                 Response.Redirect("../index.aspx");
+                return;
             }
+            Session["CurrentPage"] = "Login";
         }
 
         protected void signupbtn_Click(object sender, EventArgs e)

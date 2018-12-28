@@ -9,7 +9,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Net;
 using System.Net.Mail;
-
+using SennanBuss.head;
 
 namespace SennanBuss.Accounts
 {
@@ -29,6 +29,7 @@ namespace SennanBuss.Accounts
                 Response.Redirect("../index.aspx");
                 return;
             }
+            Session["CurrentPage"] = "Signup";
             if (!IsPostBack)
             {
                 Clear();
@@ -60,9 +61,13 @@ namespace SennanBuss.Accounts
             pswtxtbox.Text = EncryptPassword(pswtxtbox.Text);
             cpwdtxtbox.Text = EncryptPassword(cpwdtxtbox.Text);
             if (usrtxtbox.Text == "" || ematxtbox.Text == "" || pswtxtbox.Text == "")
-                ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "error()", true);
+            {
+                Main.Reg(Page, "showError(1)");
+            }
             else if (pswtxtbox.Text != cpwdtxtbox.Text)
-                ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Passerror()", true);
+            {
+                Main.Reg(Page, "showError(2)");
+            }
             else
             {
                 SqlConnection sql = new SqlConnection(db.con);
@@ -86,11 +91,11 @@ namespace SennanBuss.Accounts
                 }
                 if (Nameexist == true)
                 {
-                    ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Nameerror()", true);
+                    Main.Reg(Page, "showError(3)");
                 }
                 else if (Emailexist == true)
                 {
-                    ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Emailerror()", true);
+                    Main.Reg(Page, "showError(4)");
                 }
                 else
                 {
@@ -115,8 +120,8 @@ namespace SennanBuss.Accounts
                         //Clear();
                         Session["Username"] = _s;
                         Response.Redirect("Verifymail.aspx");
-                       // ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "success()", true);
-                    } 
+                        // ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "success()", true);
+                    }
                 }
             }
         }
@@ -180,9 +185,6 @@ namespace SennanBuss.Accounts
         {
             Response.Redirect("Login.aspx");
         }
-
-
-       
          
     }
 }

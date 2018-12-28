@@ -44,6 +44,7 @@ namespace SennanBuss.Accounts
                     //Label3.Text = "Ditt Epost: " + Request.QueryString["Epost"].ToString() + ", Var vänlig och kolla din Mailbox för aktiveringskoden";
                 }
             }
+            Session["CurrentPage"] = "VerifyEmail";
         }
 
         protected void Button1_Click(object sender, EventArgs e)

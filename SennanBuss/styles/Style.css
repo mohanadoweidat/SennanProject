@@ -30,16 +30,24 @@
     transition: 1s !important;
 }
 
-.navbar a:hover{
+.navbar a:hover:not(.excl){
     color: black !important;
     background-color: white !important;
     border-radius: 20px !important;
     transition: 0.5s !important;
 }
-.navbar li a:hover{
+.navbar li a:hover:not(.excl){
     opacity:0.5 !important;
     margin:0 10px 0 10px !important;
     transition: 1s !important;
+}
+
+.excl #logged_ {
+    transition: .5s;
+}
+
+.excl:hover #logged_ {
+    color: gold !important;
 }
 
 .navbar li{

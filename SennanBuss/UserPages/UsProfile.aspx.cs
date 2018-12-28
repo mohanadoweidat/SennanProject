@@ -17,7 +17,7 @@ namespace SennanBuss.UserPages
         public string Email = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session["CurrentPage"] = "UserProfile";
             if (Session["Username"] == null)
             {
                 Response.Redirect("../index.aspx");
@@ -29,10 +29,6 @@ namespace SennanBuss.UserPages
             GetUserEmail();
 
         }
-
-
-
-
 
         public void GetUserEmail()
         {
@@ -102,14 +98,11 @@ namespace SennanBuss.UserPages
                             cmd1.ExecuteNonQuery();
                             ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "success()", true);
                         }
-                        
-
                     }
                     else
                     {
                         ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Changeerror()", true);
                     }
-
                 }
                 else
                 {
@@ -117,9 +110,7 @@ namespace SennanBuss.UserPages
                 }
 
             }
-        }
-                   
-            
+        }   
             
         
     }

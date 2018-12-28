@@ -221,6 +221,7 @@
     </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
     <Compile Include="Database\DBActions.cs" />
+    <Compile Include="head\Main.cs" />
     <Compile Include="historik.aspx.cs">
       <DependentUpon>historik.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -278,7 +279,6 @@
     <Content Include="Data\byggets_buss_certifikat_2017.pdf" />
     <Content Include="bas\master.Master" />
     <Content Include="js\lottie\lottie.js" />
-    <Content Include="Data\animations\check.json" />
     <Content Include="Data\animations\skipping.json" />
     <None Include="packages.config" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
