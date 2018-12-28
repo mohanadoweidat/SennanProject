@@ -30,7 +30,8 @@
 
                 <!-- Buss images -->
 
-	<div class="destinations" id="destinations">
+            <!-- Version 1 Buss images-->
+            <div class="destinations" id="destinations">
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
@@ -45,24 +46,24 @@
 						<!-- Destination -->
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="images/imgv1.jpg" alt=""/>
+								<img src="images/imgv1.jpg" alt="" />
 								<!---<div class="spec_offer text-center"><a href="#"></a></div>-->
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Bali</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+								<div class="destination_title"><a href="destinations.html"></a></div>
+								<div class="destination_subtitle"><p></p></div>
 								 
 							</div>
 						</div>
 
 						<!-- Destination -->
 						<div class="destination item">
-							<div class="destination_image">
-								<img src="images/imgv2.jpg" alt=""/>
+							<div class="destination_image" >
+								<img src="images/imgv2.jpg" alt=""  />
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Indonesia</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+								<div class="destination_title"><a href="destinations.html"></a></div>
+								<div class="destination_subtitle"><p> </p></div>
 					 
 							</div>
 						</div>
@@ -70,22 +71,22 @@
 						<!-- Destination -->
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="images/imgv3.jpg" alt=""/>
+								<img src="images/imgv3.jpg" alt=""  />
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">San Francisco</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+								<div class="destination_title"><a href="destinations.html"> </a></div>
+								<div class="destination_subtitle"><p></p></div>
  							</div>
 						</div>
 
 						<!-- Destination -->
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="images/imgv4.jpg" alt=""/>
+								<img src="images/imgv4.jpg" alt=""  />
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Paris</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+								<div class="destination_title"><a href="destinations.html"></a></div>
+								<div class="destination_subtitle"><p></p></div>
 								 
 							</div>
 						</div>
@@ -93,11 +94,11 @@
 						<!-- Destination -->
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="images/imgv5.jpg" alt=""/>
+								<img src="images/imgv5.jpg" alt="" />
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Phi Phi Island</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+								<div class="destination_title"><a href="destinations.html">  </a></div>
+								<div class="destination_subtitle"><p></p></div>
 							 
 							</div>
 						</div>
@@ -105,22 +106,22 @@
 						<!-- Destination -->
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="images/imgv6.jpg" alt=""/>
+								<img src="images/imgv6.jpg" alt="" />
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Mykonos</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+								<div class="destination_title"><a href="destinations.html"></a></div>
+								<div class="destination_subtitle"><p></p></div>
 								 
 							</div>
 						</div>
 
                         <div class="destination item">
 							<div class="destination_image">
-								<img src="images/imgv7.jpg" alt=""/>
+								<img src="images/imgv7.jpg" alt=""  />
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Phi Phi Island</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+								<div class="destination_title"><a href="destinations.html"></a></div>
+								<div class="destination_subtitle"><p></p></div>
 								 
 							</div>
 						</div>
@@ -128,20 +129,20 @@
 
                         <div class="destination item">
 							<div class="destination_image">
-								<img src="images/imgv8.jpg" alt=""/>
+								<img src="images/imgv8.jpg" alt=""  />
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Phi Phi Island</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+								<div class="destination_title"><a href="destinations.html"></a></div>
+								<div class="destination_subtitle"><p></p></div>
 							</div>
 						</div>
                         <div class="destination item">
 							<div class="destination_image">
-								<img src="images/imgv9.jpg" alt=""/>
+								<img src="images/imgv9.jpg" alt=""  />
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Phi Phi Island</a></div>
-								<div class="destination_subtitle"><p>Nulla pretium tincidunt felis, nec.</p></div>
+								<div class="destination_title"><a href="destinations.html"></a></div>
+								<div class="destination_subtitle"><p></p></div>
 							</div>
 						</div>
 					</div>
@@ -149,8 +150,45 @@
 			</div>
 		</div>
 	</div>
+
+
+
+ 
+
+            <!-- version 2 buss images-->
+           <%--   Version(2) <container>
+                  <center>
+                     <h3 style="color:black">Här kan ni se några av våra bussar. </h3>
+                  </center>
+                 
+              </container>
+	 
+            <br />
+   
+            <table class="nav-justified">
+                <tr>
+                    <td><img src="images/imgv1.jpg" class="img-responsive" alt=""/></td>
+                    <td><img src="images/imgv2.jpg" class="img-responsive" alt="" /></td>
+                    <td><img src="images/imgv3.jpg" class="img-responsive" alt="" /></td>
+                </tr>
+                <tr>
+                    <td><img src="images/imgv4.jpg" class="img-responsive" alt="" /></td>
+                    <td><img src="images/imgv5.jpg" class="img-responsive" alt="" /></td>
+                    <td><img src="images/imgv6.jpg" class="img-responsive" alt="" /></td>
+                </tr>
+                <tr>
+                    <td><img src="images/imgv7.jpg" class="img-responsive" alt="" /></td>
+                    <td><img src="images/imgv8.jpg" class="img-responsive" alt="" /></td>
+                    <td><img src="images/imgv9.jpg" class="img-responsive" alt="" /></td>
+                </tr>
+                
+              
+               
+            </table>--%>
+
 		</div>
         </div>
-             <hr style="margin:0 80px 0 80px ; border:5px solid black" />
+             
+         
 </div>
 </asp:Content>

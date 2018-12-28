@@ -23,10 +23,10 @@
     <img src="../images/slider/slider_1.jpg" class="img-responsive"/>
        <div class="login">
 
-          <asp:TextBox ID="usrtxtbox" runat="server" placeholder="Användarnamn"></asp:TextBox>
-          <asp:TextBox ID="pswtxtbox" runat="server" placeholder="Lösenord" TextMode="Password"></asp:TextBox>
+          <asp:TextBox ID="usrtxtbox" runat="server" placeholder="Användarnamn" ToolTip="Username"></asp:TextBox>
+          <asp:TextBox ID="pswtxtbox" runat="server" placeholder="Lösenord" TextMode="Password" ToolTip="Password"></asp:TextBox>
         
-          <asp:HyperLink ID="pswforglink" runat="server" CssClass="forgot">forgot password?</asp:HyperLink>
+          <asp:HyperLink ID="pswforglink" runat="server" CssClass="forgot" NavigateUrl="~/Accounts/ForgotPassword.aspx">forgot password?</asp:HyperLink>
           <asp:Button ID="loginbtn" runat="server" Text="Logga In" OnClick="loginbtn_Click" />
 
           <br />

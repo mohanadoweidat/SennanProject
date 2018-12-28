@@ -17,7 +17,7 @@ namespace SennanBuss.bas
             Btn.Click += Btn_Click;
             Btn1.Click += Btn1_Click;
 
-            Main.Reg(Page, "alert('ss')");
+           // Main.Reg(Page, "alert('ss')");
             if(Session["Redirected"] != null)
             {
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "ALogout()", true);

@@ -216,6 +216,6 @@ border: 1px solid #c6c6c6;
         
 </div>
 
-<hr style="margin:0 80px 0 80px ; border:5px solid dotted" />
+ 
     
 </asp:Content>

@@ -130,10 +130,7 @@
         </div>
 </div>
 
-   <center>
-       <br />
-      <hr style="margin:0 80px 0 80px ; border:5px solid black" />
-   </center>
+    
 
      <script type="text/javascript">
                 $(document).ready(function()

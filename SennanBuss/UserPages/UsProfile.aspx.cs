@@ -29,7 +29,7 @@ namespace SennanBuss.UserPages
             GetUserEmail();
 
         }
-
+        //View User Email
         public void GetUserEmail()
         {
             using (SqlConnection sql = new SqlConnection(db))
@@ -56,6 +56,7 @@ namespace SennanBuss.UserPages
             }
         }
 
+        //Change User Password
         protected void cpwdbtn_Click(object sender, EventArgs e)
         {
             string Password = oldpwd.Text;

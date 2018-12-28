@@ -165,7 +165,7 @@ namespace SennanBuss.Accounts
         }
 
         //Dekrypt Password
-        private string dekryptPassword(string pass)
+        public string dekryptPassword(string pass)
         {
             byte[] bytes = Convert.FromBase64String(pass);
             string dekryptpassword = System.Text.Encoding.Unicode.GetString(bytes);

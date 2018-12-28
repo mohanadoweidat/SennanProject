@@ -185,6 +185,7 @@
         <script src="../js/custom.js"></script>
         <script src="../js/main.js"></script>
         <script src="../js/lottie/lottie.js"></script>
+        <script src="../js/forms/registerJ.js"></script>
 
     </form>
 </body>
