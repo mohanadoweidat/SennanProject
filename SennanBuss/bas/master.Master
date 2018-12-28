@@ -156,9 +156,9 @@
 </nav>  
 
           <!--/End navbar-->
+                        <input type="search" placeholder="#Search Here"/>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-                <input type="search" placeholder="#Search Here"/>
               	  	<!-- Footer -->
         <div class="section-4-container section-container section-container-gray-bg">
 	        <div class="container">

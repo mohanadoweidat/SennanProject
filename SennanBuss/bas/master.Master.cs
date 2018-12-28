@@ -10,14 +10,13 @@ using System.Web.UI.WebControls;
 
 namespace SennanBuss.bas
 {
-	public partial class master : System.Web.UI.MasterPage
-{
+	public partial class master : System.Web.UI.MasterPage {
+
     protected void Page_Load(object sender, EventArgs e)
         {
             Btn.Click += Btn_Click;
             Btn1.Click += Btn1_Click;
-
-            Main.Reg(Page, "alert('ss')");
+            Main.Reg(Page, "alert('s+"+Session["Redirected"]+"')");
             if(Session["Redirected"] != null)
             {
                 ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "ALogout()", true);
@@ -33,10 +32,11 @@ namespace SennanBuss.bas
                 string s = Session["CurrentPage"] as string;
                 if(s == "UserProfile" || s == "VerifyEmail")
                 {
+                    Session["Redirected"] = "yes";
                     Response.Redirect("~/index.aspx");
+                    return;
                 }
             }
-            Session["Redirected"] = "yes";
         }
 
         protected void Btn1_Click(object sender, EventArgs e)
