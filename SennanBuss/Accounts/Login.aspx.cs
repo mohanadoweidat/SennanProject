@@ -22,6 +22,7 @@ namespace SennanBuss.Accounts
             {
                 Response.Redirect("../index.aspx");
                 return;
+               
             }
             Session["CurrentPage"] = "Login";
         }
@@ -31,7 +32,7 @@ namespace SennanBuss.Accounts
             Response.Redirect("../Accounts/Signup.aspx");
         }
 
-        
+       
         protected void loginbtn_Click(object sender, EventArgs e)
         {
              

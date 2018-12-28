@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* CSS Document */
 
 /******************************
@@ -43,15 +43,14 @@ body
 	background: #FFFFFF;
 	color: #a5a5a5;
 }
-div
-{
-	display: block;
-	position: relative;
-	-webkit-box-sizing: border-box;
+div {
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-ul
+    
+ ul
 {
 	list-style: none;
 	margin-bottom: 0px;
@@ -209,6 +208,7 @@ section
 {
 	width: 100%;
 	overflow: hidden;
+    height: 1922px;
 }
 .prlx_parent
 {

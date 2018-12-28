@@ -6,6 +6,7 @@
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
  </style>
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -13,11 +14,11 @@
     <asp:HiddenField ID="hfId" runat="server" />
      <div class="login">
     <p id="info-main" class="text-center">Ange nedanstående uppgifter</p>
-    <asp:TextBox ID="usrtxtbox" runat="server" placeholder="Användarnamn"></asp:TextBox>
-         <p class="text-center info">?</p>
-    <asp:TextBox ID="ematxtbox" runat="server" placeholder="Email" TextMode="Email"></asp:TextBox>
-    <asp:TextBox ID="pswtxtbox" runat="server" placeholder="Lösenord" TextMode="Password"></asp:TextBox>
-    <asp:TextBox ID="cpwdtxtbox" runat="server" placeholder="Bekräfta Lösenord" TextMode="Password"></asp:TextBox>
+    <asp:TextBox ID="usrtxtbox" runat="server" placeholder="Användarnamn" ToolTip="Fyll i det här fältet"></asp:TextBox>
+     <asp:TextBox ID="ematxtbox" runat="server" placeholder="Email" TextMode="Email" ToolTip="Fyll i det här fältet"></asp:TextBox>
+          
+    <asp:TextBox ID="pswtxtbox" runat="server" placeholder="Lösenord" TextMode="Password" ToolTip="Fyll i det här fältet"></asp:TextBox>
+    <asp:TextBox ID="cpwdtxtbox" runat="server" placeholder="Bekräfta Lösenord" TextMode="Password" ToolTip="Fyll i det här fältet" ></asp:TextBox>
     <asp:Button ID="signupbtn" runat="server" Text="Skapa Konto" OnClick="signupbtn_Click" />
     <br/>
     <asp:Label ID="redankontolbl" runat="server" Text="Redan har ett konto?"
@@ -25,5 +26,7 @@
     <asp:Button ID="loginbtn" runat="server" Text="Logga In" OnClick="loginbtn_Click"/>
     </div>
     <div class="shadow"></div>
-    <script src="../js/forms/registerJ.js"></script>
+  
+ 
+    
     </asp:Content>

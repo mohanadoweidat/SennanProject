@@ -11,6 +11,5 @@ namespace SennanBuss {
     
     
     public partial class index {
-
     }
 }

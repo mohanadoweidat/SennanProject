@@ -85,12 +85,12 @@
                         <h5 style="color:black; margin:5px 5px 5px 5px">Vi är unika med att kunna erbjuda konferensbuss i Hallands Län.</h5>
                         <p style="margin:5px 5px 5px 5px">Läs mer och titta på en film om vår nya konferensbuss!</p>
                         <p style="margin:5px 5px 5px 5px">Totalt 31 platser + Guidestol 17 personer kan sitta med ögonkontakt runt det stora bordet längst bak i bussen.</p>
-                        <div class="button about_button" style="margin:5px 5px 5px 5px "><a href="#">Klicka Här</a></div>
-					</div>
+                        <div class="button about_button" style="margin:5px 5px 5px 5px "><a href="konferensbuss.aspx">Klicka Här</a> </div>
+ 					</div>
 				</div>
 			</div>
 		</div>
-
+               
         <!--- Card<--->
 
         <div class="intro">
@@ -151,5 +151,5 @@
      	</div>
              
          </div>
-     <hr style="margin:0 80px 0 80px ; border:5px solid black" />
+  
 </asp:Content>
