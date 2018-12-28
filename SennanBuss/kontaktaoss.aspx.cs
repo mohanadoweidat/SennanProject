@@ -12,6 +12,7 @@ namespace SennanBuss
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["CurrentPage"] = "Contact";
         }
 
         protected void skbtn_Click(object sender, EventArgs e)

@@ -134,12 +134,12 @@
         <!-- Collection of nav links and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-               <li><a class="active nitem" href="~/index.aspx" runat="server">STARTSIDAN</a></li>
-				<li><a class="nitem" href="~/varabussar.aspx" runat="server">VÅRA BUSSAR</a></li>
-                <li><a class="nitem" href="~/miljoochkvalitet.aspx" runat="server">MILJÖ & KVALITET</a></li>
-				<li><a class="nitem" href="~/historik.aspx" runat="server">HISTORIK</a></li>
-				<li><a class="nitem" href="~/konferensbuss.aspx" runat="server">KONFERENSBUSS</a></li>
-				<li><a class="nitem" href="~/kontaktaoss.aspx" runat="server">KONTAKTA OSS</a></li>
+               <li><a id="Index" class="nitem" href="~/index.aspx" runat="server">STARTSIDAN</a></li>
+				<li><a id="OurBusses" class="nitem" href="~/varabussar.aspx" runat="server">VÅRA BUSSAR</a></li>
+                <li><a id="Environment" class="nitem" href="~/miljoochkvalitet.aspx" runat="server">MILJÖ & KVALITET</a></li>
+				<li><a id="History" class="nitem" href="~/historik.aspx" runat="server">HISTORIK</a></li>
+				<li><a id="Conference" class="nitem" href="~/konferensbuss.aspx" runat="server">KONFERENSBUSS</a></li>
+				<li><a id="Contact" class="nitem" href="~/kontaktaoss.aspx" runat="server">KONTAKTA OSS</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <div style="display: none;">

@@ -20,6 +20,11 @@ function Dismiss() {
     button.click();
 }
 
+function AddClassesToNav(_id) {
+    $("#" + _id).addClass("current excl");
+    $('#' + _id).attr("href","#");
+}
+
 function ALogout() {
     const msg = Swal.mixin({
         toast: true,

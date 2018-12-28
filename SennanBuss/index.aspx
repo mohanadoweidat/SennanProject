@@ -11,7 +11,7 @@
 			<div class="owl-carousel owl-theme home_slider">
 				<!-- Slide -->
 				<div class="owl-item">
-					<div class="background_image" style="background-image:url(images/slider/slider_1.jpg)">
+                           <img src="images/slider/slider_1.jpg" class="img-responsive"/>
  					</div>
 					<div class="home_slider_content_container">
 						<div class="container">

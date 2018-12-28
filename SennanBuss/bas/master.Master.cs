@@ -16,12 +16,17 @@ namespace SennanBuss.bas
         {
             Btn.Click += Btn_Click;
             Btn1.Click += Btn1_Click;
-            Main.Reg(Page, "alert('s+"+Session["Redirected"]+"')");
+            //
             if(Session["Redirected"] != null)
             {
-                ScriptManager.RegisterStartupScript(Page, Page.GetType(), "text", "ALogout()", true);
+                Main.Reg(Page, "ALogout()");
                 Session["Redirected"] = null;
             }
+            if(Session["CurrentPage"] != null)
+            {
+                Main.Reg(Page, "AddClassesToNav('"+Session["CurrentPage"]+"')");
+            }
+            //Main.Reg(Page, "alert('s+" + Session["CurrentPage"] + "')");
         }
 
         protected void Btn_Click(object sender, EventArgs e)
