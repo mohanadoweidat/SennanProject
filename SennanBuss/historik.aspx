@@ -4,9 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
          <div class="super_container">
-	<div class="home no-slider"></div>
-        <!-- Left section-->
-                 <div class="about">
+       <div><img src="images/slider/slider_1.jpg" class="img-responsive"/></div>
+        <div class="about">
  		<div class="container">
  			<div class="row">
 				<div class="col text-left">

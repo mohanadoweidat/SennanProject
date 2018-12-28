@@ -9,7 +9,7 @@
              <!-- Home -->
         <!--  Image Background -->
 
-	<div class="home no-slider"></div>
+	   <div><img src="images/slider/slider_1.jpg" class="img-responsive"/></div>
 
 
              <!-- Left section-->

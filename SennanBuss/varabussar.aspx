@@ -3,11 +3,7 @@
    
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
          <div class="super_container">
-	<!-- Home -->
-	<div class="home no-slider">
-	</div>
-       
-        
+       <div><img src="images/slider/slider_1.jpg" class="img-responsive"/></div>
         <div class="about">
 		<div class="container">
 			<div class="row">
@@ -182,14 +178,9 @@
                     <td><img src="images/imgv8.jpg" class="img-responsive" alt="" /></td>
                     <td><img src="images/imgv9.jpg" class="img-responsive" alt="" /></td>
                 </tr>
-                
-              
-               
             </table>--%>
-
 		</div>
         </div>
-             
          
 </div>
 </asp:Content>

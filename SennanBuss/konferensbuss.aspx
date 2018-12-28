@@ -36,10 +36,8 @@ max-width: none !important;
 </asp:Content>
    
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-         <div class="super_container">
-        <!--  Image Background -->
-        <div class="home no-slider">
-	</div>
+     <div class="super_container">
+         <div><img src="images/slider/slider_1.jpg" class="img-responsive"/></div>
         <br />
         <!-- Video-->
          <div class="embedresize">
@@ -98,6 +96,6 @@ max-width: none !important;
 				</div>
 			</div>
 		</div>
- 
+ </div>
             </div>
 </asp:Content>
