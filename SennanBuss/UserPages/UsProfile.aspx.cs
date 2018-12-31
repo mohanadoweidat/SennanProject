@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -17,8 +18,8 @@ namespace SennanBuss.UserPages
         public string Email = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["CurrentPage"] = "UserProfile";
-            if (Session["Username"] == null)
+           Session["CurrentPage"] = "UserProfile";
+           if (Session["Username"] == null)
             {
                 Response.Redirect("../index.aspx");
                 Session.Abandon();
@@ -28,7 +29,15 @@ namespace SennanBuss.UserPages
             Usnmae.Text = Session["Username"].ToString();
             GetUserEmail();
 
+
+
+          
+
+
         }
+
+       
+
         //View User Email
         public void GetUserEmail()
         {
@@ -59,16 +68,19 @@ namespace SennanBuss.UserPages
         //Change User Password
         protected void cpwdbtn_Click(object sender, EventArgs e)
         {
-            string Password = oldpwd.Text;
-            string passwords = sh.EncryptPassword(Password);
 
 
+
+
+     
+            string OldPassword = oldpwd.Text;
+            string OldpasswordEncrypt = sh.EncryptPassword(OldPassword);
 
             string newPassword = newpwd.Text;
-            string hash1 = sh.EncryptPassword(newPassword);
+            string newPasswordencrypt = sh.EncryptPassword(newPassword);
 
             string newPasswordcon = newpwdcon.Text;
-            string hash2 = sh.EncryptPassword(newPasswordcon);
+            string newPasswordconencrypt = sh.EncryptPassword(newPasswordcon);
             using (SqlConnection sql = new SqlConnection(db))
             {
                 string Query = "Select * From Accounts";
@@ -80,15 +92,17 @@ namespace SennanBuss.UserPages
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 string Pass = ds.Tables[0].Rows[0]["Password"].ToString();
+                
                 sql.Close();
-                if (Pass == passwords)
+                if (Pass == OldpasswordEncrypt)
                 {
-                    if (hash1 == hash2 && passwords != "")
+                    if (newPassword == newPasswordcon && OldPassword != "")
                     {
+                    
 
 
-                        string update = "Update Accounts set Password='" + hash1 + "' where Username='" + Usnmae.Text + "'";
-                        string update2 = "Update Accounts set Cpassword='" + hash2 + "' where Username='" + Usnmae.Text + "'";
+                        string update = "Update Accounts set Password='" + newPasswordencrypt + "' where Username='" + Usnmae.Text + "'";
+                        string update2 = "Update Accounts set Cpassword='" + newPasswordconencrypt + "' where Username='" + Usnmae.Text + "'";
 
                         using (SqlConnection sql1 = new SqlConnection(db))
                         {
@@ -97,16 +111,20 @@ namespace SennanBuss.UserPages
                             cmd1.Connection = sql1;
                             sql1.Open();
                             cmd1.ExecuteNonQuery();
+                            Response.Write("<script> alert('Lösenordet har Ändrats!')</script>");
                             ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "success()", true);
                         }
                     }
                     else
                     {
+                        Response.Write("<script> alert('Lösenorden Matchar inte!')</script>");
                         ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Changeerror()", true);
                     }
                 }
                 else
                 {
+
+                    Response.Write("<script> alert('Kolla ditt gamla lösenord!')</script>");
                     ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Changeerror()", true);
                 }
 

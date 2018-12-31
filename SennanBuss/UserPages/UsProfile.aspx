@@ -42,7 +42,7 @@
                         <h3 class="panel-title">Last Password Change</h3>
                     </div>
                     <div class="panel-body">
-                        4 days Ago
+                        <asp:Label ID="lbpwch" runat="server"></asp:Label>
                     </div>
                 </div>
             </div>
