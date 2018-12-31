@@ -69,6 +69,14 @@ function showError(num, _title="Oops!") {
         msg = "Det finns ett konto redan registerat med det här namnet!";
     } else if (num == 4) {
         msg = "Det finns ett konto redan registerat med det här Email!";
+    } else if (num == 20) {
+        msg = "Vänligen fyll i alla fälten.";
+    } else if (num == 21) {
+        msg = "Du har angett fel lösenord!";
+    } else if (num == 22) {
+        msg = "Det nya Lösenordet och bekräftelsen matchar inte!";
+    } else if (num == 23) {
+        msg = "Det nya lösenordet måste vara...."; /////
     }
     showError_(msg, _title);
 }

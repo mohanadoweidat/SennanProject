@@ -19,7 +19,7 @@
           
     <asp:TextBox ID="pswtxtbox" runat="server" placeholder="Lösenord" TextMode="Password" ToolTip="Fyll i det här fältet"></asp:TextBox>
     <asp:TextBox ID="cpwdtxtbox" runat="server" placeholder="Bekräfta Lösenord" TextMode="Password" ToolTip="Fyll i det här fältet" ></asp:TextBox>
-    <asp:Button ID="signupbtn" runat="server" Text="Skapa Konto" OnClick="signupbtn_Click" />
+    <asp:Button ID="signupbtn" runat="server" Text="Skapa Konto" OnClick="signupbtn_Click"/>
     <br/>
     <asp:Label ID="redankontolbl" runat="server" Text="Redan har ett konto?"
      CssClass="forgot"></asp:Label>
