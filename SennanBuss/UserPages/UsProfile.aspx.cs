@@ -1,4 +1,5 @@
 ﻿using SennanBuss.Accounts;
+using SennanBuss.head;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,22 +19,14 @@ namespace SennanBuss.UserPages
         public string Email = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-           Session["CurrentPage"] = "UserProfile";
-           if (Session["Username"] == null)
+            //Session["CurrentPage"] = "UserProfile";
+            if (Session["Username"] == null)
             {
-                Response.Redirect("../index.aspx");
-                Session.Abandon();
+                //Response.Redirect("../index.aspx");
+                //Session.Abandon();
             }
-
-
-            Usnmae.Text = Session["Username"].ToString();
-            GetUserEmail();
-
-
-
-          
-
-
+            //Usnmae.Text = Session["Username"].ToString();
+            //GetUserEmail();
         }
 
        
@@ -65,72 +58,57 @@ namespace SennanBuss.UserPages
             }
         }
 
-        //Change User Password
-        protected void cpwdbtn_Click(object sender, EventArgs e)
+        protected void SomeoneClickedThatShittyButton(object s, EventArgs e)
         {
-
-
-
-
-     
-            string OldPassword = oldpwd.Text;
-            string OldpasswordEncrypt = sh.EncryptPassword(OldPassword);
-
-            string newPassword = newpwd.Text;
-            string newPasswordencrypt = sh.EncryptPassword(newPassword);
-
-            string newPasswordcon = newpwdcon.Text;
-            string newPasswordconencrypt = sh.EncryptPassword(newPasswordcon);
-            using (SqlConnection sql = new SqlConnection(db))
+            string OldP = oldpwd.Text, NewP = newpwd.Text, NewP1 = newpwdcon.Text, DP;
+            if(OldP == "" || NewP == "" || NewP1 == "")
             {
-                string Query = "Select * From Accounts";
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = Query;
-                cmd.Connection = sql;
-                SqlDataAdapter da = new SqlDataAdapter();
-                da.SelectCommand = cmd;
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                string Pass = ds.Tables[0].Rows[0]["Password"].ToString();
-                
-                sql.Close();
-                if (Pass == OldpasswordEncrypt)
+                Main.Reg(Page, "showError(20)");
+            } else
+            {
+                using (SqlConnection sql = new SqlConnection(db))
                 {
-                    if (newPassword == newPasswordcon && OldPassword != "")
+                    string Query = "Select Password From Accounts where (Username='"+Session["Username"]+"')";
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandText = Query;
+                    cmd.Connection = sql;
+                    SqlDataAdapter da = new SqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    DP = sh.dekryptPassword(ds.Tables[0].Rows[0]["Password"].ToString());
+                    sql.Close();
+                }
+                if(OldP == DP)
+                {
+                    if(NewP == NewP1)
                     {
-                    
-
-
-                        string update = "Update Accounts set Password='" + newPasswordencrypt + "' where Username='" + Usnmae.Text + "'";
-                        string update2 = "Update Accounts set Cpassword='" + newPasswordconencrypt + "' where Username='" + Usnmae.Text + "'";
-
-                        using (SqlConnection sql1 = new SqlConnection(db))
+                        if(OldP != NewP)
                         {
-                            SqlCommand cmd1 = new SqlCommand();
-                            cmd1.CommandText = update + update2;
-                            cmd1.Connection = sql1;
-                            sql1.Open();
-                            cmd1.ExecuteNonQuery();
-                            Response.Write("<script> alert('Lösenordet har Ändrats!')</script>");
-                            ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "success()", true);
+                            string update = "Update Accounts set Password='" + sh.EncryptPassword(NewP) + "' where Username='" + Session["Username"] + "'";
+                            using (SqlConnection sql1 = new SqlConnection(db))
+                            {
+                                SqlCommand cmd1 = new SqlCommand();
+                                cmd1.CommandText = update;
+                                cmd1.Connection = sql1;
+                                sql1.Open();
+                                cmd1.ExecuteNonQuery();
+                                // TODO Success
+                            }
+                        } else
+                        {
+                            Main.Reg(Page, "showError(23)");
                         }
-                    }
-                    else
+                    } else
                     {
-                        Response.Write("<script> alert('Lösenorden Matchar inte!')</script>");
-                        ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Changeerror()", true);
+                        Main.Reg(Page, "showError(22)");
                     }
-                }
-                else
+                } else
                 {
-
-                    Response.Write("<script> alert('Kolla ditt gamla lösenord!')</script>");
-                    ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Changeerror()", true);
+                    Main.Reg(Page, "showError(21)");
                 }
+                }
+        }
 
-            }
-        }   
-            
-        
     }
 }

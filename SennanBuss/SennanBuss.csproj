@@ -95,6 +95,7 @@
     <Content Include="Accounts\Login.aspx" />
     <Content Include="Accounts\Signup.aspx" />
     <Content Include="Accounts\Verifymail.aspx" />
+    <Content Include="AdminPages\AdminPanel.aspx" />
     <Content Include="historik.aspx" />
     <Content Include="images\1.jpg" />
     <Content Include="images\2.jpg" />
@@ -179,6 +180,7 @@
     <Content Include="styles\main_styles.css" />
     <Content Include="styles\news.css" />
     <Content Include="styles\news_responsive.css" />
+    <Content Include="styles\pages\AdminPanelDesigner.css" />
     <Content Include="styles\pages\forms\register.css" />
     <Content Include="styles\pages\quality.css" />
     <Content Include="styles\responsive.css" />
@@ -219,6 +221,13 @@
     </Compile>
     <Compile Include="Accounts\Verifymail.aspx.designer.cs">
       <DependentUpon>Verifymail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\AdminPanel.aspx.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\AdminPanel.aspx.designer.cs">
+      <DependentUpon>AdminPanel.aspx</DependentUpon>
     </Compile>
     <Compile Include="bas\master.Master.cs">
       <DependentUpon>master.Master</DependentUpon>
@@ -329,9 +338,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AdminPages\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

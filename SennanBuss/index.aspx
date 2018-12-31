@@ -49,7 +49,8 @@
   			</div>
  		</div>
 	</div>
-           
+        <asp:Button Text="Hello" runat="server" ID="Tester" OnClick="Unnamed_Click" UseSubmitBehavior="false"
+            OnClientClick="return false;"/>
          <!-- About -->
          <div class="about">
  		<div class="container">

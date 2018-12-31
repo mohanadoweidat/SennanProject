@@ -7,18 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SennanBuss {
+namespace SennanBuss.AdminPages {
     
     
-    public partial class index {
-        
-        /// <summary>
-        /// Tester control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Tester;
+    public partial class AdminPanel {
     }
 }

@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
-
+using SennanBuss.head;
 
 namespace SennanBuss.Accounts
 {
@@ -58,7 +58,7 @@ namespace SennanBuss.Accounts
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "Loginerror()", true);
+                Main.Reg(Page, "Loginerror()");
                 clear();
             }
             connection.Close();

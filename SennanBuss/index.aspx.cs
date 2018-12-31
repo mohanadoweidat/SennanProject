@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SennanBuss.head;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,7 +15,10 @@ namespace SennanBuss
             Session["CurrentPage"] = "Index";
         }
 
-        
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            Main.Reg(Page, "alert('Hello')");
+        }
     }
 
 }

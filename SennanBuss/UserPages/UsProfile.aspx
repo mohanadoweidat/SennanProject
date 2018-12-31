@@ -16,8 +16,8 @@
             <div class="col-md-3">
                 <ul class="nav nav-pills nav-stacked admin-menu" >
                     <li class="active"><a href="" data-target-id="profile"><i class="glyphicon glyphicon-user"></i> Profil</a></li>
-                    <li><a href="" data-target-id="change-password"><i class="glyphicon glyphicon-lock"></i> Ändra Lösenord</a></li>
-                    <li><a href="" data-target-id="settings"><i class="glyphicon glyphicon-cog"></i>Inställingar</a></li>
+                    <li><a href="#" data-target-id="change-password"><i class="glyphicon glyphicon-lock"></i> Ändra Lösenord</a></li>
+                    <li><a href="#" data-target-id="settings"><i class="glyphicon glyphicon-cog"></i>Inställingar</a></li>
                 </ul>
             </div>
             <div class="col-md-9  admin-content" id="profile">
@@ -119,7 +119,8 @@
                             <div class="form-group">
                                 <div class="pull-left">
                                   
-                                    <asp:Button ID="cpwdbtn" runat="server" Text="Ändra Lösenordet" CssClass="form-control btn btn-primary" OnClick="cpwdbtn_Click" />
+                                    <asp:Button ID="cpwdbtn" runat="server" Text="Ändra Lösenordet" CssClass="form-control btn btn-primary" OnClick="SomeoneClickedThatShittyButton"
+                                        />
                                 </div>
                             </div>
                         </div>
@@ -157,11 +158,6 @@
             {
                 swal("Info!", "Ditt Lösenord har Ändrats!" + "</br>"+ "<a href='Login.aspx'>Logga in På nytt</a>", "success", "LogIn");
             }
-            function Changeerror() {
-                swal({
-                type: 'error',
-                title: 'Oops...',
-                text:"Det nya Lösenordet och bekräftelsen matchar inte!"})}
         </script>
      <!-- Error logg in Alredy exist Email and name Both-->
 </asp:Content>
