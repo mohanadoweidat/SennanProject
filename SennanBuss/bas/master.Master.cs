@@ -16,7 +16,6 @@ namespace SennanBuss.bas
         {
             if (!IsPostBack)
             {
-                Btn.Click += Btn_Click;
                 Btn1.Click += Btn1_Click;
                 if (Session["Redirected"] != null)
                 {
@@ -30,32 +29,26 @@ namespace SennanBuss.bas
             }
         }
 
-        protected void Btn_Click(object sender, EventArgs e)
-        {
-          
-            Session["Username"] = null;
-            if(Session["CurrentPage"] != null)
-            {
-                string s = Session["CurrentPage"] as string;
-                if(s == "UserProfile" || s == "VerifyEmail")
-                {
-                    Session["Redirected"] = "yes";
-                    Response.Redirect("~/index.aspx");
-                    return;
-                }
-
-            }
-            Main.Reg(Page, "showError(2)");
-        }
+        
 
         protected void Btn1_Click(object sender, EventArgs e)
         {
             Session["Dismissed"] = "yes";
         }
 
-        protected void Buttoner_Click(object sender, EventArgs e)
+        protected void Btn_Click(object sender, EventArgs e)
         {
-            Main.Reg(Page, "showError(2)");
+            Session["Username"] = null;
+            if (Session["CurrentPage"] != null)
+            {
+                string s = Session["CurrentPage"] as string;
+                if (s == "UserProfile" || s == "VerifyEmail")
+                {
+                    Session["Redirected"] = "yes";
+                    Response.Redirect("~/index.aspx");
+                    return;
+                }
+            }
         }
     }
 

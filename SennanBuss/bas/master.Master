@@ -123,7 +123,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <div style="display: none;">
-                   <asp:Button runat="server" ID="Btn"/>
+                   <asp:Button runat="server" ID="Btn" OnClick="Btn_Click"/>
                    <asp:Button runat="server" ID="Btn1"/>
               </div>
                 <%
@@ -158,10 +158,6 @@
           <!--/End navbar-->
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-        <div style="display: block;">
-            <asp:Button runat="server" ID="Buttoner" OnClick="Buttoner_Click"/>
-        </div>
-            <input type="button" id="hhh" value="Hell" onclick="Clickad()"/>
               	  	<!-- Footer -->
         <div class="section-4-container section-container section-container-gray-bg">
 	        <div class="container">
@@ -189,14 +185,6 @@
         <script src="../js/main.js"></script>
         <script src="../js/lottie/lottie.js"></script>
         <script src="../js/forms/registerJ.js"></script>
-
-            <script>
-        function Clickad() {
-            var b = document.getElementById('<%=Buttoner.ClientID%>');
-            b.click();
-            //alert('ks a5tkm');
-        }
-    </script>
 
     </form>
 </body>
