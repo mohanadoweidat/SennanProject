@@ -176,8 +176,6 @@
     <Content Include="styles\bootstrap4\popper.js" />
     <Content Include="styles\main.css" />
     <Content Include="styles\main_styles.css" />
-    <Content Include="styles\news.css" />
-    <Content Include="styles\news_responsive.css" />
     <Content Include="styles\pages\Admin\animate.min.css" />
     <Content Include="styles\pages\Admin\light-bootstrap-dashboard.css" />
     <Content Include="styles\pages\Admin\pe-icon-7-stroke.css" />

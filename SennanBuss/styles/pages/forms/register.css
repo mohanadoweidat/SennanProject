@@ -1,19 +1,5 @@
 ﻿
 /*After registring, return to the previous opened page (using Session[])*/
-body {
-    /*
-    background-image: url(/images/slider/slider_1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-        */
-    //padding-top: 120px;
-}
-
-.imag {
-    background-image: url(/images/slider/slider_1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 .login {
     background: #eceeee !important;
@@ -26,6 +12,14 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.login1 {
+    background: #eceeee !important;
+    border: 1px solid #42464b;
+    border-radius: 6px;
+    height: 320px !important;
+    margin: 100px auto 0 ;
+    width: 298px;
 }
 
     .login h1 {
@@ -51,7 +45,8 @@ input[type="password"], input[type="text"], input[type="email"] {
     color: #696969;
     height: 39px;
     margin: 31px 0 0 29px;
-    padding-left: 37px;
+    padding-left: 5px;
+    padding-right:5px;
     transition: box-shadow 0.3s;
     width: 240px;
 }

@@ -2,30 +2,15 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
   
      <!-- Log in and sign up form style-->
-  <style>
-        html { height: 100% }
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
-
-.login1 {
-    background: #eceeee !important;
-    border: 1px solid #42464b;
-    border-radius: 6px;
-    height: 320px !important;
-    margin: 20px auto 0;
-    width: 298px;
-}
-  </style>
     <link rel="stylesheet" href="../styles/pages/forms/register.css"/>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <!--div class="home no-slider"></div-->
-    <img src="../images/slider/slider_1.jpg" class="img-responsive"/>
-       <div class="login">
-
+    <div class="container">
+        <div class="login1">
           <asp:TextBox ID="usrtxtbox" runat="server" placeholder="Användarnamn" ToolTip="Username"></asp:TextBox>
+             <!-- tooltip-->
+               <span class="glyphicon glyphicon-edit" data-toggle="tooltip" data-original-title="example@gmail.com"></span>
           <asp:TextBox ID="pswtxtbox" runat="server" placeholder="Lösenord" TextMode="Password" ToolTip="Password"></asp:TextBox>
-        
           <asp:HyperLink ID="pswforglink" runat="server" CssClass="forgot" NavigateUrl="~/Accounts/ForgotPassword.aspx">forgot password?</asp:HyperLink>
           <asp:Button ID="loginbtn" runat="server" Text="Logga In" OnClick="loginbtn_Click" />
 
@@ -35,8 +20,8 @@
           <asp:Button ID="signupbtn" runat="server" Text="Skapa Konto"  OnClick="signupbtn_Click"  />
 
        </div>
-       <div class="shadow"></div>
-
+                <div class="shadow"></div>
+    </div>
 
     <!-- Error logg in Alredy exist Email and name Both-->
         <script type="text/javascript" lang="ja">
@@ -47,4 +32,14 @@
          title: 'Oops...',
            text:"Du har angett fel Användarnamn eller Lösenord!"})}
         </script>
+
+
+       <!-- tooltip-->
+            <script type="text/javascript">
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip({
+        placement: 'bottom'
+    });
+});
+</script>
        </asp:Content>
