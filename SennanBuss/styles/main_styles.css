@@ -41,7 +41,7 @@ body
 	font-size: 14px;
 	font-weight: 400;
 	background: #FFFFFF;
-	color: #a5a5a5;
+	color: rgb(82, 82, 82);
 }
 div {
     display: block;
@@ -289,7 +289,6 @@ section
 }
 .logo a
 {
-	font-family: 'Oswald', sans-serif;
 	font-size: 30px;
 	font-weight: 500;
 	color: #FFFFFF;

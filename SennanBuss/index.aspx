@@ -25,9 +25,6 @@
 				</div>
                </div>
   			</div>
-        <div style="background-color: green" class="text-center">
-		<p style="color:red">Den 2 januari 2017 utökades familjen genom att Sennans Buss tog över verksamheten i Unnaryds Buss. Gamla kunder, såväl som nya hälsas välkomna till Sennans Buss.</p>
-		</div>
  		</div>
 	</div>
          <!-- About -->
@@ -50,6 +47,8 @@
                         <img src="../images/1.jpg" class="img-circle col-sm-6"/>
                         <img src="../images/2.jpg" class="img-circle col-sm-6"/>
                         </div>
+                    <br />
+		<p style="color:red">Den 2 januari 2017 utökades familjen genom att Sennans Buss tog över verksamheten i Unnaryds Buss. Gamla kunder, såväl som nya hälsas välkomna till Sennans Buss.</p>
                         <br />
 				</div>
 				<div class="col-lg-6">

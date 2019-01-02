@@ -1,4 +1,14 @@
 ﻿
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+h4 {
+    color: black;
+}
+
+* {
+    font-family: 'Righteous', cursive;
+}
+
 html {
     height: 100%
 }
