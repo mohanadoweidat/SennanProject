@@ -1,0 +1,23 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+h4 {
+    color: black;
+}
+
+* {
+    font-family: 'Righteous', cursive;
+}
+
+.about-gallery {
+    background-color: rgba(255,255,255,.9);
+    border: 5px solid rgb(0, 117, 185);
+}
+
+.about-item {
+    margin: 10px 10px 10px 10px;
+}
+
+.about-bar {
+    padding: 5px;
+    margin: 0;
+}

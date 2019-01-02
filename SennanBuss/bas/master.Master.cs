@@ -14,19 +14,20 @@ namespace SennanBuss.bas
 
     protected void Page_Load(object sender, EventArgs e)
         {
-            Btn.Click += Btn_Click;
-            Btn1.Click += Btn1_Click;
-            //
-            if(Session["Redirected"] != null)
+            if (!IsPostBack)
             {
-                Main.Reg(Page, "ALogout()");
-                Session["Redirected"] = null;
+                Btn.Click += Btn_Click;
+                Btn1.Click += Btn1_Click;
+                if (Session["Redirected"] != null)
+                {
+                    Main.Reg(Page, "ALogout()");
+                    Session["Redirected"] = null;
+                }
+                if (Session["CurrentPage"] != null)
+                {
+                    Main.Reg(Page, "AddClassesToNav('" + Session["CurrentPage"] + "')");
+                }
             }
-            if(Session["CurrentPage"] != null)
-            {
-                Main.Reg(Page, "AddClassesToNav('"+Session["CurrentPage"]+"')");
-            }
-            //Main.Reg(Page, "alert('s+" + Session["CurrentPage"] + "')");
         }
 
         protected void Btn_Click(object sender, EventArgs e)
@@ -49,6 +50,10 @@ namespace SennanBuss.bas
             Session["Dismissed"] = "yes";
         }
 
+        protected void Buttoner_Click(object sender, EventArgs e)
+        {
+            Main.Reg(Page, "showError(2)");
+        }
     }
 
    

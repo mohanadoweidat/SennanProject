@@ -1,11 +1,18 @@
 ﻿
 $(function () {
     var navbar = $('.navbar');
-    $(window).scroll(function () {
-        if ($(window).scrollTop() <= const_scroll_top) {
+    var win = $(window);
+    win.scroll(function () {
+        if (win.scrollTop() <= const_scroll_top) {
             navbar.removeClass('navbar-scroll');
         } else {
             navbar.addClass('navbar-scroll');
+        }
+        if (win.scrollTop() > 400) {
+            $(".about-a").addClass("no-tr");
+        }
+        if (win.scrollTop() > 700) {
+            $(".symbols-a").addClass("no-tr");
         }
     });
 });

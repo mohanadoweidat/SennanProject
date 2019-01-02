@@ -34,26 +34,6 @@
     <link rel="stylesheet" href="../styles/main.css"/>
     <link rel="icon" href="../images/1.jpg"/>
 
-    <style type="text/css" >
-        .glow {
-  font-size: 24px;
-  color:  #ffdf3e;
-   -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #ffdf3e, 0 0 20px #ffdf3e, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #ffdf3e, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-}
-    </style>
-
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -176,9 +156,12 @@
 </nav>  
 
           <!--/End navbar-->
-                        <input type="search" placeholder="#Search Here"/>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+        <div style="display: block;">
+            <asp:Button runat="server" ID="Buttoner" OnClick="Buttoner_Click"/>
+        </div>
+            <input type="button" id="hhh" value="Hell" onclick="Clickad()"/>
               	  	<!-- Footer -->
         <div class="section-4-container section-container section-container-gray-bg">
 	        <div class="container">
@@ -206,6 +189,14 @@
         <script src="../js/main.js"></script>
         <script src="../js/lottie/lottie.js"></script>
         <script src="../js/forms/registerJ.js"></script>
+
+            <script>
+        function Clickad() {
+            var b = document.getElementById('<%=Buttoner.ClientID%>');
+            b.click();
+            //alert('ks a5tkm');
+        }
+    </script>
 
     </form>
 </body>

@@ -18,16 +18,16 @@ namespace SennanBuss.UserPages
         public string Email = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Session["CurrentPage"] = "UserProfile";
+            Session["CurrentPage"] = "UserProfile";
             if (Session["Username"] == null)
             {
-                //Response.Redirect("../index.aspx");
-                //Session.Abandon();
+                Response.Redirect("../index.aspx");
+                Session.Abandon();
             }
-            //Usnmae.Text = Session["Username"].ToString();
-            //GetUserEmail();
+            Usnmae.Text = Session["Username"].ToString();
+            GetUserEmail();
         }
-        //View User Email
+        
         public void GetUserEmail()
         {
             using (SqlConnection sql = new SqlConnection(db))

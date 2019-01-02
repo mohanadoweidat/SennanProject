@@ -1,4 +1,55 @@
-﻿/* Nav / Navbar Styles
+﻿
+html {
+    height: 100%
+}
+::-moz-selection {
+    background: #fe57a1;
+    color: #fff;
+    text-shadow: none;
+}
+::selection {
+    background: #fe57a1;
+    color: #fff;
+    text-shadow: none;
+}
+
+.glow {
+    font-size: 24px;
+    color: #ffdf3e;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ffdf3e, 0 0 20px #ffdf3e, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+
+    to {
+        text-shadow: 0 0 20px #ffdf3e, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+}
+
+body {
+    height: 100%;
+    
+}
+
+.about-a {
+    transform: translateX(-500px);
+    transition: 1s;
+}
+.symbols-a {
+    transform: translateX(-500px);
+    transition: 1s;
+}
+.no-tr {
+    transform: translateX(0px);
+    transition: 1s;
+}
+
+/* Nav / Navbar Styles
 ===================================*/
 .navbar {
     background: rgba(105,105,105,0.7);

@@ -170,18 +170,11 @@
     <Content Include="styles\bootstrap4\bootstrap.min.css" />
     <Content Include="styles\bootstrap4\bootstrap.min.js" />
     <Content Include="styles\bootstrap4\popper.js" />
-    <Content Include="styles\contact.css" />
-    <Content Include="styles\contact_responsive.css" />
-    <Content Include="styles\destinations.css" />
-    <Content Include="styles\destinations_responsive.css" />
-    <Content Include="styles\elements.css" />
-    <Content Include="styles\elements_responsive.css" />
     <Content Include="styles\main.css" />
     <Content Include="styles\main_styles.css" />
-    <Content Include="styles\news.css" />
-    <Content Include="styles\news_responsive.css" />
     <Content Include="styles\pages\AdminPanelDesigner.css" />
     <Content Include="styles\pages\forms\register.css" />
+    <Content Include="styles\pages\index.css" />
     <Content Include="styles\pages\quality.css" />
     <Content Include="styles\responsive.css" />
     <Content Include="styles\Style.css" />
@@ -229,12 +222,26 @@
     <Compile Include="AdminPages\AdminPanel.aspx.designer.cs">
       <DependentUpon>AdminPanel.aspx</DependentUpon>
     </Compile>
+    <Compile Include="bas\master-no-nav.Master.cs">
+      <DependentUpon>master-no-nav.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bas\master-no-nav.Master.designer.cs">
+      <DependentUpon>master-no-nav.Master</DependentUpon>
+    </Compile>
     <Compile Include="bas\master.Master.cs">
       <DependentUpon>master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="bas\master.Master.designer.cs">
       <DependentUpon>master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="bas\nav-master.master.cs">
+      <DependentUpon>nav-master.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bas\nav-master.master.designer.cs">
+      <DependentUpon>nav-master.master</DependentUpon>
     </Compile>
     <Compile Include="Database\DatabaseConnection.cs" />
     <Compile Include="Database\DBActions.cs" />
@@ -297,6 +304,8 @@
     <Content Include="bas\master.Master" />
     <Content Include="js\lottie\lottie.js" />
     <Content Include="Data\animations\skipping.json" />
+    <Content Include="bas\master-no-nav.Master" />
+    <Content Include="bas\nav-master.master" />
     <None Include="packages.config" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
