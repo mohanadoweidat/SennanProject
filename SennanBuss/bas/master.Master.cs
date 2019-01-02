@@ -31,6 +31,7 @@ namespace SennanBuss.bas
 
         protected void Btn_Click(object sender, EventArgs e)
         {
+          
             Session["Username"] = null;
             if(Session["CurrentPage"] != null)
             {
@@ -41,7 +42,9 @@ namespace SennanBuss.bas
                     Response.Redirect("~/index.aspx");
                     return;
                 }
+
             }
+            Main.Reg(Page, "showError(2)");
         }
 
         protected void Btn1_Click(object sender, EventArgs e)

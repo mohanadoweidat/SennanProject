@@ -49,8 +49,7 @@ namespace SennanBuss.Accounts
                         ematxtbox.Text = dtbl.Rows[0][2].ToString();
                         pswtxtbox.Text = dtbl.Rows[0][3].ToString();
                         pswtxtbox.Attributes.Add("value", dtbl.Rows[0][3].ToString());
-                        cpwdtxtbox.Text = dtbl.Rows[0][3].ToString();
-                        cpwdtxtbox.Attributes.Add("value", dtbl.Rows[0][3].ToString());
+                        
                     }
                 }
             }
@@ -111,7 +110,6 @@ namespace SennanBuss.Accounts
                         sqlCmd.Parameters.AddWithValue("@Username", _s);
                         sqlCmd.Parameters.AddWithValue("@Email", ematxtbox.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@Password", pswtxtbox.Text.Trim());
-                        sqlCmd.Parameters.AddWithValue("@Cpassword", cpwdtxtbox.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@Status", "Obekräftat");
                         sqlCmd.Parameters.AddWithValue("@Kod", Kod);
                         sqlCmd.ExecuteNonQuery();
