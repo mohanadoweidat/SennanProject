@@ -7,7 +7,7 @@
     <br />
     <br />
    <center>
-       <img src="../images/1.jpg" class="img-circle" />
+       <img src="../images/1.jpg" class="img-circle"  style="margin:50px;"/>
    </center>
      <br />
     <br />
@@ -17,7 +17,7 @@
                 <ul class="nav nav-pills nav-stacked admin-menu" >
                     <li class="active"><a href="" data-target-id="profile"><i class="glyphicon glyphicon-user"></i> Profil</a></li>
                     <li><a href="#" data-target-id="change-password"><i class="glyphicon glyphicon-lock"></i> Ändra Lösenord</a></li>
-                    <li><a href="#" data-target-id="settings"><i class="glyphicon glyphicon-cog"></i>Inställingar</a></li>
+                    <li><a href="#" data-target-id="settings"><i class="glyphicon glyphicon-cog"></i> Mina Bokningar</a></li>
                 </ul>
             </div>
             <div class="col-md-9  admin-content" id="profile">

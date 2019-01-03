@@ -2,9 +2,41 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="styles/pages/index.css" rel="stylesheet"/>
+    <style type="text/css">
+
+        #Slideshow{
+            margin:80px auto;
+            
+            width:100vh;
+            height:240px;
+             
+            box-shadow:0 0 20px rgba(0,0,0,0.4);
+        }
+        #Slideshow > div{
+           
+        }
+
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <div class="super_container">
+  <div class="container">
+
+ 
+    <div id="Slideshow">
+        <div>
+           <img src="images/slider/slider_1.jpg" class="img-responsive" />
+
+       </div>
+       <div>
+           <img src="images/h10.jpg" class="img-responsive" />
+       </div>
+       <div>
+           <img src="images/h2.jpg" class="img-responsive" />
+       </div>
+   </div>
+       </div>
+    <br />
+    <%-- <div class="super_container">
 	<div class="home">
 		<div class="home_slider_container">
 			<div class="owl-carousel owl-theme home_slider">
@@ -27,7 +59,7 @@
                </div>
   			</div>
  		</div>
-	</div>
+	</div>--%>
          <!-- About -->
  		<div class="container about-a">
 			<div class="row">
@@ -101,4 +133,17 @@
 		</div>
 		</div>
 		</div>
+
+    <script type="text/javascript">
+        $("#Slideshow > div:gt(0)").hide();
+
+        setInterval(function () {
+            $('#Slideshow > div:first')
+                .fadeOut(500)
+                .next()
+                .fadeIn(500)
+                .end()
+                .appendTo('#Slideshow');
+        }, 3000);
+    </script>
 </asp:Content>
