@@ -16,7 +16,6 @@
 							<div class="row">
 								<div class="col">
 									<div class="home_slider_content">
-
 										<div class="home_title"><h3 style="color:white">Let us take you away</h3></div>
 									</div>
 								</div>
