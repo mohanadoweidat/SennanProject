@@ -170,6 +170,8 @@ border: 1px solid #c6c6c6;
 }
 
   </style>
+
+     
     <link rel="stylesheet" href="styles/pages/forms/register.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -194,6 +196,7 @@ border: 1px solid #c6c6c6;
 <h3>Ditt Email</h3>
 <p><span class="wpcf7-form-control-wrap your-email">
     <asp:TextBox ID="embox" runat="server" CssClass="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" TextMode="Email"></asp:TextBox></span></p>
+     
 </div>
 
 
@@ -216,6 +219,6 @@ border: 1px solid #c6c6c6;
         
 </div>
 
- 
+  
     
 </asp:Content>
