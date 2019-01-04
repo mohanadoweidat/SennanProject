@@ -19,5 +19,7 @@ namespace SennanBuss.head
             ScriptManager.RegisterStartupScript(page,page.GetType(),key,func,true);
         }
 
+
+
     }
 }

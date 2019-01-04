@@ -119,7 +119,7 @@
                             <div class="form-group">
                                 <div class="pull-left">
                                   
-                                    <asp:Button ID="cpwdbtn" runat="server" Text="Ändra Lösenordet" CssClass="form-control btn btn-primary" OnClick="SomeoneClickedThatShittyButton"
+                                    <asp:Button ID="cpwdbtn" runat="server" Text="Ändra Lösenordet" CssClass="form-control btn btn-primary" OnClick="cpwdbtn_Click"
                                         />
                                 </div>
                             </div>

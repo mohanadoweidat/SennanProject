@@ -8,10 +8,10 @@ $(function () {
         } else {
             navbar.addClass('navbar-scroll');
         }
-        if (win.scrollTop() > 400) {
+        if (win.scrollTop() > 200) {
             $(".about-a").addClass("no-tr");
         }
-        if (win.scrollTop() > 700) {
+        if (win.scrollTop() > 400) {
             $(".symbols-a").addClass("no-tr");
         }
     });

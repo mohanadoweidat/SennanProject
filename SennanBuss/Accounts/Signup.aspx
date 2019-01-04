@@ -10,21 +10,31 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <img src="../images/slider/slider_1.jpg" class="img-responsive imag"/>
+    
     <asp:HiddenField ID="hfId" runat="server" />
-     <div class="login">
-    <p id="info-main" class="text-center">Ange nedanstående uppgifter</p>
-    <asp:TextBox ID="usrtxtbox" runat="server" placeholder="Användarnamn" ToolTip="Fyll i det här fältet"></asp:TextBox>
-     <asp:TextBox ID="ematxtbox" runat="server" placeholder="Email" TextMode="Email" ToolTip="Fyll i det här fältet"></asp:TextBox>
+
+    <div class="container">
+        <div class="lg text-center">
+             <p id="info-main" class="text-center">Ange nedanstående uppgifter</p><br /><br />
+    <asp:TextBox ID="usrtxtbox" runat="server" placeholder="Användarnamn" ToolTip="Fyll i det här fältet"></asp:TextBox><br /><br />
+     <asp:TextBox ID="ematxtbox" runat="server" placeholder="Email" TextMode="Email" ToolTip="Fyll i det här fältet"></asp:TextBox><br /><br />
           
-    <asp:TextBox ID="pswtxtbox" runat="server" placeholder="Lösenord" TextMode="Password" ToolTip="Fyll i det här fältet"></asp:TextBox>
-    <asp:TextBox ID="cpwdtxtbox" runat="server" placeholder="Bekräfta Lösenord" TextMode="Password" ToolTip="Fyll i det här fältet" ></asp:TextBox>
-    <asp:Button ID="signupbtn" runat="server" Text="Skapa Konto" OnClick="signupbtn_Click"/>
-    <br/>
-    <asp:Label ID="redankontolbl" runat="server" Text="Redan har ett konto?"
-     CssClass="forgot"></asp:Label>
+    <asp:TextBox ID="pswtxtbox" runat="server" placeholder="Lösenord" TextMode="Password" ToolTip="Fyll i det här fältet"></asp:TextBox><br /><br />
+    <asp:TextBox ID="cpwdtxtbox" runat="server" placeholder="Bekräfta Lösenord" TextMode="Password" ToolTip="Fyll i det här fältet" ></asp:TextBox><br /><br />
+    <asp:Button ID="signupbtn" runat="server" Text="Skapa Konto" OnClick="signupbtn_Click"/><br /><br />
+    
+    <asp:Label ID="redankontolbl" runat="server" Text="Redan har ett konto?" CssClass="forgot"></asp:Label><br /><br />
     <asp:Button ID="loginbtn" runat="server" Text="Logga In" OnClick="loginbtn_Click"/>
+        </div>
     </div>
+
+
+
+
+
+    <%-- <div class="login">
+   
+    </div>--%>
     <div class="shadow"></div>
   
  
