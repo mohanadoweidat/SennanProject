@@ -119,6 +119,8 @@
     <Content Include="images\h9.jpg" />
     <Content Include="images\kimg.png" />
     <Content Include="images\sidebar-5.jpg" />
+    <Content Include="images\slider\slider.jpg" />
+    <Content Include="images\slider\slider2.jpg" />
     <Content Include="images\slider\slider_1.jpg" />
     <Content Include="images\rbuss.png" />
     <Content Include="images\sennan_certifikat_2017.jpg" />

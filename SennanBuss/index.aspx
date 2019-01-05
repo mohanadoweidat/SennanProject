@@ -1,40 +1,85 @@
 ﻿<%@ Page Title="Startsidan" Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SennanBuss.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="styles/pages/index.css" rel="stylesheet"/>
+
+
+   
+
+
     <style type="text/css">
-
-        #Slideshow{
-            margin:80px auto;
-            
-            width:100vh;
-            height:240px;
-             
-            box-shadow:0 0 20px rgba(0,0,0,0.4);
-        }
-        #Slideshow > div{
-           
+        #slider{
+            overflow:hidden;
         }
 
+        #slider figure{
+            position:relative;
+            width:500%;
+             margin:60px auto;
+            left:0;
+             animation : 20s slider infinite;
+
+        }
+
+        #slider figure img{
+            width:20%;
+            float:left;
+        }
+
+        @keyframes slider{
+            0%{
+                left:0;
+            }
+            20%{
+                left:0;
+            }
+            25%{
+                left:-100%;
+            }
+            45%{
+                left:-100%;
+            }
+            50%{
+                left:-200%;
+            }
+            70%{
+                left:-200%;
+            }
+            75%{
+               left: -300%;
+            }
+            95%{
+                left:-300%;
+            }
+            100%{
+                left:-400%;
+            }
+        }
     </style>
+     
+
+    <!----------------------------------------------------->
+
+    <link href="styles/pages/index.css" rel="stylesheet"/>
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-  <div class="container">
-
  
-    <div id="Slideshow">
-        <div>
-           <img src="images/slider/slider_1.jpg" class="img-responsive" />
 
-       </div>
-       <div>
-           <img src="images/h10.jpg" class="img-responsive" />
-       </div>
-       <div>
-           <img src="images/h2.jpg" class="img-responsive" />
-       </div>
-   </div>
-       </div>
+    
+
+   
+    <div id="slider">
+        <figure>
+            <img src="images/slider/slider.jpg"  />
+             <img src="images/slider/slider2.jpg"   />
+            <img src="images/slider/slider.jpg"   />
+              <img src="images/slider/slider2.jpg"   />
+            <img src="images/slider/slider.jpg"   />
+             
+        </figure>
+
+    </div>
+     
     <br />
     <%-- <div class="super_container">
 	<div class="home">
@@ -59,6 +104,8 @@
   			</div>
  		</div>
 	</div>--%>
+
+
          <!-- About -->
  		<div class="container about-a">
 			<div class="row">
@@ -134,15 +181,8 @@
 		</div>
 
     <script type="text/javascript">
-        $("#Slideshow > div:gt(0)").hide();
-
-        setInterval(function () {
-            $('#Slideshow > div:first')
-                .fadeOut(500)
-                .next()
-                .fadeIn(500)
-                .end()
-                .appendTo('#Slideshow');
-        }, 3000);
+        $(document).ready(function(){
+            $('.carousel').carousel();
+        });
     </script>
 </asp:Content>
