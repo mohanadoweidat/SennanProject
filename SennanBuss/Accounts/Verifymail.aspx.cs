@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using System.Threading;
+using SennanBuss.head;
 
 namespace SennanBuss.Accounts
 {
@@ -86,14 +87,15 @@ namespace SennanBuss.Accounts
                     if (Kod == TextBox1.Text)
                     {
                         Changestatus();
-                        Label4.Text = "Din Mail har bekräftats!";
+                        Main.Reg(Page, "success1()");
+                        
                         //http://localhost:8000/Accounts/Verifymail.aspx
                         ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "text", "success()", true);
 
                     }
                     else
                     {
-                        Label4.Text = "Du har angtt en felaktig aktiveringskod, var vänlig och kolla igen på din inbox";
+                        Main.Reg(Page, "showError(24)");
                     }
                 }
                 sqlcon.Close();

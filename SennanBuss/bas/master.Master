@@ -160,7 +160,7 @@
             </asp:ContentPlaceHolder>
         <div class="container">
             <center>
-              <hr style="width: 80vh; border: solid 2px black"/>
+              <hr style="width: 70vh; border: solid 2px black"/>
             </center>
         </div>
               	  	<!-- Footer -->

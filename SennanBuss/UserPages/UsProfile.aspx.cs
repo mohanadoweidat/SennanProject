@@ -29,9 +29,12 @@ namespace SennanBuss.UserPages
                 }
                 Usnmae.Text = Session["Username"].ToString();
                 LoadData();
+                AccountStatus();
+
             }
-          
+
            
+
         }
         
         public void LoadData()
@@ -54,6 +57,8 @@ namespace SennanBuss.UserPages
                     }
                 }
                 {
+                    
+                    
                     string cmd_last = "Select LastC From Accounts Where Username='" + Session["Username"] + "'";
                     SqlCommand cm = new SqlCommand();
                     cm.CommandText = cmd_last;
@@ -62,15 +67,18 @@ namespace SennanBuss.UserPages
                     df.SelectCommand = cm;
                     DataSet dg = new DataSet();
                     df.Fill(dg);
+                    
                     if (dg.Tables[0].Rows.Count > 0)
                     {
                         var a = dg.Tables[0].Rows[0]["LastC"];
-                        if(a != "")
-                        {
-                            lbpwch.Text = a.ToString();
-                        } else
+                        if(a == null)
                         {
                             lbpwch.Text = "Lösenordet har inte ändrats!";
+                           // lbpwch.Text = a.ToString();
+                        } else 
+                        {
+                            //lbpwch.Text = "Lösenordet har inte ändrats!";
+                             lbpwch.Text = a.ToString();
                         }
                     }
                 }
@@ -152,6 +160,26 @@ namespace SennanBuss.UserPages
                 cmd1.ExecuteNonQuery();
                 lbpwch.Text = time;
 
+            }
+        }
+
+
+
+        private void AccountStatus()
+        {
+            string query = "Select Status From Accounts where Username = '" + Session["Username"] + "'";
+            using(SqlConnection con = new SqlConnection(db))
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = query;
+                cmd.Connection = con;
+                SqlDataAdapter da = new SqlDataAdapter();
+                da.SelectCommand = cmd;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+               kstatus.Text = ds.Tables[0].Rows[0]["Status"].ToString();
+                
+                con.Close();
             }
         }
 

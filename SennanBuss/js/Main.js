@@ -76,6 +76,7 @@ function showError(num, _title="Oops!") {
         msg = "Det finns ett konto redan registerat med det här namnet!";
     } else if (num == 4) {
         msg = "Det finns ett konto redan registerat med det här Email!";
+      
     } else if (num == 20) {
         msg = "Vänligen fyll i alla fälten.";
     } else if (num == 21) {
@@ -83,7 +84,13 @@ function showError(num, _title="Oops!") {
     } else if (num == 22) {
         msg = "Det nya Lösenordet och bekräftelsen matchar inte!";
     } else if (num == 23) {
-        msg = "Det nya lösenordet måste vara...."; /////
+        msg = "Du har angett fel Användarnamn eller Lösenord!";
+    } else if (num == 24) {
+        msg = "Du har angtt en felaktig aktiveringskod, var vänlig och kolla igen på din inbox";
     }
     showError_(msg, _title);
 }
+
+
+ 
+ 

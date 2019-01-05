@@ -1,63 +1,40 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ForgotPassword.aspx.cs" Inherits="SennanBuss.Accounts.ForgotPassword" %>
+﻿<%@ Page Language="C#" Title="Glömt Lösenord" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="ForgotPassword.aspx.cs" Inherits="SennanBuss.Accounts.ForgotPassword" %>
 
-<!DOCTYPE html>
+ <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+ 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Forgot Password</title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 37%;
-            height: 129px;
-            background-color: #FFFF66;
-        }
-    </style>
-
+       <link rel="stylesheet" href="../styles/pages/forms/register.css"/>
     
-    <!--- Tooltip-->
-    
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
+    </asp:Content>
 
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+ 
+    <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-            <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Glömt Lösenord:"></asp:Label>
-
-            
-            <!-- tooltip-->
-               <span class="glyphicon glyphicon-edit" data-toggle="tooltip" data-original-title="exampl@gmail.com"></span>
-        </div>
-        <br />
-        <table class="auto-style1">
-            <tr>
-                <td>Användarnamn</td>
-             
-                <td>
-                    <asp:TextBox ID="usnmbox" runat="server" Width="216px"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td>Registererad Email</td>
-                <td>
-                    <asp:TextBox ID="usembox" runat="server" Width="214px"></asp:TextBox>
-                </td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td>
-                    <asp:Button ID="sendpwd" runat="server" BackColor="#0033CC" Font-Bold="True" ForeColor="Black" OnClick="sendpwd_Click" Text="Skicka Lösenord" Width="147px" />
-                </td>
-            </tr>
-        </table>
-        <p style="text-align: left">
-            &nbsp;</p>
+        <div class="container">
+             <div class="lg text-center">
+        <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Glömt Lösenord:"></asp:Label><br /><br />
+        <asp:TextBox ID="usnmbox" placeholder="Användarnamn" runat="server"></asp:TextBox><br /><br />
+        <asp:TextBox ID="usembox" placeholder="Email" runat="server"></asp:TextBox><br /><br />
+        <asp:Button ID="sendpwd" runat="server" BackColor="#0033CC" Font-Bold="True" ForeColor="Black" OnClick="sendpwd_Click" Text="Skicka Lösenord"/><br /><br />
         <asp:Label ID="Label2" runat="server"></asp:Label>
+        </div>
+        </div>
 
 
+       
+
+           
+            
+           
+         
+                
+       
+
+
+
+
+        
         <!-- tooltip-->
             <script type="text/javascript">
 $(document).ready(function(){
@@ -66,8 +43,11 @@ $(document).ready(function(){
     });
 });
 </script>
+    </asp:Content>
+
+        
 
 
-    </form>
-</body>
-</html>
+ 
+ 
+ 

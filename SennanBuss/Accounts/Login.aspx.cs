@@ -38,6 +38,7 @@ namespace SennanBuss.Accounts
              
             string Username = usrtxtbox.Text.ToString();
             string Password = pswtxtbox.Text;
+            string both = Username + Password;
             SqlConnection connection = new SqlConnection(db.con);
             connection.Open();
             string passwords = sg.EncryptPassword(Password);
@@ -56,10 +57,15 @@ namespace SennanBuss.Accounts
                     Response.Redirect("../index.aspx");
                 }
             }
+            else if(both != "" )  
+            {
+                Main.Reg(Page, "showError(1)");
+                 
+                clear();
+            }
             else
             {
-                Main.Reg(Page, "Loginerror()");
-                clear();
+                Main.Reg(Page, "showError(23)");
             }
             connection.Close();
         }

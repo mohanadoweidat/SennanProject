@@ -35,7 +35,7 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h1.jpg" alt=""></div>
+					<div class="about_image"><img src="images/h1.jpg" alt="" class="img-responsive"></div>
 				</div>
 			</div>
 		</div>
@@ -59,7 +59,7 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h2.jpg" alt=""></div>
+					<div class="about_image"><img src="images/h2.jpg" alt="" class="img-responsive"></div>
 				</div>
 			</div>
 		</div>
@@ -83,7 +83,7 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h3.jpg" alt=""></div>
+					<div class="about_image"><img src="images/h3.jpg" alt="" class="img-responsive"></div>
 				</div>
 			</div>
 		</div>
@@ -107,7 +107,7 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h4.jpg" alt=""></div>
+					<div class="about_image"><img src="images/h4.jpg" alt="" class="img-responsive"></div>
 				</div>
 			</div>
 		</div>
@@ -132,7 +132,7 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h5.jpg" alt=""></div>
+					<div class="about_image"><img src="images/h5.jpg" alt="" class="img-responsive"></div>
 				</div>
 			</div>
 		</div>
@@ -165,7 +165,7 @@ I november 1983 slutade Kenneth på Sennans Buss och blev utlöst ur firman i ap
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h6.jpg" alt=""></div>
+					<div class="about_image"><img src="images/h6.jpg" alt="" class="img-responsive"></div>
 				</div>
 			</div>
 		</div>
@@ -190,7 +190,7 @@ I november 1983 slutade Kenneth på Sennans Buss och blev utlöst ur firman i ap
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h7.jpg" alt=""></div>
+					<div class="about_image"><img src="images/h7.jpg" alt="" class="img-responsive"></div>
 				</div>
 			</div>
 		</div>
@@ -215,7 +215,7 @@ I november 1983 slutade Kenneth på Sennans Buss och blev utlöst ur firman i ap
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h8.jpg" alt=""/></div>
+					<div class="about_image"><img src="images/h8.jpg" alt="" class="img-responsive"/></div>
 				</div>
 			</div>
 		</div>
@@ -240,7 +240,7 @@ I november 1983 slutade Kenneth på Sennans Buss och blev utlöst ur firman i ap
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h9.jpg" alt=""/></div>
+					<div class="about_image"><img src="images/h9.jpg" alt="" class="img-responsive"/></div>
 				</div>
 			</div>
 		</div>
@@ -265,7 +265,7 @@ I november 1983 slutade Kenneth på Sennans Buss och blev utlöst ur firman i ap
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h10.jpg" alt=""/></div>
+					<div class="about_image"><img src="images/h10.jpg" alt="" class="img-responsive"/></div>
 				</div>
 			</div>
 		</div>
@@ -290,7 +290,7 @@ I november 1983 slutade Kenneth på Sennans Buss och blev utlöst ur firman i ap
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h11.jpg" alt=""/></div>
+					<div class="about_image"><img src="images/h11.jpg" alt="" class="img-responsive"/></div>
 				</div>
 			</div>
 		</div>
@@ -315,7 +315,7 @@ I november 1983 slutade Kenneth på Sennans Buss och blev utlöst ur firman i ap
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h12.jpg" alt=""/></div>
+					<div class="about_image"><img src="images/h12.jpg" alt="" class="img-responsive"/></div>
 				</div>
 			</div>
 		</div>
@@ -340,7 +340,7 @@ I november 1983 slutade Kenneth på Sennans Buss och blev utlöst ur firman i ap
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h13.jpg" alt=""/></div>
+					<div class="about_image"><img src="images/h13.jpg" alt="" class="img-responsive"/></div>
 				</div>
 			</div>
 		</div>
@@ -365,7 +365,7 @@ I november 1983 slutade Kenneth på Sennans Buss och blev utlöst ur firman i ap
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/h14.jpg" alt=""/></div>
+					<div class="about_image"><img src="images/h14.jpg" alt="" class="img-responsive"/></div>
 				</div>
 			</div>
 		</div>

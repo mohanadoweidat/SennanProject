@@ -37,19 +37,22 @@
 					<img src="images/busses/imgv1.jpg" class="img-responsive"/>
 					</div>
 					</div>
+                         
                     <div class="destination item col-lg-4">
 					<div class="destination_image" >
 					<img src="images/busses/imgv2.jpg" class="img-responsive"/>
 					</div>
 					</div>
+                          
                     <div class="destination item col-lg-4">
 					<div class="destination_image" >
 					<img src="images/busses/imgv3.jpg" class="img-responsive"/>
 					</div>
-					</div>   
-                    </div>
+					</div> 
+                     </div>
                     </div>
             <br />
+             
                     <div class="row">
 					<div class="destinations_container item_grid">
                     <div class="destination item col-lg-4">
@@ -57,19 +60,20 @@
 					<img src="images/busses/imgv4.jpg" class="img-responsive"/>
 					</div>
 					</div>
-                    <div class="destination item col-lg-4">
+                     <div class="destination item col-lg-4">
 					<div class="destination_image" >
 					<img src="images/busses/imgv5.jpg" class="img-responsive"/>
 					</div>
 					</div>
-                    <div class="destination item col-lg-4">
+                     <div class="destination item col-lg-4">
 					<div class="destination_image" >
 					<img src="images/busses/imgv6.jpg" class="img-responsive"/>
 					</div>
 					</div>
-                    </div>
+                     </div>
                     </div>
             <br />
+            
                     <div class="row">
 					<div class="destinations_container item_grid">
                     <div class="destination item col-lg-4">
@@ -77,21 +81,23 @@
 					<img src="images/busses/imgv7.jpg" class="img-responsive"/>
 					</div>
 					</div>
-                    <div class="destination item col-lg-4">
+                     <div class="destination item col-lg-4">
 					<div class="destination_image" >
 					<img src="images/busses/imgv8.jpg" class="img-responsive"/>
 					</div>
 					</div>
-                    <div class="destination item col-lg-4">
+                     <div class="destination item col-lg-4">
 					<div class="destination_image" >
 					<img src="images/busses/imgv9.jpg" class="img-responsive"/>
 					</div>
-					</div>   
+					</div>
+                     </div>
                     </div>
-                    </div>
+            
 
         
         </div>
 		</div>
         </div>
+             </div>
 </asp:Content>
