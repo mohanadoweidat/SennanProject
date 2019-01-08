@@ -138,10 +138,7 @@
     <Content Include="js\about.js" />
     <Content Include="js\bootstrap-notify.js" />
     <Content Include="js\chartist.min.js" />
-    <Content Include="js\contact.js" />
     <Content Include="js\custom.js" />
-    <Content Include="js\destinations.js" />
-    <Content Include="js\elements.js" />
     <Content Include="js\forms\registerJ.js" />
     <Content Include="js\head\constants.js" />
     <Content Include="js\jquery-3.2.1.min.js" />
@@ -171,12 +168,9 @@
     <Content Include="plugins\progressbar\progressbar.min.js" />
     <Content Include="plugins\scrollmagic\ScrollMagic.min.js" />
     <Content Include="plugins\scrollTo\jquery.scrollTo.min.js" />
-    <Content Include="styles\about.css" />
-    <Content Include="styles\about_responsive.css" />
     <Content Include="styles\bootstrap4\bootstrap.min.css" />
     <Content Include="styles\bootstrap4\bootstrap.min.js" />
     <Content Include="styles\bootstrap4\popper.js" />
-    <Content Include="styles\main.css" />
     <Content Include="styles\main_styles.css" />
     <Content Include="styles\pages\Admin\animate.min.css" />
     <Content Include="styles\pages\Admin\light-bootstrap-dashboard.css" />

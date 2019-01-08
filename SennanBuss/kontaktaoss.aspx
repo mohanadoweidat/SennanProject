@@ -3,12 +3,6 @@
   
      <!-- Log in and sign up form style-->
   <style>
-        html { height: 100% }
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
-
- 
-
  .homecontactform {
 width: 350px;
 position: relative;

@@ -16,7 +16,7 @@ namespace SennanBuss.bas
         {
             if (!IsPostBack)
             {
-                Btn1.Click += Btn1_Click;
+                //Btn1.Click += Btn1_Click;
                 if (Session["Redirected"] != null)
                 {
                     Main.Reg(Page, "ALogout()");
