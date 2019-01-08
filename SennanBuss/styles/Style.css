@@ -5,6 +5,38 @@ h4 {
     color: black;
 }
 
+//remove background and border from navbar
+.navbar-default {
+    background: none;
+    border: 0;
+}
+
+.nav {
+    position: fixed;
+    background-color: #260c2a;
+    width: 160px;
+    right: -190px;
+    top: 0;
+    bottom: 0;
+    padding: 50px 10px 0 20px;
+    z-index: 1;
+}
+
+.navbar-collapse {
+    padding: 0;
+}
+/*override width:auto of navbar-collapse*/
+@media (min-width:768px) {
+    .navbar-collapse
+{
+    width: 100%;
+}
+}
+
+.swap {
+    color: red;
+}
+
 * {
     font-family: 'Righteous', cursive;
 }
@@ -43,9 +75,7 @@ html {
 
 body {
     height: 100%;
-    
 }
-
 .about-a {
     transform: translateX(-500px);
     transition: 1s;

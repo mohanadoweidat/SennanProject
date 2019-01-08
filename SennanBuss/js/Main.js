@@ -1,4 +1,5 @@
-﻿
+﻿CheckScroll();
+
 $(function () {
     var navbar = $('.navbar');
     var win = $(window);
@@ -8,14 +9,20 @@ $(function () {
         } else {
             navbar.addClass('navbar-scroll');
         }
-        if (win.scrollTop() > 200) {
-            $(".about-a").addClass("no-tr");
-        }
-        if (win.scrollTop() > 400) {
-            $(".symbols-a").addClass("no-tr");
-        }
+        CheckScroll();
     });
 });
+
+function CheckScroll() {
+    var win = $(window);
+    var height = window.innerHeight;
+    if (win.scrollTop() > height * 0.1) {
+        $(".about-a").addClass("no-tr");
+    }
+    if (win.scrollTop() > height * 0.3) {
+        $(".symbols-a").addClass("no-tr");
+    }
+}
 
 function Logout() {
     var button = document.getElementById('Btn');
