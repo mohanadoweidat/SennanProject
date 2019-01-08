@@ -95,8 +95,6 @@
     <Content Include="Accounts\Login.aspx" />
     <Content Include="Accounts\Signup.aspx" />
     <Content Include="Accounts\Verifymail.aspx" />
-    <Content Include="AdminPages\dashboard.aspx" />
-    <Content Include="fonts\Pe-icon-7-stroke.svg" />
     <Content Include="historik.aspx" />
     <Content Include="images\1.jpg" />
     <Content Include="images\2.jpg" />
@@ -118,7 +116,6 @@
     <Content Include="images\h7.jpg" />
     <Content Include="images\h9.jpg" />
     <Content Include="images\kimg.png" />
-    <Content Include="images\sidebar-5.jpg" />
     <Content Include="images\slider\slider.jpg" />
     <Content Include="images\slider\slider2.jpg" />
     <Content Include="images\slider\slider_1.jpg" />
@@ -136,8 +133,6 @@
     <Content Include="images\busses\imgv9.jpg" />
     <Content Include="index.aspx" />
     <Content Include="js\about.js" />
-    <Content Include="js\bootstrap-notify.js" />
-    <Content Include="js\chartist.min.js" />
     <Content Include="js\contact.js" />
     <Content Include="js\custom.js" />
     <Content Include="js\destinations.js" />
@@ -178,9 +173,6 @@
     <Content Include="styles\bootstrap4\popper.js" />
     <Content Include="styles\main.css" />
     <Content Include="styles\main_styles.css" />
-    <Content Include="styles\pages\Admin\animate.min.css" />
-    <Content Include="styles\pages\Admin\light-bootstrap-dashboard.css" />
-    <Content Include="styles\pages\Admin\pe-icon-7-stroke.css" />
     <Content Include="styles\pages\forms\register.css" />
     <Content Include="styles\pages\index.css" />
     <Content Include="styles\responsive.css" />
@@ -221,13 +213,6 @@
     </Compile>
     <Compile Include="Accounts\Verifymail.aspx.designer.cs">
       <DependentUpon>Verifymail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AdminPages\dashboard.aspx.cs">
-      <DependentUpon>dashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AdminPages\dashboard.aspx.designer.cs">
-      <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="bas\master-no-nav.Master.cs">
       <DependentUpon>master-no-nav.Master</DependentUpon>
@@ -311,9 +296,6 @@
     <Content Include="bas\master.Master" />
     <Content Include="js\lottie\lottie.js" />
     <Content Include="Data\animations\skipping.json" />
-    <Content Include="fonts\Pe-icon-7-stroke.eot" />
-    <Content Include="fonts\Pe-icon-7-stroke.ttf" />
-    <Content Include="fonts\Pe-icon-7-stroke.woff" />
     <Content Include="bas\master-no-nav.Master" />
     <Content Include="bas\nav-master.master" />
     <None Include="packages.config" />
@@ -357,7 +339,10 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="AdminPages\" />
+    <Folder Include="styles\pages\Admin\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
