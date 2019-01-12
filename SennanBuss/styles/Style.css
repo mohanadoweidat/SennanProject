@@ -5,7 +5,11 @@ h4 {
     color: black;
 }
 
-//remove background and border from navbar
+.nb {
+    
+}
+
+/*//remove background and border from navbar
 .navbar-default {
     background: none;
     border: 0;
@@ -24,7 +28,7 @@ h4 {
 
 .navbar-collapse {
     padding: 0;
-}
+}*/
 /*override width:auto of navbar-collapse*/
 @media (min-width:768px) {
     .navbar-collapse
@@ -38,7 +42,7 @@ h4 {
 }
 
 * {
-    font-family: 'Righteous', cursive;
+    font-family: 'Righteous', cursive !important;
 }
 
 html {

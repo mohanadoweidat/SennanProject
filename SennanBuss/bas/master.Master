@@ -10,23 +10,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="utf-8" />
-   
+            <!-- Bootstrap-->
+    <link rel="stylesheet" href="../sweetalert2.css" />
+    <script src="../sweetalert2.all.min.js"></script>
 
-
-     <!-- Bootstrap-->
-   
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-    
-
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+     <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
      <!------------>
 <link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.carousel.css"/>
@@ -39,6 +32,8 @@
       <link rel="stylesheet" href="../sweetalert2.css" />
     <script src="../sweetalert2.all.min.js"></script>
     <link rel="icon" href="../images/1.jpg"/>
+	<link rel="stylesheet" href="../nav/css/style.css">
+	<script src="../nav/js/modernizr.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -46,10 +41,55 @@
 <body>
     <form id="form1" runat="server">
              <!-- Start Navbar-->
-               <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-
- <nav class="navbar navbar-default navbar-fixed-top" id="myScrollspy">
+                      <div style="display: none;">
+                   <asp:Button runat="server" ID="Btn" OnClick="Btn_Click"/>
+                   <asp:Button runat="server" ID="Btn1"/></div>
+  <header>
+	<nav class="cd-stretchy-nav">
+		<a class="cd-nav-trigger" href="#0">
+			<span aria-hidden="true"></span>
+		</a>
+		<ul>
+			<li><a href="#0" class="active"><span>Startsidan</span></a></li>
+			<li><a href="#0"><span>Våra bussar</span></a></li>
+			<li><a href="#0"><span>Miljö och kvalitet</span></a></li>
+			<li><a href="#0"><span>Historik</span></a></li>
+			<li><a href="#0"><span>Kontakta oss</span></a></li>
+            <li><a href="#0"><span>Konferensbussar</span></a></li>
+		</ul>
+		<span aria-hidden="true" class="stretchy-nav-bg"></span>
+	</nav>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <a class="navbar-brand glow excl" >  Sennan Buss</a>
+                <ul class="nav navbar-nav nb">
+                <%
+                    bool b = false;
+                    if(Session["CurrentPage"] != null)
+                    {
+                        var s = Session["CurrentPage"] as string;
+                        if(s == "Login" || s == "Signup")
+                        {
+                            b = true;
+                        }
+                    }
+                    if (!b)
+                    {
+                        if (Session["Username"] == null)
+                            Response.Write("<li><a href='../Accounts/Signup.aspx'>Skapa ett konto</a></li>" + "<li><a href='../Accounts/Login.aspx'>Logga In</a></li>");
+                        else
+                        {
+                            Response.Write("<li><p id=\"logged\">Inloggad som</p>" +
+                                "<a class=\"excl\" href='../UserPages/UsProfile.aspx'><p class=\"text-center\" id=\"logged_\">" +
+                                "" + Session["Username"] + "</p></a></li>");
+                            Response.Write("<li><a href='#' onclick='Logout()'>Logga ut</a></li>");
+                        }
+                    }
+                 %>
+            </ul>
+            </nav>
+</header>
+<%-- <nav class="navbar navbar-default navbar-fixed-top" id="myScrollspy">
 
           <%
               string db = "data source=89.221.254.34;initial catalog=MSSQL400023;persist security info=True;user id=MSSQL400023;password=OTo0OToyNg;MultipleActiveResultSets=True;App = EntityFramework";
@@ -89,17 +129,6 @@
                               Response.Write(s);
                           }
                       }
-                      else
-                      {
-                          /*
-                        var s = "<div class=\"alert alert-warning alert-server fade in\" role=\"alert\">" +
-      "<button type=\"button\" class=\"close\" data-dismiss=\"alert\">×</button>" +
-      "<strong>Aktiverat:</strong> " +
-      
-      "Tack för att du har aktiverat ditt konto!.</div>";
-                        Response.Write(s);*/
-
-                      }
                   }
                   sqlcon.Close();
               }
@@ -114,7 +143,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-             <a  class="navbar-brand glow" >  Sennan Buss</a>
         </div>
 
         <!-- Collection of nav links and other content for toggling -->
@@ -127,39 +155,9 @@
 <li><a id="Conference" class="nitem" href="~/konferensbuss.aspx" runat="server">KONFERENSBUSS</a></li>
 <li><a id="Contact" class="nitem" href="~/kontaktaoss.aspx" runat="server">KONTAKTA OSS</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <div style="display: none;">
-                   <asp:Button runat="server" ID="Btn" OnClick="Btn_Click"/>
-                   <asp:Button runat="server" ID="Btn1"/>
-              </div>
-                <%
-                    bool b = false;
-                    if(Session["CurrentPage"] != null)
-                    {
-                        var s = Session["CurrentPage"] as string;
-                        if(s == "Login" || s == "Signup")
-                        {
-                            b = true;
-                        }
-                    }
-                    if (!b)
-                    {
-                        if (Session["Username"] == null)
-                            Response.Write("<li><a href='../Accounts/Signup.aspx'>Skapa ett konto</a></li>" + "<li><a href='../Accounts/Login.aspx'>Logga In</a></li>");
-
-                        else
-                        {
-                            Response.Write("<li><p id=\"logged\">Inloggad som</p>" +
-                                "<a class=\"excl\" href='../UserPages/UsProfile.aspx'><p class=\"text-center\" id=\"logged_\">" +
-                                "" + Session["Username"] + "</p></a></li>");
-                            Response.Write("<li><a href='#' onclick='Logout()'>Logga ut</a></li>");
-                        }
-                    }
-                 %>
-            </ul>
         </div>
     </div>
-</nav>  
+</nav> --%> 
 
           <!--/End navbar-->
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -194,9 +192,10 @@
         <script src="../plugins/easing/easing.js"></script>
         <script src="../plugins/parallax-js-master/parallax.min.js"></script>
         <script src="../js/custom.js"></script>
-        <script src="../js/main.js"></script>
         <script src="../js/lottie/lottie.js"></script>
         <script src="../js/forms/registerJ.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../nav/js/main.js"></script>
 
     </form>
 </body>

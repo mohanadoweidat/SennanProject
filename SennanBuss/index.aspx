@@ -1,11 +1,6 @@
 ﻿<%@ Page Title="Startsidan" Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SennanBuss.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
-
-   
-
-    <!-- Slider style-->
     <style type="text/css">
         #slider{
             overflow:hidden;
