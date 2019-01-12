@@ -181,6 +181,7 @@
     <Content Include="styles\bootstrap4\bootstrap.min.js" />
     <Content Include="styles\bootstrap4\popper.js" />
     <Content Include="styles\main_styles.css" />
+    <Content Include="styles\pages\Admin\styler.css" />
     <Content Include="styles\pages\forms\register.css" />
     <Content Include="styles\pages\index.css" />
     <Content Include="styles\responsive.css" />
@@ -359,9 +360,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="styles\pages\Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

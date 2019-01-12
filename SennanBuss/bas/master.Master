@@ -55,14 +55,14 @@
 			<li><a href="../varabussar.aspx"><span>Våra bussar</span></a></li>
 			<li><a href="../miljoochkvalitet.aspx"><span>Miljö och kvalitet</span></a></li>
 			<li><a href="../historik.aspx"><span>Historik</span></a></li>
-			<li><a href="../kontaktaoss.aspx"><span>Kontakta oss</span></a></li>
-            <li><a href="../konferensbuss.aspx"><span>Konferensbussar</span></a></li>
+			<li><a href="#0"><span>Kontakta oss</span></a></li>
+            <li><a href="#0"><span>Konferensbussar</span></a></li>
 		</ul>
 		<span aria-hidden="true" class="stretchy-nav-bg"></span>
 	</nav>
             <nav class="navbar navbar-default navbar-fixed-top">
-                <a class="navbar-brand glow excl" >  Sennan Buss</a>
-                <ul class="nav navbar-nav nb">
+                <a href="../index.aspx" class="navbar-brand glow excl" >  Sennan Buss</a>
+                <ul class="nav navbar-nav nb" style="float: right;">
                 <%
                     bool b = false;
                     if(Session["CurrentPage"] != null)
