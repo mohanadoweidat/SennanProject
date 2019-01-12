@@ -29,6 +29,7 @@ namespace SennanBuss.UserPages
                 }
                 Usnmae.Text = Session["Username"].ToString();
                 LoadData();
+                LoadLastC();
                 AccountStatus();
 
             }
@@ -56,32 +57,7 @@ namespace SennanBuss.UserPages
                         Usep.Text = Email;
                     }
                 }
-                {
-                    
-                    
-                    string cmd_last = "Select LastC From Accounts Where Username='" + Session["Username"] + "'";
-                    SqlCommand cm = new SqlCommand();
-                    cm.CommandText = cmd_last;
-                    cm.Connection = sql;
-                    SqlDataAdapter df = new SqlDataAdapter();
-                    df.SelectCommand = cm;
-                    DataSet dg = new DataSet();
-                    df.Fill(dg);
-                    
-                    if (dg.Tables[0].Rows.Count > 0)
-                    {
-                        var a = dg.Tables[0].Rows[0]["LastC"];
-                        if(a == null)
-                        {
-                            lbpwch.Text = "Lösenordet har inte ändrats!";
-                           // lbpwch.Text = a.ToString();
-                        } else 
-                        {
-                            //lbpwch.Text = "Lösenordet har inte ändrats!";
-                             lbpwch.Text = a.ToString();
-                        }
-                    }
-                }
+                 
             }
         }
 
@@ -153,6 +129,8 @@ namespace SennanBuss.UserPages
             string update_last = "Update Accounts set LastC='"+time+"'"+"where Username='"+Session["Username"]+"'";
             using (SqlConnection sql3= new SqlConnection(db))
             {
+               
+
                 SqlCommand cmd1 = new SqlCommand();
                 cmd1.CommandText = update_last;
                 cmd1.Connection = sql3;
@@ -163,6 +141,32 @@ namespace SennanBuss.UserPages
             }
         }
 
+        private void LoadLastC()
+        {
+            using (SqlConnection sql = new SqlConnection(db))
+            {
+                string cmd_last = "Select LastC From Accounts Where Username='" + Session["Username"] + "'";
+                SqlCommand cm = new SqlCommand();
+                cm.CommandText = cmd_last;
+                cm.Connection = sql;
+                SqlDataAdapter df = new SqlDataAdapter();
+                df.SelectCommand = cm;
+                DataSet dg = new DataSet();
+                df.Fill(dg);
+                if (dg.Tables[0].Rows.Count > 0)
+                {
+                    var a = dg.Tables[0].Rows[0]["LastC"];
+                    if (a.ToString() == "")
+                    {
+                        lbpwch.Text = "Lösenordet har inte ändrats!";
+                    }
+                    else
+                    {
+                        lbpwch.Text = a.ToString();
+                    }
+                }
+            }
+        }
 
 
         private void AccountStatus()
