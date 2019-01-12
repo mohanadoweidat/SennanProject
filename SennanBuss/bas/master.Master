@@ -51,12 +51,12 @@
 			<span aria-hidden="true"></span>
 		</a>
 		<ul>
-			<li><a href="#0" class="active"><span>Startsidan</span></a></li>
-			<li><a href="#0"><span>Våra bussar</span></a></li>
-			<li><a href="#0"><span>Miljö och kvalitet</span></a></li>
-			<li><a href="#0"><span>Historik</span></a></li>
-			<li><a href="#0"><span>Kontakta oss</span></a></li>
-            <li><a href="#0"><span>Konferensbussar</span></a></li>
+			<li><a href="../index.aspx" class="active"><span>Startsidan</span></a></li>
+			<li><a href="../varabussar.aspx"><span>Våra bussar</span></a></li>
+			<li><a href="../miljoochkvalitet.aspx"><span>Miljö och kvalitet</span></a></li>
+			<li><a href="../historik.aspx"><span>Historik</span></a></li>
+			<li><a href="../kontaktaoss.aspx"><span>Kontakta oss</span></a></li>
+            <li><a href="../konferensbuss.aspx"><span>Konferensbussar</span></a></li>
 		</ul>
 		<span aria-hidden="true" class="stretchy-nav-bg"></span>
 	</nav>
