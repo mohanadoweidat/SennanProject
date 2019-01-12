@@ -71,7 +71,7 @@ namespace SennanBuss.UserPages
                     if (dg.Tables[0].Rows.Count > 0)
                     {
                         var a = dg.Tables[0].Rows[0]["LastC"];
-                        if(a == null)
+                        if(a.ToString() == null)
                         {
                             lbpwch.Text = "Lösenordet har inte ändrats!";
                            // lbpwch.Text = a.ToString();

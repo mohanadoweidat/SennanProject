@@ -5,7 +5,7 @@
 
    
 
-
+    <!-- Slider style-->
     <style type="text/css">
         #slider{
             overflow:hidden;
@@ -81,32 +81,7 @@
     </div>
      
     <br />
-    <%-- <div class="super_container">
-	<div class="home">
-		<div class="home_slider_container">
-			<div class="owl-carousel owl-theme home_slider">
-				<!-- Slide -->
-				<div class="owl-item">
-                    <img src="images/slider/slider_1.jpg" class="img-responsive"/>
-					<div class="home_slider_content_container">
-						<div class="container">
-							<div class="row">
-								<div class="col">
-									<div class="home_slider_content">
-										<div class="home_title"><h3 style="color:white">Let us take you away</h3></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-               </div>
-  			</div>
- 		</div>
-	</div>--%>
-
-
-         <!-- About -->
+           <!-- About -->
  		<div class="container about-a">
 			<div class="row">
 				<div class="col-lg-6" style="padding-bottom: 50px;">

@@ -13,7 +13,9 @@
 
         <div class="container">
              <div class="lg text-center">
+                                    <span class="glyphicon glyphicon-lock" style="font-size:59px;color:red"></span><br /><br />
         <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="X-Large" Text="Glömt Lösenord:"></asp:Label><br /><br />
+
         <asp:TextBox ID="usnmbox" placeholder="Användarnamn" runat="server"></asp:TextBox><br /><br />
         <asp:TextBox ID="usembox" placeholder="Email" runat="server"></asp:TextBox><br /><br />
         <asp:Button ID="sendpwd" runat="server" BackColor="#0033CC" Font-Bold="True" ForeColor="Black" OnClick="sendpwd_Click" Text="Skicka Lösenord"/><br /><br />

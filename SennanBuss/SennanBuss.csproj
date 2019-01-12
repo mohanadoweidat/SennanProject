@@ -95,6 +95,7 @@
     <Content Include="Accounts\Login.aspx" />
     <Content Include="Accounts\Signup.aspx" />
     <Content Include="Accounts\Verifymail.aspx" />
+    <Content Include="AdminPages\AdminPage.aspx" />
     <Content Include="historik.aspx" />
     <Content Include="images\1.jpg" />
     <Content Include="images\2.jpg" />
@@ -208,6 +209,13 @@
     </Compile>
     <Compile Include="Accounts\Verifymail.aspx.designer.cs">
       <DependentUpon>Verifymail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\AdminPage.aspx.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\AdminPage.aspx.designer.cs">
+      <DependentUpon>AdminPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="bas\master-no-nav.Master.cs">
       <DependentUpon>master-no-nav.Master</DependentUpon>
@@ -335,7 +343,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="AdminPages\" />
     <Folder Include="styles\pages\Admin\" />
   </ItemGroup>
   <PropertyGroup>
