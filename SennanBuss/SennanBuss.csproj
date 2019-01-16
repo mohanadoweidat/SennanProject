@@ -177,9 +177,6 @@
     <Content Include="plugins\progressbar\progressbar.min.js" />
     <Content Include="plugins\scrollmagic\ScrollMagic.min.js" />
     <Content Include="plugins\scrollTo\jquery.scrollTo.min.js" />
-    <Content Include="styles\bootstrap4\bootstrap.min.css" />
-    <Content Include="styles\bootstrap4\bootstrap.min.js" />
-    <Content Include="styles\bootstrap4\popper.js" />
     <Content Include="styles\main_styles.css" />
     <Content Include="styles\pages\Admin\styler.css" />
     <Content Include="styles\pages\forms\register.css" />

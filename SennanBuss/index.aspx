@@ -1,79 +1,12 @@
 ﻿<%@ Page Title="Startsidan" Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SennanBuss.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        #slider{
-            overflow:hidden;
-        }
-
-        #slider figure{
-            position:relative;
-            width:500%;
-             margin:0px auto;
-            left:0;
-             animation : 20s slider infinite;
-
-        }
-
-        #slider figure img{
-            width:20%;
-            float:left;
-        }
-
-        @keyframes slider{
-            0%{
-                left:0;
-            }
-            20%{
-                left:0;
-            }
-            25%{
-                left:-100%;
-            }
-            45%{
-                left:-100%;
-            }
-            50%{
-                left:-200%;
-            }
-            70%{
-                left:-200%;
-            }
-            75%{
-               left: -300%;
-            }
-            95%{
-                left:-300%;
-            }
-            100%{
-                left:-400%;
-            }
-        }
-    </style>
-     
-
     <!----------------------------------------------------->
 
     <link href="styles/pages/index.css" rel="stylesheet"/>
    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- 
-
-    
-
-   
-    <div id="slider">
-        <figure>
-            <img src="images/slider/slider.jpg"  />
-             <img src="images/slider/slider2.jpg"   />
-            <img src="images/slider/slider.jpg"   />
-              <img src="images/slider/slider2.jpg"   />
-            <img src="images/slider/slider.jpg"   />
-             
-        </figure>
-
-    </div>
      
     <br />
            <!-- About -->
