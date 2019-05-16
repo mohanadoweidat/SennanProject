@@ -14,13 +14,12 @@ namespace SennanBuss.UserPages
     public partial class Book : System.Web.UI.Page
     {
         Database.DatabaseConnection c = new Database.DatabaseConnection();
-
-        
         Database.DBActions dBActions = new Database.DBActions();
         SqlCommand cmd;
         SqlDataReader dr;
         DataSet ds;
         SqlConnection con;
+        List<string> dest = new List<string>();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -32,58 +31,18 @@ namespace SennanBuss.UserPages
                     Response.Redirect("../Accounts/Login.aspx");
 
                 }
+                
+                //for (int x = 0; x < _x.Length; x++)
+                //{
+                //    dest.Add(_x[x].ToString());
+                //}
+                
+                
             }
-
             seattable.Visible = false;
-
-            srchbtn.Click += Srchbtn_Click;
+            
             bokabtn.Click += Bokabtn_Click;
             txtname.Focus();
-
-        }
-
-
-
-        private void Srchbtn_Click(object sender, EventArgs e)
-        {
-            if (from_box.Text == "" || to_box.Text == "" || time_box.Text == "" || date_box.Text == "")
-            {
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "ss", "EmptyFields();", true);
-            }
-            else
-            {
-                String query2 = "SELECT * FROM Time_List WHERE (Fr_Station = '" + from_box.Text.Trim() + "') AND (To_Station = '" + to_box.Text.Trim() + "') AND (Dep_Time = '" + time_box.Text.Trim() + "') AND (Date_Time = '" + date_box.Text.Trim() + "');";
-                con = new SqlConnection(c.con);
-                cmd = new SqlCommand();
-                con.Open();
-                cmd.Connection = con;
-                cmd.CommandText = query2;
-                using (dr = cmd.ExecuteReader())
-                {
-                    if (dr.Read())
-                    {
-                        pnl1.Visible = true;
-                        _från.Text = dr[1].ToString();
-                        _till.Text = dr[2].ToString();
-                        _pris.Text = dr[3].ToString();
-                        _avtid.Text = dr[4].ToString();
-                        _anktid.Text = dr[5].ToString();
-                        _bussnr.Text = dr[6].ToString();
-                        _datum.Text = dr[7].ToString();
-
-                    }
-                    else
-                    {
-                        pnl1.Visible = false;
-                        ScriptManager.RegisterStartupScript(this, typeof(Page), "ss", "TripdontFound();", true);
-                    }
-                }
-                con.Close();
-            }
-            // string query = "Select * from Time_List where FName = '" + searchbox1.Text.Trim() + "'";
-
-
-
 
         }
 
@@ -91,7 +50,7 @@ namespace SennanBuss.UserPages
         {
             seattable.Visible = true;
             panel3.Visible = true;
-            string query = "Select * from Booked where((Date = '" + date_box.Text.Trim() + "') and(Time = '" + time_box.Text.Trim() + "')and(Station = '" + from_box.Text.Trim() + "'))";
+            string query = "Select * from Booked where((Date = '" + date_box.Text.Trim() + "') and(Station = '" + dest_from.Value.Trim() + "'))";
             con = new SqlConnection(c.con);
             cmd = new SqlCommand();
             con.Open();
@@ -115,14 +74,6 @@ namespace SennanBuss.UserPages
                     }
                 }
             }
-
-
-
-
-
-
-
-
         }
 
         protected void s1_Click(object sender, ImageClickEventArgs e)
@@ -423,10 +374,10 @@ namespace SennanBuss.UserPages
                     sqlCmd.Parameters.AddWithValue("@Pnr", litpnr.Text.ToString());
                     sqlCmd.Parameters.AddWithValue("@P_Name", txtname.Text.ToString());
                     sqlCmd.Parameters.AddWithValue("@P_Phone", txtphone.Text.ToString());
-                    sqlCmd.Parameters.AddWithValue("@P_From", from_box.Text.ToString());
-                    sqlCmd.Parameters.AddWithValue("@P_To", to_box.Text.ToString());
+                    sqlCmd.Parameters.AddWithValue("@P_From", dest_from.Value.ToString());
+                    sqlCmd.Parameters.AddWithValue("@P_To", dest_to.Value.ToString());
                     sqlCmd.Parameters.AddWithValue("@P_Date", date_box.Text.ToString());
-                    sqlCmd.Parameters.AddWithValue("@P_Time", time_box.Text.ToString());
+                    sqlCmd.Parameters.AddWithValue("@P_Time", null);
                     sqlCmd.Parameters.AddWithValue("@TotalSeat", littotalseat.Text.ToString());
                     sqlCmd.Parameters.AddWithValue("@SeatNumber", Stolar_box.Text.ToString());
                     sqlCmd.Parameters.AddWithValue("@Amount", littotalrent.Text.ToString());
@@ -463,6 +414,43 @@ namespace SennanBuss.UserPages
 
         }
 
-
+        protected void srchbtn_Click(object sender, EventArgs e)
+        {
+            Main.Reg(this, "alert('ks')");
+            if (dest_from.Value == "" || dest_to.Value == "" || date_box.Text == "")
+            {
+                ScriptManager.RegisterStartupScript(this, typeof(Page), "ss", "EmptyFields();", true);
+            }
+            else
+            {
+                String query2 = "SELECT * FROM Time_List WHERE (Fr_Station = '" + dest_from.Value.Trim() + "') AND (To_Station = '" + dest_to.Value.Trim() + "') AND (Date_Time = '" + date_box.Text.Trim() + "');";
+                con = new SqlConnection(c.con);
+                cmd = new SqlCommand();
+                con.Open();
+                cmd.Connection = con;
+                cmd.CommandText = query2;
+                using (dr = cmd.ExecuteReader())
+                {
+                    if (dr.Read())
+                    {
+                        pnl1.Visible = true;
+                        _från.Text = dr[1].ToString();
+                        _till.Text = dr[2].ToString();
+                        _pris.Text = dr[3].ToString();
+                        _avtid.Text = dr[4].ToString();
+                        _anktid.Text = dr[5].ToString();
+                        _bussnr.Text = dr[6].ToString();
+                        _datum.Text = dr[7].ToString();
+                    }
+                    else
+                    {
+                        pnl1.Visible = false;
+                        ScriptManager.RegisterStartupScript(this, typeof(Page), "ss", "TripdontFound();", true);
+                    }
+                }
+                con.Close();
+            }
+            // string query = "Select * from Time_List where FName = '" + searchbox1.Text.Trim() + "'";
+        }
     }
 }
