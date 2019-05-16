@@ -187,6 +187,7 @@ body {
     #slider figure {
         position: relative;
         width: 500%;
+       
         margin: 0px auto;
         left: 0;
         animation: 20s slider infinite;
@@ -195,6 +196,7 @@ body {
         #slider figure img {
             width: 20%;
             float: left;
+          
         }
 
 @keyframes slider {

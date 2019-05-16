@@ -95,10 +95,17 @@
     <Content Include="Accounts\Login.aspx" />
     <Content Include="Accounts\Signup.aspx" />
     <Content Include="Accounts\Verifymail.aspx" />
-    <Content Include="AdminPages\AdminPage.aspx" />
+    <Content Include="AdminPages\AddAdmin.aspx" />
+    <Content Include="AdminPages\AddTrip.aspx" />
+    <Content Include="AdminPages\AdminManage.aspx" />
+    <Content Include="AdminPages\Bokningar.aspx" />
+    <Content Include="AdminPages\Trips.aspx" />
     <Content Include="historik.aspx" />
     <Content Include="images\1.jpg" />
     <Content Include="images\2.jpg" />
+    <Content Include="images\available_seat_img.gif" />
+    <Content Include="images\booked_seat_img.gif" />
+    <Content Include="images\btn_go.gif" />
     <Content Include="images\byggets_buss_certifikat_2017.jpg" />
     <Content Include="images\c1.jpg" />
     <Content Include="images\c2.jpg" />
@@ -117,6 +124,7 @@
     <Content Include="images\h7.jpg" />
     <Content Include="images\h9.jpg" />
     <Content Include="images\kimg.png" />
+    <Content Include="images\selected_seat_img.gif" />
     <Content Include="images\slider\slider.jpg" />
     <Content Include="images\slider\slider2.jpg" />
     <Content Include="images\slider\slider_1.jpg" />
@@ -185,6 +193,7 @@
     <Content Include="styles\Style.css" />
     <Content Include="sweetalert2.all.min.js" />
     <Content Include="sweetalert2.css" />
+    <Content Include="UserPages\Book.aspx" />
     <Content Include="UserPages\UsProfile.aspx" />
     <Content Include="varabussar.aspx" />
     <Content Include="Web.config">
@@ -220,19 +229,47 @@
     <Compile Include="Accounts\Verifymail.aspx.designer.cs">
       <DependentUpon>Verifymail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdminPages\AdminPage.aspx.cs">
-      <DependentUpon>AdminPage.aspx</DependentUpon>
+    <Compile Include="AdminPages\AddAdmin.aspx.cs">
+      <DependentUpon>AddAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminPages\AdminPage.aspx.designer.cs">
-      <DependentUpon>AdminPage.aspx</DependentUpon>
+    <Compile Include="AdminPages\AddAdmin.aspx.designer.cs">
+      <DependentUpon>AddAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="bas\master-no-nav.Master.cs">
-      <DependentUpon>master-no-nav.Master</DependentUpon>
+    <Compile Include="AdminPages\AddTrip.aspx.cs">
+      <DependentUpon>AddTrip.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="bas\master-no-nav.Master.designer.cs">
-      <DependentUpon>master-no-nav.Master</DependentUpon>
+    <Compile Include="AdminPages\AddTrip.aspx.designer.cs">
+      <DependentUpon>AddTrip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\AdminManage.aspx.cs">
+      <DependentUpon>AdminManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\AdminManage.aspx.designer.cs">
+      <DependentUpon>AdminManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Bokningar.aspx.cs">
+      <DependentUpon>Bokningar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Bokningar.aspx.designer.cs">
+      <DependentUpon>Bokningar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPages\Trips.aspx.cs">
+      <DependentUpon>Trips.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPages\Trips.aspx.designer.cs">
+      <DependentUpon>Trips.aspx</DependentUpon>
     </Compile>
     <Compile Include="bas\master.Master.cs">
       <DependentUpon>master.Master</DependentUpon>
@@ -287,6 +324,13 @@
       <DependentUpon>miljoochkvalitet.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserPages\Book.aspx.cs">
+      <DependentUpon>Book.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserPages\Book.aspx.designer.cs">
+      <DependentUpon>Book.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserPages\UsProfile.aspx.cs">
       <DependentUpon>UsProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -309,13 +353,13 @@
     <Content Include="bas\master.Master" />
     <Content Include="js\lottie\lottie.js" />
     <Content Include="Data\animations\skipping.json" />
-    <Content Include="bas\master-no-nav.Master" />
     <Content Include="bas\nav-master.master" />
     <Content Include="nav\partials_\_layout.scss" />
     <Content Include="nav\partials_\_mixins.scss" />
     <Content Include="nav\partials_\_variables.scss" />
     <Content Include="nav\README.md" />
     <Content Include="nav\scss_\style.scss" />
+    <Content Include="AdminPages\Admin.Master" />
     <None Include="packages.config" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />

@@ -42,7 +42,7 @@ namespace SennanBuss.Accounts
             SqlConnection connection = new SqlConnection(db.con);
             connection.Open();
             string passwords = sg.EncryptPassword(Password);
-            String query = "SELECT Username, Password FROM Accounts WHERE (Username = '" + Username + "') AND (Password = '" + passwords + "');";
+            String query = "SELECT Username,Password,UType FROM Accounts WHERE (Username = '" + Username + "') AND (Password = '" + passwords + "');";
             SqlCommand cmd = new SqlCommand(query, connection);
             SqlDataAdapter sds = new SqlDataAdapter();
             DataSet ds = new DataSet();
@@ -51,11 +51,23 @@ namespace SennanBuss.Accounts
             sds.Fill(ds, "passwords");
             if (ds.Tables[i].Rows.Count > 0)
             {
-                if (passwords == ds.Tables[i].Rows[i]["Password"].ToString())
+                if (ds.Tables[i].Rows[i]["UType"].ToString() == "A")
                 {
+                    // If you login and you are admin
+                    Session["Username"] = usrtxtbox.Text.Trim();
+                    Response.Redirect("../AdminPages/Bokningar.aspx");
+                }
+                else
+                {
+                    // If you log in and you are not Admin
                     Session["Username"] = usrtxtbox.Text.Trim();
                     Response.Redirect("../index.aspx");
                 }
+                //if (passwords == ds.Tables[i].Rows[i]["Password"].ToString())
+                //{
+                //    Session["Username"] = usrtxtbox.Text.Trim();
+                //    Response.Redirect("../index.aspx");
+                //}
             }
             else if(both != "" )  
             {
@@ -72,7 +84,7 @@ namespace SennanBuss.Accounts
 
         void clear()
         {
-            pswtxtbox.Text = "";
+           usrtxtbox.Text= pswtxtbox.Text = "";
         }
         
         

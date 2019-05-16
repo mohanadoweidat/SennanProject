@@ -37,7 +37,7 @@ max-width: none !important;
    
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="super_container">
-         <div><img src="images/slider/slider_1.jpg" class="img-responsive"/></div>
+     
         <br />
         <!-- Video-->
          <div class="embedresize">
