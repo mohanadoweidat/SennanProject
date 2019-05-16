@@ -318,9 +318,7 @@ namespace SennanBuss.UserPages
         }
 
         //Gå vidare till Print sidan (Betalning)
-
-
-        // Beräkna Kostnaden samt antal stolar***
+          // Beräkna Kostnaden samt antal stolar***
         //Går vidare till Customer information
         protected void ibnext_Click(object sender, ImageClickEventArgs e)
         {
@@ -349,21 +347,20 @@ namespace SennanBuss.UserPages
                 pnl1.Visible = true;
                 Panel2.Visible = true;
                 panel3.Visible = false;
-                  btnSave.Visible = false;
+                btnSave.Visible = false;
                 
                 
                 ScriptManager.RegisterStartupScript(this, typeof(Page), "ss", "Stolnotfound();", true);
             }
             else
             {
-                 btnSave.Visible = true;
-                
+                btnSave.Visible = true;
                 pnl1.Visible = false;
                 Panel2.Visible = false;
                 panel3.Visible = false;
                 panel4.Visible = true;
                 ibnext.Visible = false;
-                // Label1.Text = "else";
+               // Label1.Text = "else";
             }
         }
 
@@ -387,8 +384,7 @@ namespace SennanBuss.UserPages
 
             //}
 
-
-            //for (int j = 0; j <= forsave.Length - 1; j++)
+              //for (int j = 0; j <= forsave.Length - 1; j++)
             //    {
             //        if (forsave[j].ToString().Trim().Length > 0)
             //        {
@@ -440,14 +436,7 @@ namespace SennanBuss.UserPages
 
                 }
             }
-
-
-         
-
-
-
-
-
+ 
             //Coockies
             //Response.Cookies["destination"].Value = from_box.Text.ToString();
             //Response.Cookies["pnr"].Value = litpnr.Text.ToString();

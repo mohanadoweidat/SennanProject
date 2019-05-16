@@ -3,15 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
  <style type="text/css">
-
-     
-     body{
+      body{
          background-color:antiquewhite;
      }
-
- </style>
-
-</asp:Content>
+  </style>
+ </asp:Content>
 
 
 
@@ -23,14 +19,11 @@
     <!-- Search -->
     <asp:HiddenField ID="hfId" runat="server" />
     <center>
-         
-	 <div>
-         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+          <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
          <asp:UpdatePanel ID="up" runat="server">
              <ContentTemplate>
          <h1>Sök Din Resa</h1><br />
-
-          	<div id="colorlib-reservation">
+           	<div id="colorlib-reservation">
 			<div class="container" style="background-color:beige; border:2px dashed black; padding:50px">
 				<div class="row">
 					<div class="col-md-12 search-wrap">
@@ -60,14 +53,7 @@
 		                    <div class="form-field">
 		                      <i class="icon icon-arrow-down3"></i>
                         <asp:TextBox ID="time_box" runat="server" TextMode="Time"  CssClass="form-control"></asp:TextBox>
-		                     <%-- <select name="people" id="people" class="form-control">
-		                        <option value="#">1</option>
-		                        <option value="#">2</option>
-		                        <option value="#">3</option>
-		                        <option value="#">4</option>
-		                        <option value="#">5+</option>
-		                      </select>--%>
-		                    </div>
+ 		                    </div>
 		                  </div>
 		                </div>
 		                <div class="col-md-3">
@@ -76,14 +62,7 @@
 		                    <div class="form-field">
 		                      <i class="icon icon-arrow-down3"></i>
                                 <asp:TextBox ID="date_box" runat="server" TextMode="Date"  CssClass="form-control"></asp:TextBox>
-		                     <%-- <select name="people" id="people" class="form-control">
-		                        <option value="#">1</option>
-		                        <option value="#">2</option>
-		                        <option value="#">3</option>
-		                        <option value="#">4</option>
-		                        <option value="#">5+</option>
-		                      </select>--%>
-		                    </div>
+ 		                    </div>
 		                  </div>
 		                </div>
                     <asp:Button ID="srchbtn" runat="server" Text="Söka" CssClass="btn btn-primary btn-block"></asp:Button>
@@ -113,10 +92,8 @@
                             <td valign="middle" align="center">
                                  <asp:Panel  ID="pnl1" runat="server" Visible="False">
                                             <div id="Div1">
-                                                 
-                                                 <div>
-                                                     
-                                                    <table cellpadding="2" border="0" style="border:2px solid gray; padding:30px;" dir="ltr" >
+                                                  <div>
+                                                     <table cellpadding="2" border="0" style="border:2px solid gray; padding:30px;" dir="ltr" >
                                                         <tbody  align="left"  >
                                                             <tr >
                                                                 <td height="25">
@@ -307,18 +284,14 @@
                                             </asp:Table>
                                         </asp:Panel>
                      <asp:Panel ID="panel3" runat="server" Visible="false">
-
-                         <table>
+                          <table>
                              <tr>
                                  <td><asp:TextBox ID="Stolar_box" runat="server"></asp:TextBox></td>
                              </tr>
                              <tr>
-                                 
-                                 <td>
+                                  <td>
                                      <asp:ImageButton ID="ibnext" ImageUrl="../images/btn_go.gif" runat="server"  OnClick="ibnext_Click" />
-                                
-                             
-                                 </td>
+                                   </td>
                              </tr>
                          </table>
                          </asp:Panel>
@@ -426,29 +399,21 @@
                                                         </tbody>
                                                     </table>
                                                 </div>
-                        
-                                        </asp:Panel>
+                                         </asp:Panel>
                 </td>
             </tr>
         </table>
-
-
-       
+ 
         </ContentTemplate>
              </asp:UpdatePanel>
      </center>
-
-     
-
-
-    <br />
+     <br />
     <br />
     <br />
     <br />
      
     <script>
-
-         function LoginReq() {
+          function LoginReq() {
                  Swal.fire({
   type: 'error',
   title: 'Fel',
@@ -490,10 +455,4 @@
 
        
     </script>
-
-
-
-
-     
-
-</asp:Content>
+  </asp:Content>
