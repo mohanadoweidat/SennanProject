@@ -52,13 +52,15 @@ img {
   color: transparent;
   pointer-events: auto;
 }
+
+/*Hamburger Icon*/
 .cd-nav-trigger span, .cd-nav-trigger span::after, .cd-nav-trigger span::before {
-  /* this is the hamburger icon */
   position: absolute;
   width: 16px;
   height: 2px;
   background-color: #ffffff;
 }
+
 .cd-nav-trigger span {
   /* middle line of the hamburger icon */
   left: 50%;
@@ -119,6 +121,9 @@ img {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+
+/*//////////////////////////////////////////*/
 .cd-stretchy-nav ul {
   position: relative;
   z-index: 2;

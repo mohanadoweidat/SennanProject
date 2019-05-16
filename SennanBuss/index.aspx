@@ -10,7 +10,7 @@
      
     <br />
            <!-- About -->
- 		<div class="container about-a">
+ 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6" style="padding-bottom: 50px;">
                        <h4>
@@ -34,7 +34,7 @@
                         <br />
 				</div>
 				<div class="col-lg-6">
-					<div class="about-gallery">
+					<div>
                         <img src="images/rbuss.png" alt="rbuss" class="about-item img-responsive"/>
                         <div>
                         <h5 style="color:black; margin:5px 5px 5px 5px">Vi är unika med att kunna erbjuda konferensbuss i Hallands Län.</h5>
@@ -47,7 +47,7 @@
 			</div>
 		</div>
         <br /><br /><br />
-		<div class="container symbols-a">
+		<div class="container">
 		<div class="row">
 		<div class="col-lg-4 text-center">
         <div class="intro_title">Vi är både miljö- och kvalitetscertifierade.</div>
