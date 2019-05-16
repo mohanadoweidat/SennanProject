@@ -40,31 +40,22 @@ namespace SennanBuss.UserPages {
         protected global::System.Web.UI.UpdatePanel up;
         
         /// <summary>
-        /// from_box control.
+        /// dest_from control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox from_box;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText dest_from;
         
         /// <summary>
-        /// to_box control.
+        /// dest_to control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox to_box;
-        
-        /// <summary>
-        /// time_box control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox time_box;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText dest_to;
         
         /// <summary>
         /// date_box control.

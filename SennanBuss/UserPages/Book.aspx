@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Boka Resa" Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="Book.aspx.cs" Inherits="SennanBuss.UserPages.Book" %>
+﻿<%@ Page  Title="Boka Resa" Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="Book.aspx.cs" Inherits="SennanBuss.UserPages.Book" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
@@ -29,34 +29,76 @@
 					<div class="col-md-12 search-wrap">
 						<form class="colorlib-form">
 		              	<div class="row">
-		                <div class="col-md-3">
+		                <div class="col-md-4">
 		                  <div class="form-group">
 		                    <label for="date">Från:</label>
 		                    <div class="form-field">
 		                      <i class="icon icon-calendar2"></i>
-		                      <asp:TextBox ID="from_box" runat="server" TextMode="SingleLine" placeholder="Från"  CssClass="form-control"></asp:TextBox>
+		                       
+      <input list="desto"  name="dest_from" value="--" onfocus="this.value = '';"   onblur="if (this.value == '') {this.value = '--';}" type="text" runat="server" class="form-control"  id="dest_from"/>
+    <datalist id="desto">
+        <%
+            {
+                var _x = SennanBuss.head.Main.GetDBValue("Time_List", "Fr_Station", null, null);
+                List<string> list = new List<string>();
+
+                for (int x = 0; x < _x.Length; x++)
+                {
+                    if (!list.Contains(_x[x].ToString()))
+                    {
+                        list.Add(_x[x].ToString());
+                    }
+                }
+                for(int x = 0; x < list.Count; x++)
+                {
+                    Response.Write("<option value=\"" + list[x] + "\"/>");
+                }
+            }
+            %>
+    </datalist>
 		                    </div>
 		                  </div>
 		                </div>
-		                <div class="col-md-3">
+		                <div class="col-md-4">
 		                  <div class="form-group">
 		                    <label for="date">Till:</label>
 		                    <div class="form-field">
 		                      <i class="icon icon-calendar2"></i>
-		                      <asp:TextBox ID="to_box" runat="server" TextMode="SingleLine" placeholder="Till"  CssClass="form-control"></asp:TextBox>
+      <input list="goto" name="dest_to" value="--" onfocus="this.value = '';"   onblur="if (this.value == '') {this.value = '--';}" type="text" runat="server" class="form-control"  id="dest_to"/>
+    <datalist id="goto">
+        <%
+            {
+                var _x = SennanBuss.head.Main.GetDBValue("Time_List", "To_Station", null, null);
+                List<string> list = new List<string>();
+
+                for (int x = 0; x < _x.Length; x++)
+                {
+                    if (!list.Contains(_x[x].ToString()))
+                    {
+                        list.Add(_x[x].ToString());
+                    }
+                }
+                for(int x = 0; x < list.Count; x++)
+                {
+                    Response.Write("<option value=\"" + list[x] + "\"/>");
+                }
+            }
+            %>
+    </datalist>
 		                    </div>
 		                  </div>
 		                </div>
-		                <div class="col-md-3">
+		                <%--<div class="col-md-3">
 		                  <div class="form-group">
 		                    <label for="adults">Tid</label>
 		                    <div class="form-field">
 		                      <i class="icon icon-arrow-down3"></i>
                         <asp:TextBox ID="time_box" runat="server" TextMode="Time"  CssClass="form-control"></asp:TextBox>
- 		                    </div>
+		                     
+		                    </div>
 		                  </div>
-		                </div>
-		                <div class="col-md-3">
+		                </div>--%>
+		                <div class="col-md-4">
 		                  <div class="form-group">
 		                    <label for="children">Res Datum</label>
 		                    <div class="form-field">
@@ -65,7 +107,7 @@
  		                    </div>
 		                  </div>
 		                </div>
-                    <asp:Button ID="srchbtn" runat="server" Text="Söka" CssClass="btn btn-primary btn-block"></asp:Button>
+                    <asp:Button ID="srchbtn" OnClick="srchbtn_Click" runat="server" Text="Söka" CssClass="btn btn-primary btn-block"></asp:Button>
                               
 		                <div class="col-md-2">
                             <%-- Search Button side-- %>
