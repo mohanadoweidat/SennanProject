@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SennanBuss.bas {
+namespace SennanBuss.AdminPages {
     
     
-    public partial class master_no_nav {
+    public partial class Admin {
         
         /// <summary>
         /// head control.
@@ -29,6 +29,24 @@ namespace SennanBuss.bas {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// LoggedinAdmin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LoggedinAdmin;
+        
+        /// <summary>
+        /// Logoutbtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton Logoutbtn;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

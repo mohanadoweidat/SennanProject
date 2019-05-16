@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="SennanBuss.AdminPages.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Dashboard</title>
+
+    <link href="../styles/pages/Admin/styler.css" rel="stylesheet" />
+    <link href="../sweetalert2.css" rel="stylesheet" />
+    <script src="../sweetalert2.all.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+       
+         <header role="banner">
+  <h1> <asp:Label ID="LoggedinAdmin" runat="server"></asp:Label></h1>
+  <ul class="utilities">
+     
+    <li class="logout warn">
+        <asp:LinkButton ID="Logoutbtn" runat="server" OnClick="Logoutbtn_Click">Logga Ut </asp:LinkButton>
+
+    </li>
+  </ul>
+</header>
+
+        <nav role='navigation'>
+  <ul class="main">
+    <li class="comments"><a href="Bokningar.aspx">Bokningar</a></li>
+      <li class="users"><a href="AdminManage.aspx">Adminstratörer</a></li>
+       <li class="dashboard"><a href="Trips.aspx">Resor</a></li>
+    <li class="edit"><a href="AddAdmin.aspx">Lägga till Adminstratör</a></li>
+    <li class="write"><a href="AddTrip.aspx">Lägg en resa</a></li>
+   
+
+    <li class="edit"><a href="#">Extra</a></li>
+  </ul>
+</nav>
+
+
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+         
+    </form>
+</body>
+</html>

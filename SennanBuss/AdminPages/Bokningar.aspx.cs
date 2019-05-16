@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SennanBuss.AdminPages
 {
-    public partial class AdminPage : System.Web.UI.Page
+    public partial class Bokningar : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

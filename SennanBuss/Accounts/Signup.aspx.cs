@@ -112,6 +112,7 @@ namespace SennanBuss.Accounts
                         sqlCmd.Parameters.AddWithValue("@Password", pswtxtbox.Text.Trim());
                         sqlCmd.Parameters.AddWithValue("@Status", "Obekräftat");
                         sqlCmd.Parameters.AddWithValue("@Kod", Kod);
+                        sqlCmd.Parameters.AddWithValue("@UType", "U");
                         sqlCmd.ExecuteNonQuery();
                         Thread.Sleep(TimeSpan.FromSeconds(2));
                         Sendcode();
@@ -135,7 +136,7 @@ namespace SennanBuss.Accounts
             SmtpClient smtp = new SmtpClient();
             smtp.Host = "smtp.gmail.com";
             smtp.Port = 587;
-            smtp.Credentials = new System.Net.NetworkCredential("mohanad.oweidat@elev.ga.ntig.se", "Mohanadrambo2000");
+            smtp.Credentials = new System.Net.NetworkCredential("mohanad.oweidat@elev.ga.ntig.se", "MohanadRambo2000");
             smtp.EnableSsl = true;
             MailMessage msg = new MailMessage();
             msg.Subject = "Aktiveringskod för att akrivera ditt konto";

@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Startsidan" Language="C#" MasterPageFile="~/bas/master.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="SennanBuss.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <!----------------------------------------------------->
+   
 
     <link href="styles/pages/index.css" rel="stylesheet"/>
    

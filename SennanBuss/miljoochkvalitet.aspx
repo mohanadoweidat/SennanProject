@@ -4,8 +4,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
          <div class="super_container">
-	   <div><img src="images/slider/slider_1.jpg" class="img-responsive"/></div>
- 		<div class="container">
+  		<div class="container">
 		<div class="section_title">
         <h4>Miljö, Kvalitet & Säkerhet</h4>
         </div>
